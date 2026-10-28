@@ -10,7 +10,7 @@ This prototype is a specialized **140 mm depth, high-strength travel variant** o
 | Specification | Standard Desktop Rack (v7.2) | Slim Cargo Travel Prototype | Advantage for Travel |
 |---|---|---|---|
 | **Depth** | $200.0\text{ mm}$ ($7.87"$) | **$140.0\text{ mm}$ ($5.51"$)** | **$-60\text{ mm}$ / 30% slimmer.** Easily fits into one half of a clamshell suitcase (which has $100\text{--}120\text{ mm}$ internal depth per shell). |
-| **Total Height** | $495.0\text{ mm}$ (with handles) | **$445.0\text{ mm}$ (with handles)** | **$-50\text{ mm}$ shorter.** Eliminates tall snagging handles so it doesn't catch on suitcase zippers. |
+| **Total Height** | $495.1\text{ mm}$ (with handles and plinth) | **$458.1\text{ mm}$ (with handles and plinth)** | **$-37\text{ mm}$ shorter** (it said 445 mm and −50 mm; measured on the models, 28 Oct). The handles rise 18 mm, not 45, so they don't catch on suitcase zippers. |
 | **Outer Wall Skin** | $1.2\text{ mm}$ (lightweight PLA) | **$2.4\text{ mm}$ (heavy-duty cargo skin)** | Double thickness for impact, crush, and puncture resistance. |
 | **Corner Posts** | $12.0\text{ mm}$ | **$14.0\text{ mm}$** | Beefier anchor around M5 heat-set inserts. |
 | **Anti-Racking** | Plain thin vents | **Integrated diagonal shear trusses** | Prevents diagonal parallelogram distortion when luggage is dropped or tossed. |
@@ -57,6 +57,7 @@ The Pi shelf rests on the slim front and middle bars (z 1–14, 63–77), so the
   * `SlimCargo_CapHalf_x2.stl`
   * `SlimCargo_LowProfile_Handle_x2.stl`
   * `SlimCargo_BaseBar_x3.stl`
+* **Print plates, overhang check and filament estimate (28 Oct):** `source/build_slim_plates.py <project root>` writes the seven P1S plates into `../../01_PRINT_FILES/5_SLIM_CARGO_140mm_TRAVEL_PROTOTYPE/P1S_plates/` and the report `../../03_CHECKS/VERIFICATION_slim-cargo_plates_28Oct.txt` (frame ≈ 1,193 g PETG). The earlier "no supports, all overhangs ≤ 45°" is not true; see that report.
 * **Studio Renders:**  
   Located in [`02_RENDERS/SLIM_CARGO_PROTOTYPE/`](file://~/Downloads/Pi%205%20HomeLab%201/02_RENDERS/SLIM_CARGO_PROTOTYPE/).
 

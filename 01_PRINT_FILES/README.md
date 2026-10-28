@@ -19,7 +19,7 @@
 | **`2_CHECK-UPS-FIRST/`** | UPS tray + faceplate: look at the real Cuzor UPS (or a photo) first. Two files |
 | **`3_WAIT/`** | Poly+ 5 tray (measure the case), adapter holder (fit test), screen body (screen arrives 4 Nov). Four files |
 | **`4_OPTIONAL_spare-spacers/`** | Only if your brick isn't ~30 mm thick |
-| `5_SLIM_CARGO_140mm_TRAVEL_PROTOTYPE/` | **Alternative frame, not part of this order.** A 140 mm deep travel version of 01–06 (6 files, 15 parts, made by another tool on 28 Oct). The dock, screen, UCG mount and Pi unit fit it, but **the 12 V brick and its cradle don't** (the cradle is 187 mm long; checked 28 Oct). Read its README first |
+| `5_SLIM_CARGO_140mm_TRAVEL_PROTOTYPE/` | **Alternative frame, not part of this order.** A 140 mm deep travel version of 01–06 (6 files, 15 parts, made by another tool on 28 Oct; seven P1S plates `SlimPlate01–07` and a weight estimate added the same day: ≈ 1.24 kg PETG, not printed). The dock, screen, UCG mount and Pi unit fit it, but **the 12 V brick and its cradle don't** (the cradle is 187 mm long; checked 28 Oct). Read its README first |
 
 **What's in each folder:**
 - **The STLs:** send these to Robu.

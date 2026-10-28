@@ -23,9 +23,9 @@ sheet = Image.new("RGB", (cols * cw + (cols + 1) * pad, 200 + rows * (ch + cap +
 d = ImageDraw.Draw(sheet)
 
 d.text((pad, 30), "Pi 5 Mini Rack: 140 mm Slim Cargo Prototype (9U Portable Homelab)", font=f_title, fill=(28, 31, 36))
-d.text((pad, 92), "140 mm ultra-compact depth (-30% volume) · 2.4 mm heavy-duty walls · Flush travel handles (445 mm total height)",
+d.text((pad, 92), "140 mm ultra-compact depth (-30% volume) · 2.4 mm heavy-duty walls · Flush travel handles (458 mm total height with the plinth)",
        font=f_sub, fill=(90, 96, 106))
-d.text((pad, 130), "Fits standard 20-inch carry-on luggage · All cables routed 100% internally behind EIA-310 rails",
+d.text((pad, 130), "458 × 280 × 140 mm overall: inside a 55 × 35 × 20 cm carry-on envelope · The four units fit; the 12 V brick cradle does not",
        font=f_sub, fill=(90, 96, 106))
 
 for i, k in enumerate(shots):

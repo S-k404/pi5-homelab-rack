@@ -132,6 +132,6 @@ This is the **one** to-do list. `START_HERE.md` points here; the print list is `
 ## 7. Later / decisions
 - [ ] What the 5 × WeAct e-paper + 5 × ESP32-C3 are for.
 - [ ] Do you want the gateway on the UPS too? It isn't now: it has its own USB-C adapter.
-- [ ] **Slim Cargo rack:** only if you want the travel version. The brick would have to live outside, or it needs a new short cradle. It also has no print plates or weight estimate yet.
+- [ ] **Slim Cargo rack:** only if you want the travel version. The brick would have to live outside, or it needs a new short cradle. It now has print plates (`SlimPlate01–07`, replacing Plate01–07) and a weight estimate (frame ≈ 1.24 kg PETG with the ears and clips), but nothing has been printed or test-fitted.
 - [x] Onshape: the master STEP assemblies were regenerated on 28 Oct (clean faceplate, shelf with the arch, holder base with the HDMI relief). One thing is still a stand-in: unit 4 is the unused custom UCG shelf, because the Printables 942972 mount only exists as a mesh. Rebuild with `04_DESIGN_SOURCE/ONSHAPE_PROJECT/build_onshape_project.py`.
 - [ ] Git: the first commit holds 433 MB of STL/STEP/PNG, so `/ultrareview` can't run on this repo (no remote, too large). See `ULTRAREVIEW/README.md`.

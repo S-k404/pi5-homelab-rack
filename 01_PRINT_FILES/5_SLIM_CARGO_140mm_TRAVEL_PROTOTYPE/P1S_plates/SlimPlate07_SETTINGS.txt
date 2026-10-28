@@ -1,0 +1,22 @@
+SlimPlate07 (PETG): cap half + ear
+==================================
+Status: ALTERNATIVE rack. Print the Slim plates 01S-07S INSTEAD of Plate01-07 of the standard rack, not as well.
+It's not in the Robu order. The 12 V brick cradle (plate 13) does not fit this rack: see ../README.md.
+Material: PETG, about 91 g  (the Slim README lists PETG / ABS / ASA; ABS / ASA need the enclosure closed too)
+
+How: double-click the .3mf (or File > Open Project in Bambu Studio). Every part is already placed.
+If Bambu Studio asks, choose to load the geometry only. Then pick the settings below and Slice.
+
+Settings (Bambu P1S): 0.20mm Standard @BBL P1S, Generic PETG, 4 walls, 25% gyroid, supports OFF (see Notes),
+Textured PEI no glue, enclosure CLOSED.
+
+Notes:
+  Supports OFF: the joint bosses and key slots have small overhangs, the same as the standard rack's modules
+  (Slim check: 03_CHECKS/VERIFICATION_slim-cargo_plates_28Oct.txt). If a boss looks ragged, turn on tree supports
+  for that plate only.
+  Cap half: right-click > Sparse infill 20%.
+
+On this plate:
+  - Cap half x1   (SlimCargo_CapHalf_x2.stl)
+  - Unit ear x1   (07_Unit_Ear_3U__x4__PLA.stl)  <- shared with the standard rack's units
+Hardware for the whole rack: 48 x M5 x 12 button head + 48 M5 heat-set inserts (the same as the standard rack).

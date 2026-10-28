@@ -1,0 +1,29 @@
+Pi unit power path (Argon Poly+ 5 build): checks, 28 Oct 2026
+Calculations on the CAD models, not a physical test. v3 frame: x left->right, y rack rear(-)->front(+), z up.
+
+== The UPS (Cuzor Mini UPS Pro 12 V 3 A) ==
+INFO  size used  100 x 80 x 28 (Cuzor's page: 10 x 8 x 2.8 cm). The tray takes up to 101 x 81 x 28.5. One marketplace listing says 10.2 x 8 x 2.4: if yours is 102 long it is 1 mm too long, so measure it
+INFO  switch  Cuzor's page: a SLIDE switch (0 / 1), not a rocker. Its position isn't published
+INFO  jacks in the CAD model  one on the rear face at x 86.6, z 11.5 (taken as OUT) and one on the front face at x 14.6 (DC-IN). Cuzor publish no drawing; the v3 case says the jack positions came from product photos
+WARN  the CAD model's DC-IN lines up with the UPS tray's front window (x 80..112) and the faceplate window  (model DC-IN at x 14.6: OUTSIDE: behind the solid front wall of the UPS tray). The tray and faceplate windows assume DC-IN at the RIGHT end of the front face (x ~86-106). Check where your UPS's IN jack really is before printing plate 10 / the faceplate
+
+== Right-angle 5.5 x 2.1 plug in the UPS OUT (rack rear) ==
+PASS  plug body (11 x 12, 16 deep) passes the UPS tray's rear window (x 58..110, z 5..25)  (body x 81.1..92.1, z 5.5..17.5)
+PASS  plug + strain relief (cable out to the right) touch nothing  (worst UPS tray: 0.0 mm3; the plug sticks out 13 mm behind the case's rear face, into the open rack rear: the rear base bar is ~73 mm further back)
+WARN  room round the plug body in the window  (17.9 mm each side across, 0.5 mm at the bottom: a 12 mm tall overmould centred on a jack at z 11.5 sits 0.5 mm above the window's bottom edge. If your jack is lower, or the plug fatter, file the window's bottom edge)
+
+== Lead from the plug to the adapter (F)'s screw terminal (in the F holder) ==
+INFO  route  OUT plug (rear) -> right channel x 101.5..113.9 -> front window -> pocket behind the faceplate, under the tray -> lead hole (14..26, 96..104) -> holder front notch (x 28..42) -> terminal. Length about 26 cm from the plug; pigtails are usually 15-30 cm
+PASS  a 4.0 mm lead along that route touches nothing  (worst UPS: 0.0 mm3)
+WARN  a 5.5 mm lead along that route touches nothing  (worst holder base: 14.3 mm3)
+INFO  pinch in the right channel  the M3 joint post at x 107.7, y 40.0 (dia 6.5, full height) leaves 2.95 / 2.95 mm either side in the 12.4 mm channel, too narrow for a 4 mm lead. The route lifts the lead over the UPS's top edge there, through the 5.5 mm air gap between the UPS and the tray floor
+PASS  the lead clears the brick's plug in DC-IN (dia 11, assumed at the window centre x 96, z 17)  (0.0 mm3)
+PASS  the tray's lead hole (12 x 8) takes two 4 mm leads side by side (one to the terminal, one to a 12 V -> 5 V converter if you also use one)  
+INFO  terminal access  the terminal block's wire entries face the front notch (y 95.8); its screws are on top: lid off, strip ~7 mm, screw down, lid on. The ~13 mm strip in front of the holder (y 98..112) is also where the Argon plan puts the 12 V -> 5 V converter, so if you fit both, run this lead over the converter
+
+== The Pi's side ports (USB-C power, 2 x micro-HDMI) with the F holder beside the case ==
+FAIL  a USB-C / micro-HDMI plug (32 mm with its strain relief) fits into each side port, case nominal 64 mm  (holder is 5.2 mm from the case's side; USB-C power y 76: 1121 mm3 of holder in the way, micro-HDMI 0 y 62: 814 mm3 of holder in the way, micro-HDMI 1 y 48: 737 mm3 of holder in the way)
+FAIL  a USB-C / micro-HDMI plug (32 mm with its strain relief) fits into each side port, case max 66 mm  (holder is 3.2 mm from the case's side; USB-C power y 76: 1173 mm3 of holder in the way, micro-HDMI 0 y 62: 852 mm3 of holder in the way, micro-HDMI 1 y 48: 761 mm3 of holder in the way)
+INFO  what this means  The holder puts the adapter (F)'s own USB-C and micro-HDMI plugs in line with the Pi's side ports, ~1.2 mm short of the case wall. So EITHER the adapter's plugs reach the Pi through the Poly+ 5's side cut-outs (then the Pi is powered and drives HDMI through the adapter, fed by this UPS OUT -> terminal lead; no step-down converter or UGREEN needed), OR they don't, and then nothing else can plug into those ports either: the step-down converter's USB-C and the UGREEN micro-HDMI extender from the Argon plan have no room while the holder is there. Measure the Poly+ 5's side cut-outs (wall thickness, how far the Pi's USB-C sits behind the outside face) with the adapter in hand before printing the holder.
+
+5 PASS, 2 FAIL, 3 WARN

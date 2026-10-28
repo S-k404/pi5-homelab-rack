@@ -1,0 +1,63 @@
+12 V brick cradle (plate 13) + Pi faceplate with the 12 V lead notch: checks
+Calculations on the 3D models, not a physical test. Rack frame: x across, y up from the base-bar tops, z back from the front rails.
+
+== Parts ==
+PASS  cradle: one valid solid  
+PASS  2 mm spacer: one valid solid  
+PASS  4 mm spacer: one valid solid  
+PASS  6 mm spacer: one valid solid  
+PASS  8 mm spacer: one valid solid  
+PASS  notched faceplate: one valid solid  
+PASS  cradle sizes match the rack it sits on (bars, Pi shelf edge, rear post)  (middle bar z (80.0, 92.0), rear bar z (188.0, 199.0), shelf edge x 67.15)
+
+== Cradle in the rack ==
+PASS  cradle clears every rack part and every unit  (38 parts: no overlap with anything)
+PASS  2 mm spacer hung on the inner wall clears the cradle, rack and units  (no overlap with anything)
+PASS  4 mm spacer hung on the inner wall clears the cradle, rack and units  (no overlap with anything)
+PASS  6 mm spacer hung on the inner wall clears the cradle, rack and units  (no overlap with anything)
+PASS  8 mm spacer hung on the inner wall clears the cradle, rack and units  (no overlap with anything)
+PASS  rests on the middle and rear base bars (no gap, no overlap)  (104 mm3 into the middle bar if 0.2 mm lower, 95 mm3 into the rear bar if 0.2 mm lower)
+PASS  can't slide front to back: the floor notches straddle both bars  (0.4 mm play each way)
+PASS  boxed in sideways: the Pi shelf on the left, the right rear post on the right  (0.85 and 0.70 mm play)
+PASS  stays inside the rack's width and the Pi unit's 2U, behind the faceplate  (x 68.0..111.3, y -3.0..32.4, z 14.0..201.4)
+INFO  rear lip  the lip behind the rear bar ends 1.4 mm behind the rack's back face (the front faceplates stand 4 mm proud)
+INFO  air round the brick  8.9 mm from the cradle to the UPS tray wall, open above, behind and below (floor vents over the open plinth), faceplate vents in front
+
+== Bricks it takes (L x H x T: length, height standing on edge, thickness across the rack) ==
+PASS  Robu 'Standard 12V 5A 60W' (the one in your cart, listed 110 x 50 x 30), 110 x 50 x 30.0: fits with the 8 mm spacer, held by the floor, walls and kerb  (0.5 mm side play for the straps to take up; 37 mm of air over it)
+PASS     its mains plug (C13, 33.5 x 24 x 50) goes straight out of the open rear end, over the kerb  (no overlap with anything)
+PASS  Mean Well GST60A12-P1J (the BOM's example), 125 x 50 x 31.5: fits with the 6 mm spacer, held by the floor, walls and kerb  (1.0 mm side play for the straps to take up; 37 mm of air over it)
+PASS     its mains plug (C13, 33.5 x 24 x 50) goes straight out of the open rear end, over the kerb  (no overlap with anything)
+PASS  generic 12 V 5 A desktop brick (Pro Elec PSU50004 size), 110 x 50 x 33.0: fits with the 4 mm spacer, held by the floor, walls and kerb  (1.5 mm side play for the straps to take up; 37 mm of air over it)
+PASS     its mains plug (C13, 33.5 x 24 x 50) goes straight out of the open rear end, over the kerb  (no overlap with anything)
+PASS  Ideal Power 15DYS865 size, 120 x 53 x 32.0: fits with the 6 mm spacer, held by the floor, walls and kerb  (0.5 mm side play for the straps to take up; 34 mm of air over it)
+PASS     its mains plug (C13, 33.5 x 24 x 50) goes straight out of the open rear end, over the kerb  (no overlap with anything)
+PASS  CUI SDI65-12 size (thickest common), 115 x 53 x 38.0: fits with no spacer, held by the floor, walls and kerb  (0.5 mm side play for the straps to take up; 34 mm of air over it)
+PASS     its mains plug (C13, 33.5 x 24 x 50) goes straight out of the open rear end, over the kerb  (no overlap with anything)
+PASS  thinnest it holds well, 120 x 48 x 29.0: fits with the 8 mm spacer, held by the floor, walls and kerb  (1.5 mm side play for the straps to take up; 39 mm of air over it)
+PASS     its mains plug (C13, 33.5 x 24 x 50) goes straight out of the open rear end, over the kerb  (no overlap with anything)
+PASS  largest it takes, 140 x 60 x 38.2: fits with no spacer, held by the floor, walls and kerb  (0.3 mm side play for the straps to take up; 27 mm of air over it)
+PASS     its mains plug (C13, 33.5 x 24 x 50) goes straight out of the open rear end, over the kerb  (no overlap with anything)
+
+== 12 V lead to the UPS DC-IN ==
+PASS  a 5.5 mm lead runs from the brick's front, along the cradle, over the front base bar and out through the notch  (no overlap with anything; checked on the Robu brick)
+PASS     ... and the plate 11 faceplate without the notch would block it (so the notch is what lets it out)  (95 mm3 into the plain faceplate)
+INFO  outside the faceplate  the lead turns left: 13 mm from the notch to the DC-IN window's right edge, then the plug goes into the window as before
+PASS  notched faceplate = the plate 11 faceplate minus the notch, nothing else  (same outline; 261 mm3 removed, notch alone 261 mm3: it runs into no other hole)
+PASS  notch is clear of the vents, screw holes and rail slots  (notch x 70..78, up to y 9; lowest vent slot from y 16.5; rail slot at x 118.3)
+
+== Printing (PETG, 0.20 mm, 3 walls, 20 % gyroid, no supports) ==
+PASS  Brick_Cradle_12V.stl: watertight, flat on the bed, fits, no unsupported overhang  (43.3 x 187.4 x 35.4 mm, 5751 mm2 first layer, 3 bridge(s) up to 12.8 mm, about 63 g)
+PASS  Brick_Spacer_2mm.stl: watertight, flat on the bed, fits, no unsupported overhang  (110.0 x 31.6 x 4.4 mm, 3476 mm2 first layer, 0 bridge(s) up to 0.0 mm, about 10 g)
+PASS  Brick_Spacer_4mm.stl: watertight, flat on the bed, fits, no unsupported overhang  (110.0 x 31.6 x 6.4 mm, 3476 mm2 first layer, 0 bridge(s) up to 0.0 mm, about 12 g)
+PASS  Brick_Spacer_6mm.stl: watertight, flat on the bed, fits, no unsupported overhang  (110.0 x 31.6 x 8.4 mm, 3476 mm2 first layer, 0 bridge(s) up to 0.0 mm, about 14 g)
+PASS  Brick_Spacer_8mm.stl: watertight, flat on the bed, fits, no unsupported overhang  (110.0 x 31.6 x 10.4 mm, 3476 mm2 first layer, 0 bridge(s) up to 0.0 mm, about 17 g)
+PASS  Rack_Faceplate_2U_10in_DC-notch.stl: watertight, flat on the bed, fits, no unsupported overhang  (254.0 x 88.1 x 4.0 mm, 19105 mm2 first layer, 1 bridge(s) up to 11.0 mm, about 64 g)
+INFO  filament  plate 13 (cradle + 4 spacers) about 116 g PETG
+
+== Stability (same hand calc and assumed weights as verify_rack_t0.py) ==
+INFO  with the brick in its cradle  total 3.62 -> 3.99 kg, centre of mass 68 -> 74 mm behind the rails
+PASS  the brick low at the back makes the rack harder to tip forward from the gateway  (push on the back of the UCG-Ultra to tip it: 4.8 -> 5.8 N. Still well under an RJ45's 20 N, so the desk fixing / plug-in-first advice stands)
+PASS  and it still doesn't tip back under a firm 5 N press on the B1 button  (it would take 21 -> 22 N at the button)
+
+42 PASS, 0 FAIL

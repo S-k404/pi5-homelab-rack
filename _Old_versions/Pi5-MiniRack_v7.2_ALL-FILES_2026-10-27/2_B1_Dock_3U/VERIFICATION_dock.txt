@@ -1,0 +1,28 @@
+NIIMBOT B1 face-out dock — 10-inch 3U — geometric checks
+
+PASS  printer sits in the cradle without collisions  (0.000 mm3)
+PASS  ears clear the body  
+PASS  printer actually rests on the cradle (1 mm lower collides)  
+PASS  nothing in front of the printer's top face above the lip  (exposed 132 x 88 mm of the 132 x 91 face)
+PASS  front lip holds the bottom edge  (2.5 mm)
+PASS  lid can swing out (no frame over the top or sides of the face)  (window +/-95, printer +/-66)
+PASS  racked removal: tip upright, lift 3.5 mm, slide out the front  (printer top 46.5 vs next unit at 66.3; tip hits [], slide hits [])
+PASS  lite windows in both side walls  (104 x 62 mm each)
+PASS  finger room beside the printer (both sides)  (24.5 mm each side, guides only 18 mm tall)
+PASS  62 mm B1 + spacers: printer, spacers and body don't collide  (worst 0.000 mm3)
+PASS  62 mm B1 + spacers: spacers sit on the back rest (1 mm lower collides)  
+PASS  62 mm B1 + spacers: same 1.5 mm gap behind the printer as a 67 mm B1 without them  (1.5 mm; spacer 5 mm thick)
+PASS  62 mm B1 + spacers: printer rests on the cradle  
+PASS  spacer prints on its side (hook profile on the bed) within a 220 mm bed  (10.9 x 59.4 profile, 34 tall)
+PASS  printer leans back (centre of mass behind its front edge)  (39.5 mm behind)
+PASS  back rest above the printer's centre of mass  (rest 60 mm, CoM 45.5 mm up the face)
+PASS  panel width 254 mm  
+PASS  panel height 132.55 mm (3U)  (132.55)
+PASS  rack slots 236.5 mm apart at EIA 3U positions  
+PASS  body fits between 10-inch rails  (214 mm)
+PASS  body inside 3U  (130 mm)
+PASS  depth  (95 mm)
+PASS  ear inserts have >= 1.5 mm wall  (2.0 mm)
+PASS  body fits 220 mm bed (floor down)  (214 x 95 footprint, 130 tall)
+
+24 PASS, 0 FAIL

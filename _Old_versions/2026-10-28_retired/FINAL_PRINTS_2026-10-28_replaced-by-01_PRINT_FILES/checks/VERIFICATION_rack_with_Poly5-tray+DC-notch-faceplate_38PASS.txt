@@ -1,0 +1,42 @@
+PASS  every part is one valid solid  (side module 2U base, side module 3U, side module 1U top, base bar, cap half, handle, UCG shelf)
+PASS  no collisions between rack parts  (15 parts, worst 0.000 mm3 side_0_2U_R/side_0_2U_L)
+PASS  no collisions with the rack: Pi unit (real STEP parts), B1 dock with the real B1 (132 x 91 x 62), 7" screen  (worst 0.000 mm3 side_0_2U_R/Pi shelf)
+PASS  units clear each other  (worst 0.000 mm3)
+PASS  UCG-Ultra (141.8 x 127.6 x 30) fits its tray and is held: floor, window lip, side rails, rear stops  (0.6 mm clearance round it)
+PASS  Pi shelf rests on the front and middle base bars (no gap, no overlap)  (767 mm3 overlap if 0.2 mm lower)
+PASS  Pi faceplate slots sit on the rail inserts (EIA 6.35 / 82.55)  (faceplate bottom at y = 0.00)
+PASS  Pi shelf rubber feet (optional) hang clear of the base bars  (Ø10 x 3 mm feet at the shelf's four recesses)
+PASS  Pi UPS tray rests on the shelf standoffs, pins in its holes  (tray floor at the same height as the old feet)
+PASS  module joints: 18 screws clear through the upper rib and into an insert below  (3 per joint per side)
+PASS  module joints: keys drop 3 mm into their pockets  (2 per joint per side, 0.25 mm clearance)
+PASS  cap: 4 screws down through the corner columns into the top ribs  
+PASS  handles: 4 screws through the foot tabs into inserts in the cap columns  
+PASS  base bars: 6 screws up through the ledges into inserts in the bar ends  
+PASS  27 EIA insert holes per post, front and rear, continuous across the joints  (first 6.35, last 393.70 mm)
+PASS  10-inch standard: 236.525 mm hole spacing, 224 mm clear between the posts  
+PASS  RackMate T0 footprint: 280 W x 200 D  (280 x 200 mm, 495 mm tall to the handle tops)
+PASS  B1 dock ear slots line up with rail inserts  (y = 95.25, 215.90)
+PASS  7" screen ear slots line up with rail inserts  (y = 228.60, 349.25)
+PASS  UCG-Ultra shelf ear slots line up with rail inserts  (y = 361.95, 393.70)
+PASS  rail inserts: >= 3 mm wall round them, >= 2 mm floor behind them  (3.06 mm wall, 2.0 mm floor)
+PASS  wall round the other inserts >= 2 mm  (joint bosses 3.3, cap columns 3.0, bar ends 2.3 mm)
+PASS  UCG shelf sits clear above the screen module  (screen module top 355.2 vs shelf 356.0)
+PASS  cap sits clear above the top unit  (UCG shelf top 399.7, gateway top 388.4, cap 400.1: 11.6 mm of air over the gateway, then the vent grid)
+PASS  deepest unit leaves room for cables at the back  (134 mm of 200)
+PASS  Rack_BaseBar_x3.stl: watertight, fits a 220 mm bed, flat on the bed  (needs 166 mm, 3654 mm2 first layer)
+PASS  Rack_CapHalf_x2.stl: watertight, fits a 220 mm bed, flat on the bed  (needs 200 mm, 18160 mm2 first layer)
+PASS  Rack_Handle_x2.stl: watertight, fits a 220 mm bed, flat on the bed  (needs 151 mm, 4261 mm2 first layer)
+PASS  Rack_SideModule_1U_Top_x2.stl: watertight, fits a 220 mm bed, flat on the bed  (needs 173 mm, 8801 mm2 first layer)
+PASS  Rack_SideModule_2U_Base_x2.stl: watertight, fits a 220 mm bed, flat on the bed  (needs 200 mm, 21142 mm2 first layer)
+PASS  Rack_SideModule_3U_x4.stl: watertight, fits a 220 mm bed, flat on the bed  (needs 200 mm, 26403 mm2 first layer)
+INFO  mass and centre of mass  rack 1.16 kg (assumed units: Pi 1.0, B1 + dock 0.46, screen 0.39, UCG + shelf 0.61 kg), total 3.62 kg, centre of mass 68 mm behind the rails
+PASS  doesn't tip back under a firm 5 N press on the B1 button  (holds 4.14 N.m vs 0.98; it would take 21 N there)
+PASS  doesn't tip back under a 2 N tap on the touch screen  (holds 4.14 N.m vs 0.62; it would take 13 N there)
+PASS  doesn't tip forward when you tear off a label (5 N pull)  (holds 1.90 N.m vs 0.88; it would take 11 N)
+INFO  plugging a cable into the gateway's back pushes the top forward  it takes about 5 N there to tip it and an RJ45 plug can need up to 20 N, so steady the rack with your other hand (or plug in before racking the shelf)
+PASS  carry the loaded rack (3.6 kg) by ONE handle  (2.3 MPa in the grip, 18 N per foot screw; an M5 insert in PLA or PETG holds well over 1 kN)
+PASS  side panels: a 20 N press in the middle of a panel moves it less than in v7.0  (2.6 mm vs 4.3 mm; 1.2 mm wall with 10 mm stiffening ribs taken as panel edges, PLA)
+PASS  5 kg on the middle of the cap: sag < 2 mm, stress < 8 MPa  (1.08 mm, 4.7 MPa; bands only, top plate ignored)
+PASS  1 kg on the middle of one base bar: sag < 0.5 mm  (0.37 mm, 1.0 MPa)
+
+38 PASS, 0 FAIL

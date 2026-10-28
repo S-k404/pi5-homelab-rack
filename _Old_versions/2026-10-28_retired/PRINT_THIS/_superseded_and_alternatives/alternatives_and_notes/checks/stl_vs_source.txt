@@ -1,0 +1,22 @@
+STLs compared with a fresh export from the CadQuery source (src) and Pi-unit STLs with their STEP files (step), 27 Oct 2026
+
+PASS	src	Rack_BaseBar_x3.stl	byte-identical
+PASS	src	Rack_CapHalf_x2.stl	byte-identical
+PASS	src	Rack_Handle_x2.stl	byte-identical
+PASS	src	Rack_SideModule_1U_Top_x2.stl	byte-identical
+PASS	src	Rack_SideModule_2U_Base_x2.stl	byte-identical
+PASS	src	Rack_SideModule_3U_x4.stl	byte-identical
+PASS	src	B1_Dock_3U_Body.stl	byte-identical
+PASS	src	B1_Dock_3U_Ear_x2.stl	byte-identical
+PASS	src	B1_Spacer_5mm_x2.stl	byte-identical
+PASS	src	Display7C_3U_Body.stl	byte-identical
+PASS	src	Display7C_Clip_x4.stl	byte-identical
+PASS	src	UCG_Ultra_1U_Shelf.stl	byte-identical
+PASS	step	Pi5_UPS_v3_board_tray_HDMIexit.stl	vol 0.002%  sorted extents differ 0.000 mm
+PASS	step	Pi5_UPS_v3_lid.stl	vol 0.000%  sorted extents differ 0.000 mm
+INFO	step	Pi5_UPS_v3_shims.stl	no STEP (made from mesh) vol 0.48 cm3
+PASS	step	Pi5_UPS_v3_ups_tray_pinned.stl	vol 0.003%  sorted extents differ 0.000 mm
+PASS	step	Rack_Faceplate_2U_10in.stl	vol 0.001%  sorted extents differ 0.000 mm
+PASS	step	Rack_Faceplate_Left.stl	vol 0.001%  sorted extents differ 0.000 mm
+PASS	step	Rack_Faceplate_Right.stl	vol 0.001%  sorted extents differ 0.000 mm
+PASS	step	Rack_Shelf_pinned.stl	vol 0.000%  sorted extents differ 0.000 mm

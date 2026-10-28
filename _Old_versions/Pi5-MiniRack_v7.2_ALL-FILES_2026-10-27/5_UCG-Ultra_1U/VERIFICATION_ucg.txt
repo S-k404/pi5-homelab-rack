@@ -1,0 +1,21 @@
+UCG-Ultra 1U shelf (v7.2) — checks
+Calculations on the 3D model and hand calcs, not a physical test.
+
+PASS  one valid solid  
+PASS  1U panel: 254 x 43.65 mm, 0.4 mm clear of the units above and below  (254.00 x 43.65)
+PASS  ear slots sit on the EIA holes (6.35 and 38.1 mm up the U, 236.525 apart)  
+PASS  everything behind the panel passes between the posts (224 mm clear)  (widest 214 mm)
+PASS  UCG-Ultra (141.8 x 127.6 x 30) fits without touching  (0.6 mm clearance round it)
+PASS  it stands on the floor  
+PASS  the window lip stops it at the front  
+PASS  the side rails hold it 0.6 mm each side  
+PASS  the rear corner stops hold it 0.6 mm behind  
+PASS  window frames the front face (lip >= 3.5 mm all round), display in the middle  (sides 4.9, bottom 4.0, top 4.0 mm; window 132 x 22)
+PASS  ports and USB-C power at the back are clear (nothing behind the middle 112 mm)  
+PASS  STL watertight, fits a 220 mm bed, front face flat on the bed  (needs 210 mm turned 45 degrees, 137 mm tall, 7596 mm2 first layer)
+PASS  no supports: every downward face above the bed is a short bridge or lip (<= 4 mm)  (widest 3.3 mm: the floor-slot tops and the stop lips)
+INFO  filament  about 95 g PETG (3 walls, 15% infill)
+PASS  tray as a cantilever off the panel: stress < 5 MPa, rear sags < 0.5 mm  (1.5 MPa, 0.39 mm with 615 g; rails and slotted floor only)
+PASS  ear screws: the top pair takes the tipping load easily  (6 N per top screw)
+
+15 PASS, 0 FAIL

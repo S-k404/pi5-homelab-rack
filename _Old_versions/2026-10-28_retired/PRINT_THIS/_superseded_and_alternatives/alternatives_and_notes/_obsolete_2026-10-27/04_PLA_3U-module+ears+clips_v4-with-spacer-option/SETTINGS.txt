@@ -1,0 +1,27 @@
+04_PLA_3U-module+ears+clips
+===========================
+Status: print now (spacer version only for a ~62 mm B1)
+Material: PLA, about 144 g
+
+How: double-click the .3mf (or File > Open Project in Bambu Studio). Every part is already placed.
+If Bambu Studio asks, choose to load the geometry only. Then pick the settings below and Slice.
+(The loose STLs are here too, in case you'd rather import them yourself.)
+
+Settings:
+  - Bambu Studio profile: 0.24mm Draft @BBL P1S
+  - Filament: Generic PLA
+  - Wall loops: 3 (default is 2)
+  - Sparse infill: 15% gyroid
+  - Supports: OFF
+  - Plate: Textured PEI
+  - Enclosure: top lid or front door OPEN (PLA heat-creeps in a closed P1S)
+
+Notes:
+  Two files here: Plate04.3mf (B1 about 67 mm thick) and Plate04_WITH-B1-spacers.3mf (B1 about 62 mm thick).
+  Print only ONE of them, after measuring the B1 (due Wed 28 Oct).
+
+On this plate:
+  - Side 3U x1   (Rack_SideModule_3U_x4.stl)
+  - Ear x2   (B1_Dock_3U_Ear_x2.stl)
+  - Clip x4   (Display7C_Clip_x4.stl)
+  - B1 spacer x2   (B1_Spacer_5mm_x2.stl)   <- only in Plate04_WITH-B1-spacers.3mf

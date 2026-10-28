@@ -1,0 +1,24 @@
+08_PLA_B1-dock_WAIT-measure-B1-first
+====================================
+Status: WAIT: measure the B1 first
+Material: PLA, about 125 g
+
+How: double-click the .3mf (or File > Open Project in Bambu Studio). Every part is already placed.
+If Bambu Studio asks, choose to load the geometry only. Then pick the settings below and Slice.
+(The loose STLs are here too, in case you'd rather import them yourself.)
+
+Settings:
+  - Bambu Studio profile: 0.20mm Standard @BBL P1S
+  - Filament: Generic PLA
+  - Wall loops: 3
+  - Sparse infill: 15% gyroid
+  - Supports: OFF
+  - Plate: Textured PEI
+  - Enclosure: top lid OPEN
+
+Notes:
+  WAIT: measure the NIIMBOT B1's thickness first. The dock itself is the same either way (67 mm cradle);
+  a ~62 mm B1 just also needs the two spacers on Plate04_WITH-B1-spacers.
+
+On this plate:
+  - B1 dock body x1   (B1_Dock_3U_Body.stl)

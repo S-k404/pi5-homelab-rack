@@ -1,0 +1,17 @@
+7" display module (3U) — checks
+
+PASS  body is one solid  
+PASS  screen sits in its pocket without touching  
+PASS  screen rests on the bezel (1 mm forward collides)  
+PASS  4 corner clips clear the body and the screen  
+PASS  clips overlap the screen edge  (4.5 mm, with 1 mm foam tape between)
+PASS  bezel window shows the whole active area  (window 156 x 88, active 154.1 x 85.9 mm)
+PASS  bezel covers the glass edge  
+PASS  ribbon-cable gaps in the pocket wall on all four edges  (60 mm top/bottom, 50 mm sides)
+PASS  each clip's screw hole lines up with a boss insert  
+PASS  ear inserts in place (ears are the B1 dock's ears)  
+PASS  driver board fits on the tray  (100 x 50 mm board shown; tray 186 x 67 mm with zip-tie slots)
+PASS  body fits between 10-inch rails and inside 3U  (214 x 130 mm)
+PASS  body fits a 220 mm bed face down  (214 x 130 x 70 mm)
+
+13 PASS, 0 FAIL

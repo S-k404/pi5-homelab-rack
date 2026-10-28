@@ -1,0 +1,39 @@
+Antigravity "final" faceplate (Rack_Faceplate_2U_10in_final) + UPS switch extender: audit, 28 Oct 2026
+Measured on the STEP files in the Pi unit's v3 frame (x left->right, y rack rear -> front, z up; faceplate rear face y 112.5).
+
+Findings:
+1. The UPS switch is NOT behind the faceplate. In the v3 case (case_v3.py: UPS_X "switch/LED/OUT end at the right";
+   the window x 58..110 z 5..25 is on the y = -2.2 face) the switch, LED and OUT face the RACK REAR. The face of the UPS
+   towards the faceplate (y 80.6) carries only DC-IN. Antigravity's renders moved the UPS mesh 29.9 mm forward
+   (apply_final_fix_and_render_all.py) to make the switch line up; the printed UPS tray can't hold it there.
+2. Behind the new 16 x 11 switch window there is the UPS tray's solid back wall (y 87.0..89.2, 132 mm3 in a 10 x 6
+   corridor below). The 38.4 mm extender can't pass it and there is no switch to reach.
+3. The "hidden cable slit" removed only 155 mm3: a 9 x 7 mm, 2.5 mm deep groove at z 31..38. The rest of it (z 4..31) and
+   the "transit notch" fall inside the existing open DC-IN window, so they cut nothing. The UPS OUT -> terminal lead
+   already ran inside the case in v3; nothing changed for it.
+4. The notch for plate 13's 12 V brick lead is gone (261 mm3 of material back in it). The brick-cradle check shows the
+   faceplate without the notch blocks the lead's route. So with plate 13 the lead had no way out.
+Fix: the final set uses Rack_Faceplate_2U_10in_DC-notch (checked: 42 PASS brick, 38 PASS rack, rebuilt byte-identical).
+The switch extender (plate 14) is dropped.
+
+Raw output:
+plain faceplate   x -70.0..183.9  y 112.5..116.5  z -8.0..80.1 vol 76815
+final faceplate   x -70.0..183.9  y 112.5..116.5  z -8.0..80.1 vol 75847
+DC-notch fp       x -70.0..183.9  y 112.5..116.5  z -8.0..80.1 vol 76554
+UPS tray          x -2.2..116.1  y -2.2..89.2  z -2.0..34.5
+board tray        x -2.2..116.1  y -2.2..112.2  z 34.5..63.4
+shelf             x -46.0..124.1  y -4.2..112.5  z -8.0..60.0
+removed by final vs plain: 968 mm3
+   piece x 52.6..72.6  y 112.5..116.5  z 5.8..20.2 813 mm3
+   piece x 97.0..106.0  y 112.5..115.0  z 31.0..38.0 155 mm3
+added by final vs plain: 0.0 mm3
+removed by DC-notch vs plain: 261 mm3
+   piece x 126.9..134.9  y 112.5..116.5  z -8.0..1.0
+final faceplate material inside the DC-notch opening: 261 mm3 (0 = notch present)
+  material along y at switch window centre: 0.00 mm of faceplate
+  material along y at slit (x101.5,z35): 1.50 mm of faceplate
+  material along y at slit (x101.5,z20): 0.00 mm of faceplate
+  in the 10x6 corridor behind the switch window: UPS tray 132 mm3
+  in the 10x6 corridor behind the switch window: board tray 0 mm3
+  in the 10x6 corridor behind the switch window: shelf 0 mm3
+   UPS tray wall in corridor at y 87.0..89.2

@@ -1,0 +1,7 @@
+Plate12-ALT2 (PETG, 0.20 mm)
+  PASS  UCG-Ultra_1U_3-keystones_Printables-942972.stl: one watertight solid, panel face down
+  PASS  flat on the bed: 9731 mm2 first layer (the whole panel face)
+  PASS  on the plate at 45 deg: x 23.9-232.1, y 23.9-232.1, 136.0 tall; 23.9 mm to the bed edge, room for a 5 mm brim
+  PASS  Plate12-ALT2.3mf written and read back: same part, same place, same volume
+
+4 PASS, 0 FAIL

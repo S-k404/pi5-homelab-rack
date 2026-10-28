@@ -1,0 +1,20 @@
+Plate 11: DC-notch faceplate (PETG)
+===================================
+Status: print now
+Material: PETG black, about 64 g
+
+BRIM OFF: the faceplate is 254 mm long on the 256 mm bed (1 mm from each edge). Front face down.
+The 8 x 9 mm notch in its bottom edge lets the 12 V brick's lead out to the UPS DC-IN window.
+
+Settings (Bambu P1S):
+  - Profile: 0.20mm Standard @BBL P1S
+  - Filament: Generic PETG
+  - Wall loops: 3
+  - Sparse infill: 20% gyroid
+  - Supports: OFF (longest bridge: 11 mm)
+  - Plate: Textured PEI, no glue
+  - Enclosure: CLOSED
+
+On this plate:
+  - Faceplate, 2U, with the 12 V lead notch x1   (1_ORDER-NOW/12_Pi_Faceplate_2U_DC-notch__x1__PETG.stl)
+Hardware: 6 x M3 x 8 countersunk into the shelf's inserts.

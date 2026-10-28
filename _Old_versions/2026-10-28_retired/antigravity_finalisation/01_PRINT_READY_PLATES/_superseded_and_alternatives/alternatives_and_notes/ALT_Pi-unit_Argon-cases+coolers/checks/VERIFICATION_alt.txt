@@ -1,0 +1,47 @@
+Alternative Pi-unit parts: Argon NEO 5 / Poly+5 trays, and the coolers in the v3 case — checks
+Calculations on the CAD models, not a physical test. Frame = v3 frame (y- = rack rear).
+
+== ARGON NEO 5 tray (Pi5_ArgonNEO5_tray) ==
+INFO  case size used  nominal 94.0 x 70.0 x 30.0, fences at the max 95.5 x 71.5 + 0.5 mm. Published: 94 x 70 x 30 (Tom's Hardware, Electrokit); 87.6 x 71.5 x 30 (Core, Little Bird); 93 x 68 x 27 (Botland); 95.5 x 71.5 x 30 (rcdrone)
+PASS  one valid solid  
+PASS  same footprint and seat height as the v3 board tray it replaces  (x -2.2..116.1, y -2.2..112.2, floor underside z 34.5)
+PASS  sits on the UPS tray's walls and posts (no gap, no overlap)  
+PASS  3 joint holes line up with the UPS tray's M3 posts (same 3 x M3 x 12 countersunk screws)  
+PASS  nothing stands above the floor inside the case pocket (screw heads countersunk flush)  
+PASS  max case (95.5 x 71.5 x 30.0) on 1 mm foam tape fits with no collision  
+PASS  nominal case (94.0 x 70.0 x 30.0) on 1 mm foam tape fits with no collision  
+PASS  max-size case is boxed in: right fence, rear corners, left stubs, front fence  (0.5 mm play)
+INFO  play on a nominal-size case  2.0 mm lengthwise, 2.0 mm sideways: push it into the rear-right corner and stick it down with the foam tape
+PASS  side-port plugs (USB-C, 2 x micro-HDMI) have 32 mm of open space to the left of the case  (USB-C power at y 76, micro-HDMI 0 at y 62, micro-HDMI 1 at y 48)
+PASS  USB / Ethernet plugs at the rear: 30 mm of open space behind the case end  
+PASS  12 V lead hole opens into the free space under the tray's front overhang  (hole 12 x 8 at x 20, y 100; UPS tray ends at y 89.2)
+PASS  STL: watertight, flat on the bed, fits the 256 mm bed  (118.3 x 114.4 x 12.4 mm, 12780 mm2 first layer)
+INFO  filament  about 42 g PETG (3 walls, 20 % infill)
+PASS  at least 10 mm of air over the case for its top fan (B1 dock's underside is above it)  (case top z 67.9 with the foam tape, dock underside z 81.3: 13.4 mm; v3 lid top was 65.8. The rack check loads the case in the lid's place)
+
+== ARGON POLY+5 tray (Pi5_ArgonPoly5_tray) ==
+INFO  case size used  nominal 93.5 x 64.0 x 30.0, fences at the max 95.5 x 66.0 + 0.5 mm. Published: 93.5 x 64 x 30 (several seller listings, 'allow 0-1 cm measuring error'); no official figure
+PASS  one valid solid  
+PASS  same footprint and seat height as the v3 board tray it replaces  (x -2.2..116.1, y -2.2..112.2, floor underside z 34.5)
+PASS  sits on the UPS tray's walls and posts (no gap, no overlap)  
+PASS  3 joint holes line up with the UPS tray's M3 posts (same 3 x M3 x 12 countersunk screws)  
+PASS  nothing stands above the floor inside the case pocket (screw heads countersunk flush)  
+PASS  max case (95.5 x 66.0 x 30.0) on 1 mm foam tape fits with no collision  
+PASS  nominal case (93.5 x 64.0 x 30.0) on 1 mm foam tape fits with no collision  
+PASS  max-size case is boxed in: right fence, rear corners, left stubs, front fence  (0.5 mm play)
+INFO  play on a nominal-size case  2.5 mm lengthwise, 2.5 mm sideways: push it into the rear-right corner and stick it down with the foam tape
+PASS  side-port plugs (USB-C, 2 x micro-HDMI) have 32 mm of open space to the left of the case  (USB-C power at y 76, micro-HDMI 0 at y 62, micro-HDMI 1 at y 48)
+PASS  USB / Ethernet plugs at the rear: 30 mm of open space behind the case end  
+PASS  12 V lead hole opens into the free space under the tray's front overhang  (hole 12 x 8 at x 20, y 100; UPS tray ends at y 89.2)
+PASS  STL: watertight, flat on the bed, fits the 256 mm bed  (118.3 x 114.4 x 12.4 mm, 12571 mm2 first layer)
+INFO  filament  about 42 g PETG (3 walls, 20 % infill)
+PASS  at least 10 mm of air over the case for its top fan (B1 dock's underside is above it)  (case top z 67.9 with the foam tape, dock underside z 81.3: 13.4 mm; v3 lid top was 65.8. The rack check loads the case in the lid's place)
+
+== Coolers on the bare Pi 5 in the unchanged v3 case (plates 10 + 11 as they are) ==
+INFO  room above the board under the v3 lid  19.9 mm (lid underside z 63.4, board top z 43.5)
+PASS  Raspberry Pi Active Cooler: 13.7 mm (official drawing) + up to 2.8 mm under its base fits under the lid  (3.4 mm to spare at worst)
+PASS  Active Cooler (63.5 x 42.5, inside the Pi's 85 x 56 outline) can't reach the adapter (F)  (adapter ends at x 55.0, the Pi starts at x 56.9)
+PASS  Active Cooler fan intake sits under the lid's hex grill  (fan centre ~x 91, y 40; still inside if it is up to 10 mm off)
+INFO  Argon THRML 30 mm cooler on the bare Pi  fits the same way if its fan top is no more than 17.0 mm above the board (2.9 mm left under the lid). Argon publish no height (one listing gives 9.6 mm for the heatsink), so measure it before fitting the lid.
+
+29 PASS, 0 FAIL

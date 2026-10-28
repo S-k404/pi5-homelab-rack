@@ -1,0 +1,60 @@
+[Rack]
+  PASS       Faceplate W x H x T                                         254.0 x 88.10 x 4.0   -- 10-inch, 2U = 88.9 - 0.8 mm
+  PASS       M6 ear slots                                                pitch 236.525 mm, z 6.35 / 82.55 mm, 10 x 6.5 mm   -- probed edges of all 4 slots
+  PASS       Shelf half-width from centre                                103.0 mm (rail clearance limit ~111)   -- fits between 10-inch rails
+  PASS       Headroom: lid top -> panel top                              14.3 mm   -- unit above starts 0.8 mm higher still
+
+[Fit]
+  PASS       Interference, all 45 pairs                                  none
+  PASS       v3 feet seated on socket floors (z = -5.00)                 yes   -- 0.4 mm radial clearance, 1.5 mm deep
+  PASS       Faceplate to case back gap                                  0.30 mm
+  PASS       UPS top to board-tray floor (plenum)                        5.50 mm
+
+[Front]
+  PASS       Power-button path (faceplate + v3 tube)                     open end-to-end   -- press with a ~25 mm pin/paperclip (tube is 17 mm + 2.5 mm to the button)
+  PASS       UPS DC-IN window visible through faceplate                  100% open   -- jack is 31.9 mm behind the panel face; barrel plug + cable exit through it
+  PASS       v3 back-wall vents unobstructed                             100% of slot area open   -- 11 slots matched 1:1
+
+[Rear]
+  PASS       Pi Ethernet                                                 wall cut-out 100% open, approach 100% clear
+  PASS       Pi USB 1                                                    wall cut-out 100% open, approach 100% clear
+  PASS       Pi USB 2                                                    wall cut-out 100% open, approach 100% clear
+  PASS       Adapter HDMI                                                wall cut-out 100% open, approach 100% clear
+  PASS       Adapter RJ45 PoE                                            wall cut-out 100% open, approach 100% clear
+  PASS       UPS switch/LED/OUT                                          wall cut-out 100% open, approach 100% clear
+  PASS       Pi Ethernet RJ45 body -> case wall                          1.78 mm   -- my port model; v3 author also checked against the official Pi 5 STEP
+  PASS       Pi USB3 stack body -> case wall                             3.01 mm   -- my port model; v3 author also checked against the official Pi 5 STEP
+  PASS       Pi USB2 stack body -> case wall                             3.01 mm   -- my port model; v3 author also checked against the official Pi 5 STEP
+
+[Power]
+  PASS       12 V route: UPS OUT -> back window -> pocket -> floor hole  pocket 100% clear, floor hole open   -- shelf lip top z=2, below window bottom z=5
+  UNVERIFIED Screw terminal location/height                              inside board tray, rear (near cable-tie anchors)   -- adapter component layout is not in my files - v3 used Waveshare's drawing; check by eye
+  PASS       12 V current budget (Pi 5 max 25 W @ 90% + adapter)         ~2.5 A of 3.0 A   -- UPS input brick must be 12 V >= 3 A (Cuzor recommends >= 1.5 A; Pi load needs more)
+  WARN       Two power sources                                           UPS -> terminal AND PoE both possible   -- use one: feed the terminal from the UPS and use a non-PoE switch port (or PoE without the UPS)
+
+[HAT]
+  INFO       Lid underside above Pi PCB top                              19.9 mm   -- PCB taken as 1.6 mm
+  PASS       Armor Lite top -> lid                                       6.6 mm (my model) / 3.7 mm (v3 worst case 16.5 mm cooler)
+  FAIL       HAT over the Armor Lite (17 mm standoffs, 2.5 mm parts)     HAT top 64.6 vs lid 63.4   -- no HAT fits v3; needs a lid riser of >= 5 mm (rack headroom allows up to 14 mm)
+
+[Air]
+  PASS       Fan centre under lid hex grill                              fan at x 84.9, y 58.0
+  PASS       Lid grill open area                                         99 hex x 23.4 = 23.2 cm²   -- 30 mm fan disc is 7.1 cm²
+  PASS       Plenum pocket side inlets                                   100% clear
+  PASS       Shelf vents under UPS-channel floor slots                   9/11 slots open below   -- the rest still breathe through the 1.5 mm foot gap
+  PASS       Air above lid when racked                                   15.1 mm to next unit
+  PASS       Case left-wall vents: 10 mm channel to the HDMI tower       100% clear   -- UPS-tray inlets, plenum slots and board-tray side vents
+
+[HDMI ext]
+  PASS       Cable exit in board-tray left wall                          open, 12 x 10 mm (y 38-50, z 47-57)   -- passes the micro plug (11.3 x 6.6) + cable
+  PASS       Socket face position                                        y -0.70 (case port face -2.2, behind a 1.5 mm lip)   -- in the same rear plane as the other ports
+  PASS       Socket height vs adapter HDMI                               centre z 47.6 vs adapter HDMI z 47.1   -- both HDMI outputs sit in one row
+  PASS       Plug opening in front of the socket                         100% open (20.6 x 9.6 mm)
+  PASS       Tower cable window -> case cable exit                       100% open path
+  PASS       Cable length needed                                         ~105 mm of 200-220 mm   -- free micro-HDMI -> case exit -> 90 deg turn in tower chamber -> housing
+  UNVERIFIED Free micro-HDMI reachable with adapter fitted               needs a notch in the adapter at that port   -- adapter edge sits ~1 mm from the Pi edge; check the plug actually seats before printing
+
+[Print]
+  PASS       Faceplate one-piece                                         254 x 88 mm footprint   -- bed 256 mm (254 mm part: 256 mm beds only)
+  PASS       Faceplate halves                                            127 x 88 mm footprint   -- bed 220 mm
+  PASS       Shelf                                                       170 x 117 mm footprint   -- bed 220 mm

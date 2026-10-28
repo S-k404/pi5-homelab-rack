@@ -1,0 +1,12 @@
+Plate11A (PETG, 0.20 mm)
+  PASS  Pi5_ArgonNEO5_tray.stl: x 8.0-126.3, y 10.0-124.4, 12.4 tall, on the bed
+  PASS  Rack_Faceplate_2U_10in.stl: x 1.0-255.0, y 140.0-228.1, 4.0 tall, on the bed
+  PASS  gap between the parts 15.6 mm
+  PASS  Plate11A.3mf written and read back: same 2 parts, same places, same volumes
+Plate11B (PETG, 0.20 mm)
+  PASS  Pi5_ArgonPoly5_tray.stl: x 8.0-126.3, y 10.0-124.4, 12.4 tall, on the bed
+  PASS  Rack_Faceplate_2U_10in.stl: x 1.0-255.0, y 140.0-228.1, 4.0 tall, on the bed
+  PASS  gap between the parts 15.6 mm
+  PASS  Plate11B.3mf written and read back: same 2 parts, same places, same volumes
+
+8 PASS, 0 FAIL

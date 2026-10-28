@@ -2,7 +2,7 @@
 
 > **Read first (ultrareview, 28 Oct):** these assemblies are for *looking at* the build in Onshape; print only from `../../01_PRINT_FILES/`.
 > - **Unit 4 in the assemblies is the custom UCG shelf (plate 12), which the build doesn't use.** The build uses the ready-made Printables 942972 mount (`../8_UCG_mount_12-ALT2_Printables-942972/`), which only exists as a mesh, so it isn't in these STEP files.
-> - The master assemblies (here and the copies in the project root) were made before the 28 Oct fix to the adapter (F) holder base (HDMI plug relief in its rear wall). `INDIVIDUAL_STEP_PARTS/06_PI5_Waveshare_F_holder_base.step` is the fixed one.
+> - The master assemblies, the compound and the ZIP (here and the copies in the project root) were **regenerated on 28 Oct, after the ultrareview**: they have the shelf with the gusset arch, the **clean faceplate** (no DC-IN window, no notch) and the adapter (F) holder base with the HDMI plug relief. `build_onshape_project.py` rebuilds them (CadQuery); each file was re-imported and its shelf, faceplate and holder base matched to the current STEPs by volume.
 > - The Slim Cargo assembly shows the 12 V brick cradle inside a 140 mm rack, but it doesn't fit there (it's 187 mm long): see `../../03_CHECKS/VERIFICATION_slim-cargo_fit_28Oct.txt`.
 > - The fastener table at the end was wrong (38 M5 / 8 cap screws / M2.5 × 6): corrected below.
 
@@ -19,7 +19,7 @@ Everything is provided in **standard AP214 STEP format (`.step` / `.stp`)**, whi
 | **`Pi5_HomeLab_9U_ALL_IN_ONE_COMBINED.step`** | **Master Combined 2-in-1** | **200 mm & 140 mm** | **Both Racks Side-by-Side in One File**: Standard 200 mm Desktop Edition on the left + Slim Cargo 140 mm Travel Edition on the right. Both with all 4 units loaded. Immediate visual comparison in Onshape! | [Download Combined STEP](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/Pi5_HomeLab_9U_ALL_IN_ONE_COMBINED.step) |
 | **`Pi5_HomeLab_9U_Complete_ASSEMBLY.step`** | **Master STEP Assembly** | **200 mm** | **Complete Standard Homelab**: Full 9U rack frame (DeskPi T0 aesthetic) + all 4 units loaded in place (1U UCG-Ultra, 3U 7" Screen, 3U NIIMBOT B1 Dock, 2U Pi 5 + Cuzor UPS + 12V Brick Cradle + Spacers). | [Download STEP](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/Pi5_HomeLab_9U_Complete_ASSEMBLY.step) |
 | **`SlimCargo_HomeLab_9U_Complete_ASSEMBLY.step`** | **Master STEP Assembly** | **140 mm** | **Complete Slim Cargo Edition**: 140 mm depth reinforced travel frame + low-profile flush handles + all 4 units fully verified inside the suitcase travel envelope. | [Download STEP](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/SlimCargo_HomeLab_9U_Complete_ASSEMBLY.step) |
-| **`Pi5_HomeLab_9U_SingleBody_Compound_STUDIO.step`** | **Multi-Body Part Studio Compound** | **200 mm** | **Single Part Studio Model**: All 49 solid bodies united in place as a compound solid. Opens directly in an Onshape Part Studio tab without needing assembly mates! | [Download Compound STEP](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/Pi5_HomeLab_9U_SingleBody_Compound_STUDIO.step) |
+| **`Pi5_HomeLab_9U_SingleBody_Compound_STUDIO.step`** | **Multi-Body Part Studio Compound** | **200 mm** | **Single Part Studio Model**: All 50 solid bodies united in place as a compound solid. Opens directly in an Onshape Part Studio tab without needing assembly mates! | [Download Compound STEP](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/Pi5_HomeLab_9U_SingleBody_Compound_STUDIO.step) |
 | **`Pi5_HomeLab_9U_Onshape_Project_Package.zip`** | **Complete Project ZIP** | — | **One-Click Onshape Import**: Zip archive containing all master assemblies, 30 individual component STEPs, and full engineering schematics. | [Download ZIP](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/Pi5_HomeLab_9U_Onshape_Project_Package.zip) |
 
 ---
@@ -121,7 +121,7 @@ The Master Assembly contains the following solid bodies, color-coded and named:
 | | `NIIMBOT_B1_Button` | Silver Grey (`#9AA0A6`) | Power / feed control button. |
 | | `NIIMBOT_B1_LED` | Green (`#34D399`) | Status LED indicator. |
 | **Unit 1 (2U Base)** | `Pi5_Rack_Shelf` | Dark Slate (`#333333`) | 2U main shelf with alignment pins for UPS & Argon trays. |
-| | `Pi5_Faceplate_2U_DC_notch` | Dark Slate (`#333333`) | 2U faceplate with recessed window & DC power lead notch. |
+| | `Pi5_Faceplate_2U_clean` | Dark Slate (`#333333`) | 2U faceplate, clean front: no DC-IN window, no notch (the brick's 12 V lead stays behind it). |
 | | `Pi5_UPS_Tray` | Dark Slate (`#333333`) | Retention tray for Cuzor 12V Mini UPS. |
 | | `Cuzor_MiniUPS_Pro_12V3A` | Blue Slate (`#1E293B`) | Official 3D model of Cuzor 12V 3A Mini UPS Pro. |
 | | `Pi5_ArgonPoly5_Tray` | Dark Slate (`#333333`) | Plate 11B tray for Argon Poly+ 5 case with foam tape datum. |

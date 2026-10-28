@@ -104,6 +104,31 @@ for f in sorted(os.listdir(PARTS_DIR)):
     slim_empty.objects.link(obj)
     slim_frame_objs.append(obj)
 
+# Replace stale DC-notch faceplate with the 28 Oct clean faceplate
+CLEAN_FP_STL = os.path.abspath("04_DESIGN_SOURCE/4_Pi_Unit_2U/STL_for_printing/Rack_Faceplate_2U_10in_clean.stl")
+fp_old = bpy.data.objects.get("Pi faceplate")
+if fp_old:
+    for c in list(fp_old.users_collection):
+        c.objects.unlink(fp_old)
+    bpy.data.objects.remove(fp_old, do_unlink=True)
+
+bpy.ops.wm.stl_import(filepath=CLEAN_FP_STL)
+fp_new = bpy.context.selected_objects[0]
+fp_new.name = "Pi faceplate"
+M_STL_TO_BLENDER = Matrix((
+    (-0.001, 0, 0, 0.1270),
+    (0, 0, 0.001, -0.1404),
+    (0, 0.001, 0, 0.0200),
+    (0, 0, 0, 1.0)
+))
+fp_new.matrix_world = M_STL_TO_BLENDER
+fp_new.data.shade_smooth()
+mat_petg_black = bpy.data.materials.get("PETG black") or mat_black
+fp_new.data.materials.append(mat_petg_black)
+for c in list(fp_new.users_collection):
+    c.objects.unlink(fp_new)
+old_rack.objects.link(fp_new)
+
 # Add all unit objects from old_rack into slim_loaded
 for o in old_rack.objects:
     # Skip old 200 mm rack frame parts

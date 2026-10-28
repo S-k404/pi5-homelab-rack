@@ -7,6 +7,29 @@ This is the **one** to-do list. `START_HERE.md` points here; the print list is `
 
 ---
 
+## Progress (28 Oct 2026, evening)
+
+**Done and committed** (7 commits on `feature/b1-dock`; text and binaries are in separate commits):
+- [x] Review docs, new checks and this list (`ULTRAREVIEW/`, `03_CHECKS/`)
+- [x] Print files and renders regenerated for the clean faceplate, the shelf with the arch, and the holder base with the HDMI relief
+- [x] Onshape masters, compound and ZIP regenerated and checked against the current STEPs (`04_DESIGN_SOURCE/ONSHAPE_PROJECT/`)
+- [x] Slim Cargo: seven P1S plates (`SlimPlate01–07`), overhang check and filament estimate (frame ≈ 1.24 kg PETG). Its README's "no supports, all overhangs ≤ 45°" and "445 mm tall" were wrong and are corrected
+
+**Left to do at the computer (no hardware needed):**
+- [x] **Engineering schematic** (`04_DESIGN_SOURCE/10_Slim_Cargo_Rack_140mm/source/make_schematic.py`, view A). Fixed constants and labels to match CAD models (cap 30 mm, handle rise 45 mm, 450.1 mm plinth-to-cap, 495.1 mm total with handles; Slim rack 458.1 mm overall). Shifted rack right (`RX0 = 230`) and rotated vertical dimension labels 90° so all labels fit cleanly inside View A panel `(100, 180)-(1050, 1920)` without clipping. Updated stale text ("clean faceplate (no window, no notch)"; "18 mm handles" in View B). Regenerated both schematic PNGs (`02_RENDERS/` and `02_RENDERS/SLIM_CARGO_PROTOTYPE/`) and copied both to `04_DESIGN_SOURCE/ONSHAPE_PROJECT/`.
+- [x] **Slim Cargo renders** (`02_RENDERS/SLIM_CARGO_PROTOTYPE/`). Replaced old DC-notch faceplate in scene with `Rack_Faceplate_2U_10in_clean.stl` via `pi_to_rack()` transformation. Re-rendered all 4 stills (front/isometric, rear, side profile, empty isometric), rebuilt `SLIM_CARGO_SHEET.png`, and re-rendered 360° turntable animation (`.mp4` and `.gif`).
+- [ ] Onshape: unit 4 is still the unused custom UCG shelf as a stand-in (the Printables 942972 mount is mesh-only).
+
+**Needs a decision from you:**
+- [ ] Merge `feature/b1-dock` into `main`? It isn't merged, and there's no remote.
+- [ ] Repo size: `.git` is ~520 MB, so `/ultrareview` can't run on it. Fixing that means untracking the STL/STEP/PNG/3MF files (the `.gitignore` already lists them) or rewriting history; neither is done.
+
+**Needs hardware:** everything in §2 (measure and test), §3 (print), §4 (build) and §6 (first power-up). Nothing physical has been tested, and the Slim Cargo rack has never been printed.
+
+**Setup note:** the CadQuery scripts need a venv (no system cadquery): `uv venv --python 3.14 <dir>` then `uv pip install --python <dir>/bin/python cadquery trimesh scipy matplotlib shapely pillow networkx rtree mapbox-earcut`; run scripts with `-I`.
+
+---
+
 ## 0. Before you check out anything
 - [ ] **Robu print cart** (17 lines, ₹6,702 on 27 Oct):
   - replace `Rack_Faceplate_2U_10in` with **`C2_Pi_Faceplate_2U_clean`** (28 Oct: no DC-IN window, no notch)

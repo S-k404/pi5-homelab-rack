@@ -57,7 +57,7 @@ def draw_dim_h(x0, x1, y, label, color=DIM_COLOR, above=True):
     d.rectangle([( (x0+x1)/2 - lw/2 - 4, ty), ((x0+x1)/2 + lw/2 + 4, ty + 18)], fill=BG_COLOR)
     d.text(((x0 + x1)/2 - lw/2, ty), label, font=font_dim, fill=color)
 
-def draw_dim_v(x, y0, y1, label, color=DIM_COLOR, left=True):
+def draw_dim_v(x, y0, y1, label, color=DIM_COLOR, left=True, rotate=False):
     d.line([(x, y0), (x, y1)], fill=color, width=2)
     d.line([(x - 6, y0), (x + 6, y0)], fill=color, width=2)
     d.line([(x - 6, y1), (x + 6, y1)], fill=color, width=2)
@@ -65,9 +65,22 @@ def draw_dim_v(x, y0, y1, label, color=DIM_COLOR, left=True):
     d.polygon([(x, y1), (x - 3, y1 - 8), (x + 3, y1 - 8)], fill=color)
     bb = font_dim.getbbox(label)
     lw = bb[2] - bb[0]
-    tx = x - lw - 14 if left else x + 10
-    d.rectangle([(tx - 2, (y0+y1)/2 - 10), (tx + lw + 2, (y0+y1)/2 + 10)], fill=BG_COLOR)
-    d.text((tx, (y0 + y1)/2 - 9), label, font=font_dim, fill=color)
+    lh = bb[3] - bb[1]
+    if rotate:
+        pad_w, pad_h = 6, 4
+        txt_im = Image.new("RGBA", (lw + pad_w * 2, lh + pad_h * 2), (255, 255, 255, 255))
+        td = ImageDraw.Draw(txt_im)
+        td.text((pad_w - bb[0], pad_h - bb[1]), label, font=font_dim, fill=color)
+        rot_im = txt_im.rotate(90, expand=True)
+        rw, rh = rot_im.size
+        mid_y = int((y0 + y1) / 2)
+        rx = int(x - rw / 2)
+        ry = int(mid_y - rh / 2)
+        im.paste(rot_im, (rx, ry))
+    else:
+        tx = x - lw - 14 if left else x + 8
+        d.rectangle([(tx - 2, (y0+y1)/2 - 10), (tx + lw + 2, (y0+y1)/2 + 10)], fill=BG_COLOR)
+        d.text((tx, (y0 + y1)/2 - 9), label, font=font_dim, fill=color)
 
 # ---------------- SECTION 1: FRONT ELEVATION SCHEMATIC ----------------
 # Box at (120, 200) to (1000, 1850)
@@ -80,7 +93,7 @@ d.text((130, 242), "Standard 10\" EIA-310 Spec: 236.525 mm (9.3125\") Mounting H
 # Overall scale: rack 280 mm wide -> 560 px (scale = 2.0 px/mm)
 # Total height: ~445 mm -> ~890 px
 SCALE = 2.4
-RX0 = 240
+RX0 = 230
 RY0 = 400
 RW = int(280 * SCALE)      # 672 px
 # Height components
@@ -89,15 +102,15 @@ H_2U = int(88.9 * SCALE)   # 213 px
 H_3U_B1 = int(133.35 * SCALE) # 320 px
 H_3U_DISP = int(133.35 * SCALE) # 320 px
 H_1U_UCG = int(44.45 * SCALE) # 107 px
-H_CAP = int(25 * SCALE)
-H_HANDLE = int(20 * SCALE)
+H_CAP = int(30 * SCALE)
+H_HANDLE = int(45 * SCALE)
 
 TOTAL_H = H_PLINTH + H_2U + H_3U_B1 + H_3U_DISP + H_1U_UCG + H_CAP
 BASE_Y = RY0 + TOTAL_H     # Bottom desk line
 
 # Desk line
 d.line([(RX0 - 60, BASE_Y), (RX0 + RW + 60, BASE_Y)], fill=(100, 116, 139), width=3)
-d.text((RX0 + RW + 70, BASE_Y - 10), "DESK SURFACE (Z=0)", font=font_small, fill=TEXT_MUTED)
+d.text((RX0 + RW - 160, BASE_Y + 10), "DESK SURFACE (Z=0)", font=font_small, fill=TEXT_MUTED)
 
 # Outer frame outline
 d.rectangle([(RX0, BASE_Y - TOTAL_H), (RX0 + RW, BASE_Y)], fill=PANEL_BG, outline=LINE_COLOR, width=3)
@@ -109,8 +122,9 @@ d.text((RX0 + RW/2 - 50, BASE_Y - H_PLINTH/2 - 8), "PLINTH (20 mm)", font=font_l
 # Unit 1: 2U Pi Unit
 U1_Y0 = BASE_Y - H_PLINTH - H_2U
 d.rectangle([(RX0 + int(13*SCALE), U1_Y0), (RX0 + RW - int(13*SCALE), U1_Y0 + H_2U)], fill=(30, 41, 59), outline=LINE_COLOR, width=2)
-d.text((RX0 + 80, U1_Y0 + H_2U/2 - 18), "2U: RASPBERRY PI 5 + CUZOR MINI UPS PRO", font=font_lbl, fill=(255, 255, 255))
-d.text((RX0 + 80, U1_Y0 + H_2U/2 + 6), "Argon Poly+ 5 Case · Waveshare Adapter (F) · 12V Brick Cradle · DC-Notch Faceplate", font=font_small, fill=(148, 163, 184))
+d.text((RX0 + 80, U1_Y0 + H_2U/2 - 20), "2U: RASPBERRY PI 5 + CUZOR MINI UPS PRO", font=font_lbl, fill=(255, 255, 255))
+d.text((RX0 + 80, U1_Y0 + H_2U/2 + 2), "Argon Poly+ 5 Case · Waveshare Adapter (F) · 12V Brick Cradle", font=font_small, fill=(148, 163, 184))
+d.text((RX0 + 80, U1_Y0 + H_2U/2 + 22), "clean faceplate (no window, no notch)", font=font_small, fill=(148, 163, 184))
 
 # Unit 2: 3U NIIMBOT B1 Dock
 U2_Y0 = U1_Y0 - H_3U_B1
@@ -145,12 +159,12 @@ draw_dim_h(RX0, RX0 + RW, BASE_Y + 40, "280.0 mm OVERALL RACK WIDTH")
 draw_dim_h(RX0 + int(13*SCALE), RX0 + RW - int(13*SCALE), U1_Y0 - 15, "254.0 mm (10.0\") FACEPLATE WIDTH")
 draw_dim_h(RX0 + int(21.7*SCALE), RX0 + RW - int(21.7*SCALE), U1_Y0 + 25, "236.5 mm (9.3125\") EIA HOLE PITCH")
 
-draw_dim_v(RX0 - 35, BASE_Y, BASE_Y - TOTAL_H, "442.0 mm (FRAME HEIGHT)")
-draw_dim_v(RX0 - 75, BASE_Y, CAP_Y0 - H_HANDLE, "462.0 mm (TOTAL WITH HANDLES)")
-draw_dim_v(RX0 + RW + 25, U1_Y0, U1_Y0 + H_2U, "2U (88.9 mm)", left=False)
-draw_dim_v(RX0 + RW + 25, U2_Y0, U2_Y0 + H_3U_B1, "3U (133.4 mm)", left=False)
-draw_dim_v(RX0 + RW + 25, U3_Y0, U3_Y0 + H_3U_DISP, "3U (133.4 mm)", left=False)
-draw_dim_v(RX0 + RW + 25, U4_Y0, U4_Y0 + H_1U_UCG, "1U (44.5 mm)", left=False)
+draw_dim_v(RX0 - 35, BASE_Y, BASE_Y - TOTAL_H, "450.1 mm (FRAME HEIGHT)", rotate=True)
+draw_dim_v(RX0 - 75, BASE_Y, CAP_Y0 - H_HANDLE, "495.1 mm (TOTAL WITH HANDLES)", rotate=True)
+draw_dim_v(RX0 + RW + 16, U1_Y0, U1_Y0 + H_2U, "2U (88.9 mm)", left=False)
+draw_dim_v(RX0 + RW + 16, U2_Y0, U2_Y0 + H_3U_B1, "3U (133.4 mm)", left=False)
+draw_dim_v(RX0 + RW + 16, U3_Y0, U3_Y0 + H_3U_DISP, "3U (133.4 mm)", left=False)
+draw_dim_v(RX0 + RW + 16, U4_Y0, U4_Y0 + H_1U_UCG, "1U (44.5 mm)", left=False)
 
 # ---------------- SECTION 2: SIDE PROFILE DEPTH COMPARISON ----------------
 d.rectangle([(1100, 180), (2740, 1020)], fill=(255, 255, 255), outline=(203, 213, 225), width=2)
@@ -174,7 +188,7 @@ SC_X0 = 1800
 SC_W = int(140 * 2.2)     # 308 px
 d.rectangle([(SC_X0, SD_Y0), (SC_X0 + SC_W, SD_Y0 + SD_H)], fill=(255, 241, 242), outline=HIGHLIGHT_COLOR, width=3)
 d.text((SC_X0 + 20, SD_Y0 + 20), "SLIM CARGO PROTOTYPE (NEW)", font=font_lbl, fill=HIGHLIGHT_COLOR)
-d.text((SC_X0 + 20, SD_Y0 + 50), "• Depth: 140.0 mm (-30% Slimmer!)\n• Fits inside clamshell suitcase!\n• Wall: 2.4 mm PETG / ABS\n• Low-profile 16 mm handles\n• Diagonal anti-racking trusses", font=font_body, fill=(159, 18, 57))
+d.text((SC_X0 + 20, SD_Y0 + 50), "• Depth: 140.0 mm (-30% Slimmer!)\n• Fits inside clamshell suitcase!\n• Wall: 2.4 mm PETG / ABS\n• Low-profile 18 mm handles\n• Diagonal anti-racking trusses", font=font_body, fill=(159, 18, 57))
 draw_dim_h(SC_X0, SC_X0 + SC_W, SD_Y0 + SD_H + 30, "140.0 mm (SLIM CARGO DEPTH)", color=HIGHLIGHT_COLOR)
 
 # Delta callout

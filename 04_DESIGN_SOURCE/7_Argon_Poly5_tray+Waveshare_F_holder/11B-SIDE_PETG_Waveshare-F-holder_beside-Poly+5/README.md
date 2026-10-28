@@ -1,5 +1,7 @@
 # Waveshare adapter (F) holder: sits beside the Argon Poly+ 5 (27 Oct 2026)
 
+> **Updated 28 Oct (ultrareview).** These are the 27 Oct notes, written before the build was decided. The current plan is in `01_PRINT_FILES/README.md`: Poly+ 5 **with** this holder, after a **fit test** (do the adapter's own plugs reach the Pi through the case's side cut-outs?). If they do, the adapter's HDMI-A and 12 V terminal are used. **28 Oct change:** the holder base's rear wall is cut back 23 mm wide round the HDMI jack (`HDMI_RELIEF_W` in `source/waveshare_f_holder.py`): the old 18.6 mm notch stopped a 20–22 mm HDMI plug moulding 2.4 mm short. The holder check now tests the plugs: 26 PASS (`checks/VERIFICATION_waveshare_f_holder.txt`).
+
 ![Holder beside the Poly+5](Holder_iso_beside_Poly5.png)
 
 A black PETG box with a grooved lid and a round louvred vent window, styled after the Poly+ 5. It holds the **Waveshare Pi5 Connector Adapter (F)** on the free left part of the Argon tray (plate 11B), next to the case. Nothing else in `PRINT_THIS` changes: plate 10, the Poly+ 5 tray, the faceplate and the shelf are as they were.
@@ -9,7 +11,7 @@ A black PETG box with a grooved lid and a round louvred vent window, styled afte
 | Parts | `Waveshare_F_holder_base.stl` + `Waveshare_F_holder_lid.stl`, 1 each |
 | Size | 56 × 102.6 mm in plan, 28.8 mm tall once seated (top at z 65.7; the B1 dock's underside is at 81.3) |
 | Print | PETG, 0.20 mm, 3 walls, 20% gyroid, **no supports**, ≈ 19 g + 12 g. See `SETTINGS.txt` |
-| Checks | `../checks/VERIFICATION_waveshare_f_holder.txt`: 25 PASS, 0 FAIL |
+| Checks | `../checks/VERIFICATION_waveshare_f_holder.txt`: 26 PASS, 0 FAIL (28 Oct) |
 | Source | `../source/waveshare_f_holder.py` (CadQuery), `../source/verify_waveshare_f_holder.py` |
 | STEP | `../STEP_for_Onshape/Waveshare_F_holder_*.step`, in the v3 assembly frame |
 

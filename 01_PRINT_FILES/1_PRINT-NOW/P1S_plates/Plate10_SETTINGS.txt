@@ -9,3 +9,4 @@ Textured PEI no glue, enclosure CLOSED.
 On this plate:
   - Rack_Shelf_pinned x1   (../10_Pi_Rack_Shelf_pinned__x1__PETG.stl)
 Hardware: 6 x M3 heat-set inserts (dia 4 hole) in its two front posts, for the faceplate screws.
+28 Oct: the right post's gusset has a 9 x 7 mm arch at its foot for the brick's 12 V lead (no supports needed: 3 mm round top).

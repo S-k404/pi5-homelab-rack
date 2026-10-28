@@ -1,0 +1,22 @@
+Slim Cargo 140 mm rack with the 28 Oct build in it: checks (ultrareview, 28 Oct 2026)
+Rack frame: x across, y up from the base-bar tops, z back from the front rails, mm. The units, devices, plugs and the
+12 V cables are the standard build's (export_final.py); the slim rack parts are its in_rack_coords STLs.
+
+PASS  slim rack parts are watertight solids  (15 parts; rack depth 140.0)
+
+== Depth: what sticks out behind a 140 mm rack ==
+PASS  dock: deepest part ends at z 92.0  (B1 dock body)
+PASS  screen: deepest part ends at z 30.0  (Screen module body (C type))
+PASS  ucg: deepest part ends at z 133.0  (UCG-Ultra mount, 3 keystones (Printables 942972))
+FAIL  Pi unit: deepest part ends at z 201.4  (12 V brick cradle (plate 13): 61.4 mm behind the rack)
+INFO  everything past z 140 (the mains plug and cord leave the back in the standard rack too)  (Mains cord to z 277; Mains plug (C13) to z 236; 12 V brick cradle (plate 13) to z 201; 12 V 5 A brick (Robu, 110 x 50 x 30) to z 198; Brick spacer, 8 mm to z 196)
+
+== Collisions with the slim rack parts ==
+FAIL  no unit, device or cable runs into the slim rack  (12 V brick cradle (plate 13) into bar_1: 1754 mm3; 12 V brick cradle (plate 13) into bar_2: 947 mm3)
+
+== What the Pi unit stands on ==
+INFO  slim base bars at z  (1..14, 63..77, 126..139; the standard rack's are 1..12, 80..92, 188..199: the Pi shelf rests on the front and middle ones, the brick cradle straddles the middle and rear)
+PASS  Pi shelf stands on at least two base bars  (on 2: z 1..14, z 63..77)
+FAIL  brick cradle stands on two bars and fits the depth  (on 0: none; it is 187 mm long and ends at z 201)
+
+5 PASS, 3 FAIL, 0 WARN

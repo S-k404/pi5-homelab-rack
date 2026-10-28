@@ -1,5 +1,11 @@
 # Pi 5 HomeLab 10-Inch 9U Mini Rack · Master Onshape Project
 
+> **Read first (ultrareview, 28 Oct):** these assemblies are for *looking at* the build in Onshape; print only from `../../01_PRINT_FILES/`.
+> - **Unit 4 in the assemblies is the custom UCG shelf (plate 12), which the build doesn't use.** The build uses the ready-made Printables 942972 mount (`../8_UCG_mount_12-ALT2_Printables-942972/`), which only exists as a mesh, so it isn't in these STEP files.
+> - The master assemblies (here and the copies in the project root) were made before the 28 Oct fix to the adapter (F) holder base (HDMI plug relief in its rear wall). `INDIVIDUAL_STEP_PARTS/06_PI5_Waveshare_F_holder_base.step` is the fixed one.
+> - The Slim Cargo assembly shows the 12 V brick cradle inside a 140 mm rack, but it doesn't fit there (it's 187 mm long): see `../../03_CHECKS/VERIFICATION_slim-cargo_fit_28Oct.txt`.
+> - The fastener table at the end was wrong (38 M5 / 8 cap screws / M2.5 × 6): corrected below.
+
 This directory contains the official **Onshape Master CAD Project** and **Technical Engineering Schematics** for the 10-inch 9U Homelab Mini Rack.
 
 Everything is provided in **standard AP214 STEP format (`.step` / `.stp`)**, which imports natively into **Onshape**, **SolidWorks**, **Autodesk Fusion 360**, **FreeCAD**, and **Rhino** with full solid geometry, individual named bodies, and color attribution preserved.
@@ -101,7 +107,7 @@ The Master Assembly contains the following solid bodies, color-coded and named:
 | | `Rack_bar_front` / `middle` / `rear` | Silver (`#C8CCD1`) | Base cross-bars providing structural lateral rigidity. |
 | | `Rack_cap_R` / `L` | Silver (`#C8CCD1`) | Ventilated top cap halves with interlocking dovetail seam. |
 | | `Rack_handle_R` / `L` | Silver (`#C8CCD1`) | Top grab handles for rack transport. |
-| **Unit 4 (1U Top)** | `UCG_Ultra_1U_Shelf` | Dark Slate (`#333333`) | 1U tray with display window and rear corner stops. |
+| **Unit 4 (1U Top)** | `UCG_Ultra_1U_Shelf` | Dark Slate (`#333333`) | The custom 1U shelf (plate 12), shown as a stand-in: **the build prints the Printables 942972 mount instead** (mesh only, not in this STEP). |
 | | `UniFi_UCG_Ultra_Gateway` | White (`#F0F2F5`) | Solid dummy model of UniFi UCG-Ultra ($141.8 \times 127.6 \times 30\text{ mm}$). |
 | **Unit 3 (3U)** | `Display7C_3U_Body` | Silver (`#C8CCD1`) | 3U front bezel and bracket for Waveshare 7" LCD (C type). |
 | | `Display7C_Ear_R` / `L` | Silver (`#C8CCD1`) | Rack mounting ears with EIA-310 slotted mounting holes. |
@@ -136,8 +142,13 @@ All rack frame connections use a **single standardized screw and insert size**:
 
 | Fastener | Quantity | Application |
 | :--- | :--- | :--- |
-| **M5 x 12 mm Button Head Socket Cap Screws** | **38 pcs** | Side module joints (18 pcs), cap attachment (8 pcs), handles (4 pcs), base bars (6 pcs), units to rack (16 pcs). |
-| **M5 Brass Heat-Set Threaded Inserts** ($\varnothing 6.4\text{ mm} \times 10\text{ mm}$) | **38 pcs** | Embedded into top ribs of lower modules, cap columns, base bar ends, and rail posts. |
-| **M2.5 x 6 mm Screws + Standoffs** | **8 pcs** | Waveshare Adapter (F) board mounting & Argon tray alignment. |
-| **M3 x 8 mm Screws** | **4 pcs** | Display 7C rear retention clips. |
+| **M5 × 12 mm button head (ISO 7380)** | **48 pcs** | Side module joints (18), cap (4), handles (4), base bars (6), unit ears (16: Pi faceplate, B1 dock, screen, UCG mount, 4 each). Corrected 28 Oct: it said 38 with 8 for the cap |
+| **M5 brass heat-set inserts** (Ø6.4 × 10 mm hole) | **48 pcs** | Joint ribs (18), 1U top ribs under the cap (4), cap columns for the handles (4), base bar ends (6), front rail holes the units use (16) |
+| **M5 washers** | **16 pcs** | Under the unit-ear screws |
+| **M3 heat-set inserts** (Ø4.0) | **18 pcs** | B1 dock ears (4), screen ears (4) + clip bosses (4), Pi shelf for the faceplate (6) |
+| **M3 × 8 mm countersunk** | **14 pcs** | Dock ears (4), screen ears (4), faceplate to shelf (6) |
+| **M3 × 8 mm button head** | **4 pcs** | Screen clips |
+| **M3 × 12 mm countersunk** | **3 pcs** | Poly+ 5 tray to the UPS tray (self-threading into 2.5 mm pilots) |
+| **M2.5 × 25 mm pan head** | **4 pcs** | Adapter (F) holder: lid + board onto the posts (self-threading into 2.1 mm pilots); only if the fit test passes. Corrected 28 Oct: it said 8 × M2.5 × 6 + standoffs |
+The full buy list is `../../PARTS_LIST.md`.
 

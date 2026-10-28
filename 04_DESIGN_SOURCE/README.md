@@ -21,12 +21,13 @@ For opening or importing the entire 9U rack and all components into **Onshape**,
 | `1_Rack_9U_T0-look/` | The 9U T0-look rack: side modules, cap, handles, base bars. `source/rack_t0.py`, `units.py`, `verify_rack_t0.py`, plus copies of the dock, screen and UCG scripts the rack check imports | 01–06 |
 | `2_B1_Dock_3U/` | B1 dock v5 + ears (`source/b1_dock.py`) | 07, 09 |
 | `3_Display_7in_3U/` | Display7C screen module + clips, Waveshare's STEP of the screen (its ears are the dock's) | 08, W4 |
-| `4_Pi_Unit_2U/` | Pi shelf, UPS tray, faceplate (plain) and the bare-Pi v3 board tray + lid; component STEPs (Pi 5, adapter (F), Cuzor UPS, …) | 10, C1 |
+| `4_Pi_Unit_2U/` | Pi shelf, UPS tray, faceplate (plain, and the 28 Oct **clean** one: `faceplate(dcin_window=False)`) and the bare-Pi v3 board tray + lid; component STEPs (Pi 5, adapter (F), Cuzor UPS, …). 28 Oct: the shelf's right gusset has an arch for the 12 V lead (`pi_rack.PASS_Y`), and `source/brick_lead_route.py` is the lead's route behind the faceplate | 10, C1, C2 |
 | `5_UCG-Ultra_1U/` | The custom UCG shelf (plate 12). **Not used:** the build uses the ready-made mount in folder 8 | — |
-| `6_Brick_Cradle_plate13+DC-notch_faceplate/` | 12 V brick cradle, spacers, and the faceplate with the 12 V lead notch (`source/brick_cradle.py`, `verify_brick.py`) | 11, 12, O1–O3, C2 |
-| `7_Argon_Poly5_tray+Waveshare_F_holder/` | Argon Poly+ 5 tray (and the NEO 5 alternative), the adapter (F) holder (`source/argon_tray.py`, `waveshare_f_holder.py` and their checks) | W1, W2, W3 |
+| `6_Brick_Cradle_plate13+DC-notch_faceplate/` | 12 V brick cradle, spacers, and the faceplate with the 12 V lead notch (`source/brick_cradle.py`, `verify_brick.py`). The notch faceplate was replaced on 28 Oct by the clean one in folder 4 | 11, 12, O1–O3 |
+| `7_Argon_Poly5_tray+Waveshare_F_holder/` | Argon Poly+ 5 tray (and the NEO 5 alternative), the adapter (F) holder (`source/argon_tray.py`, `waveshare_f_holder.py` and their checks). 28 Oct: the holder base got an HDMI plug relief | W1, W2, W3 |
 | `8_UCG_mount_12-ALT2_Printables-942972/` | The ready-made UCG-Ultra mount: the original download (`_downloads/`), the cleaned + trimmed STL, scripts and checks. For your own use only: don't re-share | 13 |
-| `9_scripts_28Oct/` | Scripts from 28 Oct: `build_print_files.py` (rebuilds `01_PRINT_FILES`, md5-checked), `verify_pi_power_path.py` (UPS OUT plug, lead route, side ports), `fp_check.py` (the Antigravity faceplate audit) | — |
+| `9_scripts_28Oct/` | Scripts from 28 Oct: `build_print_files.py` (rebuilds `01_PRINT_FILES`, md5-checked; W2/W3 now come from folder 7), `verify_pi_power_path.py` (UPS OUT plug, lead route, side ports; the original, restored), `fp_check.py` (the Antigravity faceplate audit), and from the ultrareview: `verify_wiring_all.py` + `scene_load.py` (every cable, on the scene from `02_RENDERS/source/export_final.py`), `verify_slim_fit.py` (the build in the Slim Cargo rack) | — |
+| `10_Slim_Cargo_Rack_140mm/` | The 140 mm travel frame (made by another tool, 28 Oct): `source/slim_rack.py`, STLs, STEPs, `make_schematic.py`. An alternative to folder 1; the brick cradle doesn't fit it | `5_SLIM_CARGO…` |
 
 ## Running things
 **Python:** use the CadQuery venv noted in the project memory.

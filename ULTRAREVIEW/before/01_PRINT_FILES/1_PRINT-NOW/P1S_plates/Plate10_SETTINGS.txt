@@ -1,0 +1,11 @@
+Plate 10 (PETG): Pi shelf
+=========================
+Status: print now
+Material: PETG black, about 96 g
+
+Settings (Bambu P1S): 0.20mm Standard @BBL P1S, Generic PETG, 3 walls, 20% gyroid, supports OFF,
+Textured PEI no glue, enclosure CLOSED.
+
+On this plate:
+  - Rack_Shelf_pinned x1   (../10_Pi_Rack_Shelf_pinned__x1__PETG.stl)
+Hardware: 6 x M3 heat-set inserts (dia 4 hole) in its two front posts, for the faceplate screws.

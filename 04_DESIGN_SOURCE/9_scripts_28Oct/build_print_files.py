@@ -1,6 +1,8 @@
 """Build PRINT_FILES_FINAL: every print file for the chosen build in one folder, sorted by what you can do with it.
 Build (28 Oct 2026): v7.2 rack + B1 dock v5 + Display7C + Argon Poly+ 5 tray + Waveshare adapter (F) holder
-+ DC-notch faceplate + Printables 942972 UCG mount (12-ALT2) + 12 V brick cradle (plate 13).
++ faceplate + Printables 942972 UCG mount (12-ALT2) + 12 V brick cradle (plate 13).
+28 Oct (ultrareview): the clean front. The shelf (10) has an arch in its right gusset for the brick's 12 V lead, and the
+faceplate (C2) has no DC-IN window and no notch: the lead stays behind it (04_DESIGN_SOURCE/4_Pi_Unit_2U/source/brick_lead_route.py).
 
   1_PRINT-NOW/            STLs + P1S plates you can order / print today
   2_CHECK-UPS-FIRST/      UPS tray + faceplate: check the real Cuzor's jack positions first
@@ -38,6 +40,9 @@ ALT = os.path.join(PT, "_superseded_and_alternatives", "alternatives_and_notes")
 ARG = os.path.join(ALT, "ALT_Pi-unit_Argon-cases+coolers")
 A2 = os.path.join(ALT, "ALT_Geerling-list_ready-made-prints", "12-ALT2_PETG_UCG-Ultra-1U-3-keystones_Printables-942972")
 P11S = os.path.join(PT, "_superseded_and_alternatives", "plate11_superseded")
+# 28 Oct (ultrareview): the adapter (F) holder comes from 04_DESIGN_SOURCE (its rear wall got an HDMI plug relief)
+HOLDER = os.path.join(ROOT, "04_DESIGN_SOURCE", "7_Argon_Poly5_tray+Waveshare_F_holder", "11B-SIDE_PETG_Waveshare-F-holder_beside-Poly+5")
+PIU = os.path.join(ROOT, "04_DESIGN_SOURCE", "4_Pi_Unit_2U", "STL_for_printing")      # 28 Oct: shelf with the gusset arch, clean faceplate
 BED = 256.0
 PETG = 1.27 / 1.24
 
@@ -52,15 +57,15 @@ PARTS = [
     ("07_Unit_Ear_3U__x4__PLA.stl", f"{PT}/04_PLA_3U-module+ears+clips/B1_Dock_3U_Ear_x2.stl", 4, "PLA", 3, .15, "now", "ears: 2 for the dock + 2 for the screen module", "ee7076f1"),
     ("08_Display7C_Clip__x4__PLA.stl", f"{PT}/04_PLA_3U-module+ears+clips/Display7C_Clip_x4.stl", 4, "PLA", 3, .30, "now", "screen-module corner clips", "42d40f6d"),
     ("09_B1_Dock_v5_Body__x1__PLA.stl", f"{PT}/08_PLA_B1-dock/B1_Dock_3U_Body.stl", 1, "PLA", 3, .15, "now", "B1 dock v5 (real B1 132 x 91 x 62)", "961c71e0"),
-    ("10_Pi_Rack_Shelf_pinned__x1__PETG.stl", f"{PT}/10_PETG_Pi-shelf+UPS-tray+shims/Rack_Shelf_pinned.stl", 1, "PETG", 3, .20, "now", "Pi unit: shelf", "9250148d"),
+    ("10_Pi_Rack_Shelf_pinned__x1__PETG.stl", f"{PIU}/Rack_Shelf_pinned.stl", 1, "PETG", 3, .20, "now", "Pi unit: shelf (gusset arch for the 12 V lead)", "8f1b7825"),
     ("11_Brick_Cradle_12V__x1__PETG.stl", f"{PT}/13_PETG_12V-brick-cradle/Brick_Cradle_12V.stl", 1, "PETG", 3, .20, "now", "12 V brick cradle, bay beside the Pi unit", "cc0e1ff4"),
     ("12_Brick_Spacer_8mm__x1__PETG.stl", f"{PT}/13_PETG_12V-brick-cradle/Brick_Spacer_8mm.stl", 1, "PETG", 3, .20, "now", "spacer for Robu's 30 mm thick brick", "d80bd582"),
     ("13_UCG-Ultra_1U_Mount_Printables-942972__x1__PETG.stl", f"{A2}/UCG-Ultra_1U_3-keystones_Printables-942972.stl", 1, "PETG", 3, .15, "now", "UCG-Ultra 1U mount, 3 keystones (ready-made, trimmed 0.8 mm)", "218ddda4"),
     ("C1_Pi_UPS_Tray_pinned__x1__PETG__CHECK-UPS-jacks.stl", f"{PT}/10_PETG_Pi-shelf+UPS-tray+shims/Pi5_UPS_v3_ups_tray_pinned.stl", 1, "PETG", 3, .20, "check", "Pi unit: Cuzor UPS tray", "b181d5d6"),
-    ("C2_Pi_Faceplate_2U_DC-notch__x1__PETG__CHECK-UPS-jacks.stl", f"{P11S}/Rack_Faceplate_2U_10in_DC-notch.stl", 1, "PETG", 3, .20, "check", "Pi unit: faceplate with the 12 V lead notch", "f1dcfac4"),
+    ("C2_Pi_Faceplate_2U_clean__x1__PETG.stl", f"{PIU}/Rack_Faceplate_2U_10in_clean.stl", 1, "PETG", 3, .20, "check", "Pi unit: faceplate, clean front (no DC-IN window, no notch)", "c3ef0b14"),
     ("W1_Argon_Poly5_Tray__x1__PETG__WAIT-measure-case.stl", f"{ARG}/11B_PETG_Argon-Poly+5-tray+faceplate_WAIT-measure-case/Pi5_ArgonPoly5_tray.stl", 1, "PETG", 3, .20, "wait", "Pi unit: Poly+ 5 tray (case up to 96.0 x 66.5)", "8882606c"),
-    ("W2_Waveshare_F_Holder_Base__x1__PETG__WAIT-fit-test.stl", f"{ARG}/11B-SIDE_PETG_Waveshare-F-holder_beside-Poly+5/Waveshare_F_holder_base.stl", 1, "PETG", 3, .20, "wait", "adapter (F) holder base: only if the fit test passes", "65f45876"),
-    ("W3_Waveshare_F_Holder_Lid__x1__PETG__WAIT-fit-test.stl", f"{ARG}/11B-SIDE_PETG_Waveshare-F-holder_beside-Poly+5/Waveshare_F_holder_lid.stl", 1, "PETG", 3, .20, "wait", "adapter (F) holder lid", "982fa284"),
+    ("W2_Waveshare_F_Holder_Base__x1__PETG__WAIT-fit-test.stl", f"{HOLDER}/Waveshare_F_holder_base.stl", 1, "PETG", 3, .20, "wait", "adapter (F) holder base: only if the fit test passes", "6b9cad7e"),
+    ("W3_Waveshare_F_Holder_Lid__x1__PETG__WAIT-fit-test.stl", f"{HOLDER}/Waveshare_F_holder_lid.stl", 1, "PETG", 3, .20, "wait", "adapter (F) holder lid", "982fa284"),
     ("W4_Display7C_3U_Body__x1__PLA__WAIT-screen-4Nov.stl", f"{PT}/09_PLA_screen-module_WAIT-measure-screen-first/Display7C_3U_Body.stl", 1, "PLA", 3, .15, "wait", "7in screen module body", "f89567e4"),
     ("O1_Brick_Spacer_6mm__x1__PETG__only-if-brick-30.5-32.5mm.stl", f"{PT}/13_PETG_12V-brick-cradle/Brick_Spacer_6mm.stl", 1, "PETG", 3, .20, "opt", "spacer for a 30.5-32.5 mm brick", "e7fa68d9"),
     ("O2_Brick_Spacer_4mm__x1__PETG__only-if-brick-32.5-34.5mm.stl", f"{PT}/13_PETG_12V-brick-cradle/Brick_Spacer_4mm.stl", 1, "PETG", 3, .20, "opt", "spacer for a 32.5-34.5 mm brick", "a193c01e"),
@@ -185,43 +190,53 @@ for folder, stem in [("01_PLA_side-modules-2U-base", "Plate01"), ("02_PLA_3U-mod
     shutil.copy2(os.path.join(src, stem + "_layout.png"), os.path.join(d, stem + "_layout.png"))
     s = open(os.path.join(src, "SETTINGS.txt")).read()
     s = s.replace("Material: PLA, about 144 g", "Material: PLA, about 128 g (144 g was with the old v4 B1 spacers, which are gone)")
+    # 28 Oct (ultrareview): plate 09's caliper list, measured on Waveshare's STEP of the screen
+    s = s.replace("  - Filament: Generic PLA (black / dark grey)", "  - Filament: Generic PLA, silver like the rest of the PLA parts (Robu: PLA silver, 15 %)")
+    s = s.replace("  4. Tab hole center-to-center span: ~159 mm horizontal x ~114 mm vertical\n  If all 4 numbers match within ±0.5 mm, slice Plate09.3mf and print immediately!",
+                  "  4. Tab holes (short slots, Ø3.3): centres 157.0 mm apart across; up/down the slot centres are ~114.9 mm apart\n"
+                  "     (112.8 between the slots' inner ends, 117.0 between their outer ends). Corrected 28 Oct from \"~159 x ~114\":\n"
+                  "     measured on Waveshare's STEP of the screen.\n"
+                  "  If numbers 1-3 match within ±0.5 mm and the holes are where item 4 says, slice Plate09.3mf and print.")
     s = s.replace("""The 12 V power lead routes forward along the cradle, passes over the front base bar, and connects cleanly behind
 the Pi faceplate via the rear concealed cable slit (featured on the final Plate 11 faceplate). The mains lead exits
 directly out the rear. (An alternate bottom-edge notched faceplate is preserved in _superseded_and_alternatives/).""",
-                  """The 12 V lead runs forward along the cradle, over the front base bar and out through the 8 x 9 mm notch in the
-bottom edge of the Pi faceplate (C2_Pi_Faceplate_2U_DC-notch, plate 11), then about 13 mm along the front into the
-UPS DC-IN window. Without that notch the faceplate blocks the lead (checked: 42 PASS). The mains lead goes straight
+                  """The 12 V lead stays behind the faceplate (28 Oct): a 30 cm right-angle 5.5 x 2.1 extension goes from the UPS
+DC-IN along the shelf floor, through the arch in the shelf's right gusset, into this cradle's open front, where the
+brick's own plug pushes into its socket. Coil the brick's spare lead beside the join. The mains lead goes straight
 out of the back.""")
     open(os.path.join(d, stem + "_SETTINGS.txt"), "w").write(s)
 
 # plate 10: the Pi shelf alone (the UPS tray moved to plate 11; the shims are gone: the F holder doesn't use them)
-p10 = [(n, m) for n, m in read_3mf(f"{PT}/10_PETG_Pi-shelf+UPS-tray+shims/Plate10.3mf") if "Shelf" in n]
+p10 = [("Rack_Shelf_pinned", place(trimesh.load(path_of["10_Pi_Rack_Shelf_pinned__x1__PETG.stl"], force="mesh"), 43.0, 12.0))]   # 28 Oct shelf
 write_3mf(os.path.join(PLN, "Plate10.3mf"), "Plate10", p10)
 layout_png(os.path.join(PLN, "Plate10_layout.png"), "Plate 10 (PETG): Pi shelf", p10)
 open(os.path.join(PLN, "Plate10_SETTINGS.txt"), "w").write(
     "Plate 10 (PETG): Pi shelf\n=========================\nStatus: print now\nMaterial: PETG black, about 96 g\n\n" + PETG_SET +
     "\nOn this plate:\n  - Rack_Shelf_pinned x1   (../10_Pi_Rack_Shelf_pinned__x1__PETG.stl)\n"
-    "Hardware: 6 x M3 heat-set inserts (dia 4 hole) in its two front posts, for the faceplate screws.\n")
+    "Hardware: 6 x M3 heat-set inserts (dia 4 hole) in its two front posts, for the faceplate screws.\n"
+    "28 Oct: the right post's gusset has a 9 x 7 mm arch at its foot for the brick's 12 V lead (no supports needed: 3 mm round top).\n")
 
 ld = lambda pre: trimesh.load(next(v for k, v in path_of.items() if k.startswith(pre)), force="mesh")
 fp, ut, pt, hb, hl = ld("C2_"), ld("C1_"), ld("W1_"), ld("W2_"), ld("W3_")
 PLC = os.path.join(DEST, FOLDER["check"], "P1S_plates")
-p11 = [("Faceplate_2U_DC-notch", place(fp, (BED - fp.extents[0]) / 2, 8.0)),
+p11 = [("Faceplate_2U_clean", place(fp, (BED - fp.extents[0]) / 2, 8.0)),
        ("UPS_tray_pinned", place(ut, (BED - ut.extents[0]) / 2, 8.0 + fp.extents[1] + 14.0))]
 write_3mf(os.path.join(PLC, "Plate11_CHECK-UPS.3mf"), "Plate11", p11)
-layout_png(os.path.join(PLC, "Plate11_CHECK-UPS_layout.png"), "Plate 11 (PETG, brim OFF): DC-notch faceplate + UPS tray - check the UPS first", p11)
+layout_png(os.path.join(PLC, "Plate11_CHECK-UPS_layout.png"), "Plate 11 (PETG, brim OFF): clean faceplate + UPS tray - check the UPS first", p11)
 open(os.path.join(PLC, "Plate11_CHECK-UPS_SETTINGS.txt"), "w").write(
-    "Plate 11 (PETG): DC-notch faceplate + UPS tray  --  CHECK THE UPS FIRST\n"
-    "=======================================================================\n"
+    "Plate 11 (PETG): faceplate (clean front) + UPS tray  --  CHECK THE UPS FIRST\n"
+    "============================================================================\n"
+    "28 Oct: the faceplate has no DC-IN window and no notch any more (the brick's lead stays behind it), so it no longer\n"
+    "depends on the UPS: it's here because it shares the plate. The UPS tray and the right-angle DC-IN plug still do.\n"
     "Status: print once you've checked the real Cuzor Mini UPS Pro (a photo of it is enough):\n"
     "  - switch, LED and OUT on one end face (it goes to the rack REAR: tray window x 58..110 of the 100 mm face)\n"
-    "  - DC-IN on the opposite end face, at the end that lines up with the faceplate's DC-IN window (x 80..112)\n"
+    "  - DC-IN on the opposite end face, at the end that lines up with the UPS tray's DC-IN window (x 80..112)\n"
     "  - at most 101 x 81 x 28.5 mm (Cuzor's page: 10 x 8 x 2.8 cm; one listing says 10.2 long)\n"
     "  If the DC-IN sits at the other end of its face, don't print: ask Claude to move the windows.\n"
-    "Material: PETG black, about 126 g (faceplate ~64 g, UPS tray ~62 g)\n\n"
+    "Material: PETG black, about 130 g (faceplate ~68 g, UPS tray ~62 g)\n\n"
     "BRIM OFF: the faceplate is 254 mm long on the 256 mm bed (1 mm from each edge). Faceplate front face down,\n"
     "UPS tray floor down.\n" + PETG_SET +
-    "\nOn this plate:\n  - Faceplate, 2U, with the 12 V lead notch x1   (../C2_Pi_Faceplate_2U_DC-notch__x1__PETG__CHECK-UPS-jacks.stl)\n"
+    "\nOn this plate:\n  - Faceplate, 2U, clean front x1               (../C2_Pi_Faceplate_2U_clean__x1__PETG.stl)\n"
     "  - UPS tray (pinned) x1                         (../C1_Pi_UPS_Tray_pinned__x1__PETG__CHECK-UPS-jacks.stl)\n"
     "Hardware: 6 x M3 x 8 countersunk (faceplate to the shelf); foam tape on the UPS tray's ribs.\n")
 PLW = os.path.join(DEST, FOLDER["wait"], "P1S_plates")

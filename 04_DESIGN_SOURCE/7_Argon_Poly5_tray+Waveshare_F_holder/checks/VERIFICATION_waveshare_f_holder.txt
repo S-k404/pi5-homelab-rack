@@ -10,7 +10,8 @@ PASS  adapter, its connectors and plugs don't hit the base or the lid  (overlap 
 PASS  PCB sits 0.35 mm inside the walls all round  (left 0.35, right 0.35; jack faces 0.45 from the rear wall; terminal block 0.55 from the front wall)
 PASS  4 posts carry the PCB at the drawing's hole pattern (58.00 x 46.50), 2.1 mm pilots for self-tapping M2.5  (PCB underside z 46.6, post/pilot depth 8 mm)
 PASS  RJ45 and HDMI-A jacks sit centred in their rear notches, >= 0.9 mm each side  (RJ45 1.20, HDMI 1.00; notches 18.4 and 18.6 wide, open to the lid)
-PASS  jack faces are recessed only 2.45 mm from the rear face of the holder  (face y -2.15, holder rear y -4.60; an RJ45 plug (about 14 x 15) and an HDMI plug (about 21 x 12) fit the notches)
+PASS  RJ45 plug + boot (14 x 15) pushed fully home clears the holder's rear wall and lid  (0.0 mm3; jack faces y -2.15, holder rear y -4.60)
+PASS  HDMI plug moulding (22 x 12) pushed fully home clears the holder's rear wall and lid  (0.0 mm3; jack faces y -2.15, holder rear y -4.60)
 PASS  plug window in the right wall covers the SH1.0, micro-HDMI and USB-C plugs  (window y 28..79; plugs at y 33.2, 58.1, 72.4; sill z 44.8)
 PASS  12 V terminal: both wire entries (they face the front) line up with the front notch  (entries at x 31.3 and 38.2, notch x 28..42 (>= 2 mm each side); block ends 0.55 mm from the front wall)
 PASS  no collision with the Argon Poly+5 tray (rims, stubs, fences, tie anchors)  (base 0.00, lid 0.00 mm3)
@@ -29,14 +30,14 @@ INFO  adapter plug tips vs the case's side wall, largest published 95.5 x 66.0  
 INFO  the adapter's plugs and the Poly+5's side wall  (the plugs are 5.5 mm long and stop about 1.2 mm short of a nominal case wall, so they cannot plug into the Pi's ports through the wall. Adapter (F) talks to the Pi over its 16-pin FFC (NVMe + 2.5G); HDMI 0 and Type-C / terminal power need a different route (see README).)
 PASS  top of the holder is under the B1 dock  (holder top z 65.7; Argon case top 67.9; B1 dock underside 81.3 (rack check) -> 15.6 mm of air)
 PASS  front of the holder stays clear of the shelf's front posts and the faceplate  (holder front y 98.0; posts start y 104.5; faceplate rear y 112.5; tie anchors y 101..107 (z <= 41.4) are 0.9 mm under the deck)
-PASS  Waveshare_F_holder_base.stl: watertight, flat on the bed, fits the 256 mm bed  (56.0 x 102.6 x 25.8 mm, first layer 2198 mm2, 11076 triangles)
+PASS  Waveshare_F_holder_base.stl: watertight, flat on the bed, fits the 256 mm bed  (56.0 x 102.6 x 25.8 mm, first layer 2198 mm2, 11068 triangles)
 PASS  Waveshare_F_holder_base.stl: no supports needed; widest unsupported flat patch is a short bridge  (widest bridge about 5.6 mm (limit 7))
 PASS  Waveshare_F_holder_lid.stl: watertight, flat on the bed, fits the 256 mm bed  (56.0 x 102.6 x 17.3 mm, first layer 4581 mm2, 12766 triangles)
 PASS  Waveshare_F_holder_lid.stl: no supports needed; widest unsupported flat patch is a short bridge  (widest bridge about 2.5 mm (limit 7))
 
-INFO  PETG about 19 g for the base and 12 g for the lid at 20% infill (solid CAD volume 27.5 / 16.3 cm3)
+INFO  PETG about 19 g for the base and 12 g for the lid at 20% infill (solid CAD volume 27.3 / 16.3 cm3)
 
-25 PASS, 0 FAIL
+26 PASS, 0 FAIL
 
 NOT VERIFIED (needs the real parts in hand): tall components other than the RJ45 and HDMI-A, the exact M.2 / FFC / terminal
 positions (taken from the drawing image), how the Poly+5's side wall is cut, and whether the FFC reaches the Pi's PCIe socket.

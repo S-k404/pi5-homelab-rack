@@ -1,0 +1,27 @@
+NIIMBOT B1 face-out dock — 10-inch 3U — geometric checks
+
+PASS  printer sits in the cradle without collisions  (0.000 mm3)
+PASS  ears clear the body  
+PASS  printer actually rests on the cradle (1 mm lower collides)  
+PASS  nothing in front of the printer's top face above the lip  (exposed 132 x 85 mm of the 132 x 91 face)
+PASS  front lip holds the bottom edge: sliding the printer 3 mm forward hits it  (5.0 mm lip, past the printer's 5 mm edge round; under the left part of the face only)
+PASS  label slot, light and power button face you with nothing in front of them  (label slot, light, power button)
+PASS  lid swings open far enough to change the label roll without taking the printer out  (opens 120 deg before touching the dock; hinge assumed at the back of the lid end, from the photos)
+PASS  racked removal: tip upright, lift 3.5 mm, slide out the front  (printer top 49.9 vs next unit at 66.3; tip hits [], slide hits [])
+PASS  lite windows in both side walls  (104 x 62 mm each)
+PASS  open slide (top side) has finger room above it, up to the next unit  (24.4 mm)
+PASS  real size: official 132 x 91 x 62 mm, 1.5 mm clearance at the back, no spacers needed  (also fits the 61.6 mm edition)
+PASS  printer rests against the guide at its bottom end (1 mm further collides)  
+INFO  USB-C port: not visible in the photos. The bottom end (your left) is open above the 18 mm guide, and the back rest has a 50 mm cable notch, so a cable reaches either place
+PASS  printer leans back (centre of mass behind its front edge)  (37.0 mm behind)
+PASS  back rest above the printer's centre of mass  (rest 60 mm, CoM 45.5 mm up the face)
+PASS  panel width 254 mm  
+PASS  panel height 132.55 mm (3U)  (132.55)
+PASS  rack slots 236.5 mm apart at EIA 3U positions  
+PASS  body fits between 10-inch rails  (214 mm)
+PASS  body inside 3U  (130 mm)
+PASS  depth  (95 mm)
+PASS  ear inserts have >= 1.5 mm wall  (2.0 mm)
+PASS  body fits 220 mm bed (floor down)  (214 x 95 footprint, 130 tall)
+
+22 PASS, 0 FAIL

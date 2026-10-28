@@ -80,42 +80,43 @@ lines.append("")
 
 # ---------------------------------------------------------------- 2. right-angle plug on the UPS OUT (rear)
 lines.append("== Right-angle 5.5 x 2.1 plug in the UPS OUT (rack rear) ==")
-BODY_W, BODY_H, BODY_D = 9.0, 9.0, 6.0         # compact right-angle overmould depth out of jack face (6.0 mm)
-SR_D, SR_L = 4.6, 4.0                           # strain relief collar exiting along +X
-CAB = 3.5                                       # pigtail cable dia
+BODY_W, BODY_H, BODY_D = 11.0, 12.0, 16.0      # overmould across x, z; depth out of the jack face (generous)
+SR_D, SR_L = 6.5, 10.0                          # strain relief, coming out of the elbow sideways
+CAB = 4.0                                       # pigtail cable dia (DC leads are 3.5-4.0)
 ox, oy, oz = OUT
-body = cq.Workplane().box(BODY_W, BODY_D, BODY_H, centered=False).translate((ox - 4.5, oy - 6.0, oz - 4.5)).edges("|Z").fillet(1.5).val()
-ye = oy - 3.0                                   # elbow centre line
-neck = cq.Solid.makeCylinder(2.9, 7.0, cq.Vector(ox, ye, oz), cq.Vector(1, 0, 0))
-sr = cq.Solid.makeCylinder(SR_D / 2, SR_L, cq.Vector(ox + 7.0, ye, oz), cq.Vector(1, 0, 0))
-barrel = cq.Solid.makeCylinder(2.75, 3.5, cq.Vector(ox, oy, oz), cq.Vector(0, 1, 0))
-plug = body.fuse(neck).fuse(sr).fuse(barrel)
+body = box(ox - BODY_W / 2, ox + BODY_W / 2, oy - BODY_D, oy, oz - BODY_H / 2, oz + BODY_H / 2)
+ye = oy - BODY_D + 5.5                          # elbow centre line
+sr = cq.Solid.makeCylinder(SR_D / 2, SR_L, cq.Vector(ox + BODY_W / 2, ye, oz), cq.Vector(1, 0, 0))
+plug = body.fuse(sr)
 win_ok = (58.0 + 3 <= ox - BODY_W / 2) and (ox + BODY_W / 2 <= 110.0 - 3) and (5.0 <= oz - BODY_H / 2) and (oz + BODY_H / 2 <= 25.0)
 rec("PASS" if win_ok else "FAIL", f"plug body ({BODY_W:.0f} x {BODY_H:.0f}, {BODY_D:.0f} deep) passes the UPS tray's rear window (x 58..110, z 5..25)",
     f"(body x {ox - BODY_W / 2:.1f}..{ox + BODY_W / 2:.1f}, z {oz - BODY_H / 2:.1f}..{oz + BODY_H / 2:.1f})")
 hits = {n: vol(plug, s) for n, s in [("UPS tray", upst), ("shelf (rear stop, HDMI tower)", shelf), ("Poly+ 5 tray", tray),
                                       ("holder base", hb), ("holder lid", hl), ("Poly+ 5 (max size)", case_max)]}
 worst = max(hits, key=hits.get)
-rec("PASS" if hits[worst] < 0.5 else "FAIL", "compact right-angle plug + strain relief touch nothing",
-    f"(worst {worst}: {hits[worst]:.1f} mm3; flush inside the rear window)")
+rec("PASS" if hits[worst] < 0.5 else "FAIL", "plug + strain relief (cable out to the right) touch nothing",
+    f"(worst {worst}: {hits[worst]:.1f} mm3; the plug sticks out {BODY_D - 2.8:.0f} mm behind the case's rear face, into the open "
+    "rack rear: the rear base bar is ~73 mm further back)")
 m_x = min(ox - BODY_W / 2 - 58.0, 110.0 - (ox + BODY_W / 2)); m_z = min(oz - BODY_H / 2 - 5.0, 25.0 - (oz + BODY_H / 2))
 rec("PASS" if m_z >= 1.0 else "WARN", "room round the plug body in the window",
-    f"({m_x:.1f} mm each side across, {m_z:.1f} mm at the bottom: sits {m_z:.1f} mm above the window's bottom edge)")
+    f"({m_x:.1f} mm each side across, {m_z:.1f} mm at the bottom: a 12 mm tall overmould centred on a jack at z {oz} sits "
+    f"{m_z:.1f} mm above the window's bottom edge. If your jack is lower, or the plug fatter, file the window's bottom edge)")
 lines.append("")
 
-# ---------------------------------------------------------------- 3. lead: OUT -> hidden right channel -> front pocket -> tray lead hole -> holder notch
-lines.append("== Lead from the plug to the adapter (F)'s screw terminal (hidden in channel) ==")
+# ---------------------------------------------------------------- 3. lead: OUT -> right channel -> front pocket -> tray lead hole -> holder notch
+lines.append("== Lead from the plug to the adapter (F)'s screw terminal (in the F holder) ==")
 cx, cy, w, h = A.LEAD_HOLE
 TX = sum(H.TERM_X) / 2
 TZ = H.PCB_TOP + 5.0                            # terminal wire entries, mid-height of the ~10 mm block
 TY_IN = H.PCB_Y0 + 97.0                         # face of the terminal block (entries)
-path = [(ox + 11.0, ye, oz),                    # exit of right-angle plug neck
-        (101.5, 1.0, 10.0),                     # into the internal right channel
-        (104.0, 10.0, 8.0),                     # down on the channel floor, hidden below walls
-        (104.0, 45.0, 8.0),                     # hidden under the tray shelf
-        (104.0, 75.0, 8.0),                     # concealed along floor
-        (104.0, 92.0, 12.0),                    # forward into front pocket
-        (100.0, 100.0, 26.0),                   # up into pocket under tray
+path = [(ox + BODY_W / 2 + SR_L, ye, oz),       # end of strain relief, behind the case
+        (104.5, ye + 2.0, oz), (106.3, -3.5, oz),   # turn forward
+        (106.3, 4.0, oz),                       # through the rear window's right end, into the right channel
+        (106.5, 22.0, 14.0),                    # along the channel (between the UPS and the right wall)
+        (102.0, 33.0, 31.6), (102.0, 47.0, 31.6),   # over the UPS's top edge past the joint post (x 107.7, y 40)
+        (107.0, 58.0, 16.0), (107.0, 84.0, 14.0),   # back down into the channel
+        (107.0, 95.0, 14.0),                    # out through the front window into the pocket under the tray
+        (100.0, 101.0, 27.0),                   # up, over the DC-IN plug
         (cx + 2.0, 101.0, 29.0),                # left along the pocket, under the Poly+ 5 tray
         (cx, cy, 33.0), (cx, cy, A.ZS + 4.0),   # up through the tray's lead hole
         (TX, H.OY1 + 4.0, TZ + 3.0),            # over to the holder's front notch

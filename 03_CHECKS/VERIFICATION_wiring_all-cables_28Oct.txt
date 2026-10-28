@@ -1,0 +1,60 @@
+Every cable in the 28 Oct build: plugs, routes, clearances and lengths (ultrareview, 28 Oct 2026)
+Calculations on the CAD models and stand-ins, not a physical test. Rack frame: x across (+x = viewer's LEFT from the front), y up from the base-bar tops, z back from the front rails, mm.
+Cables are routed up the open rack rear on the -x side (the viewer's RIGHT seen from the front; the 12 V brick and its mains cord are on the other side), tight against that side so the ears hide them from the front. Lengths are port face to port face along the route + 10 %.
+
+== Where the plugs go ==
+INFO  adapter (F) HDMI-A + 2.5G RJ45 (rack rear)  (HDMI centre x -23.8 y 59.2, RJ45 centre x -44.4 y 63.0; jack mouths at z 114.7, holder rear face z 117.1)
+INFO  Pi 5 USB 2.0 pair (Poly+ 5 rear end)  (x 44.0, lower y 54.5, upper y 62.1; case rear face z 112.5)
+INFO  screen HDMI + micro-USB (side edge, -x)  (HDMI x -83.5 y 325.3 z 13.5; micro-USB y 306.1 z 11.8)
+INFO  UCG-Ultra rear ports  (rear face z 127.6, x -84.0..57.8, y 358.6..388.6; port order across the back not modelled: the Cat6 is taken to its centre)
+
+== Plugs at the adapter (F) in its holder (the holder check only tested the jacks) ==
+PASS  HDMI-A plug (slim flat-cable plug, 20.0 x 9.0) clears the holder's rear notch  (nothing)
+PASS  HDMI-A plug (standard moulded plug, 21.5 x 11.5) clears the holder's rear notch  (nothing)
+PASS  RJ45 plug + boot (slim Cat6 plug + boot, 12.5 x 14.5) clears the holder's rear notch  (nothing)
+INFO  HDMI notch width at the jack mouth (measured on the model)  (open, more than 29 mm; the plug's moulding sits in it for the last 2.4 mm)
+
+== The UCG-Ultra's rear ports and the mount (Printables 942972) ==
+INFO  mount material right behind the gateway  (a rear lip up to 10.0 mm above the gateway's base, full width; corner posts cover x -84.0..-70.0 and 54.0..57.8: plugs fit only in x -70.0..54.0, 10.0..30 mm up)
+PASS  RJ45 plugs (14.5 tall with the boot) clear the mount's rear lip  (Ubiquiti's rear view: the RJ45 openings run 13.5-23.9 mm above the base, so a plug's bottom is ~11.4 mm up; the lip is 10.0 mm: 1.4 mm to spare, +-1 mm from the picture)
+PASS  the USB-C power plug clears the lip  (its bottom ~13.9 mm up: 3.9 mm to spare)
+PASS  LAN 1's plug clears the corner post at that end  (4.5 mm; the post covers the last 14 mm)
+INFO  the reset pinhole is behind that corner post  (10 mm from the end): slide the gateway out to reach it
+INFO  power  (Ubiquiti: "5V DC, 3A USB-C adapter included")
+
+== Routes: the plug bodies and the cable against every printed part, device and rack part ==
+PASS  HDMI (adapter (F) -> screen), 1 m flat: plugs + 4.5 mm cable touch nothing  (nothing)
+PASS     length: 564 mm port to port, 620 mm with 10 % slack  (buying 1000 mm: 380 mm to spare)
+INFO     note  the flat cable folds back at the screen as display.py's plug space allows
+PASS  USB-A -> micro-USB (Pi -> screen touch/power), 1 m: plugs + 3.5 mm cable touch nothing  (nothing)
+PASS     length: 632 mm port to port, 695 mm with 10 % slack  (buying 1000 mm: 305 mm to spare)
+PASS  slim Cat6 (adapter (F) 2.5G -> UCG-Ultra LAN 1): plugs + 3.8 mm cable touch nothing  (nothing)
+PASS     length: 558 mm port to port, 614 mm with 10 % slack  (buying 1000 mm: 386 mm to spare)
+PASS  USB-A -> USB-C (Pi -> B1), 0.5 m: plugs + 4.0 mm cable touch nothing  (nothing)
+PASS     length: 181 mm port to port, 199 mm with 10 % slack  (buying 500 mm: 301 mm to spare)
+PASS  UCG-Ultra USB-C power, out of the rack rear to its adapter: plugs + 4.0 mm cable touch nothing  (nothing)
+PASS     B1 cable reaches the printer's port wherever it is (port not modelled: worst case = the farthest corner of the printer)  (304 mm, 335 mm with slack, buying 500 mm)
+PASS  Cat6 length: the 1 m patch cable in PARTS_LIST / START_HERE is enough  (needs 614 mm)
+FAIL     ... a 0.5 m cable (ROBU_HARDWARE_CART_TO_RESTORE.md 'Not on Robu' list) would be enough  (needs 614 mm: buy the 1 m one)
+INFO  UCG-Ultra power  (about 62 cm from its back to the desk behind the rack, then to a wall socket: it is NOT on the UPS. The 5 V 3 A adapter comes in the box)
+
+== The brick's 12 V lead behind the faceplate (28 Oct: no notch, no DC-IN window; brick_lead_route.py) ==
+PASS  right-angle plug (11 x 12, 16 deep) + strain relief in the UPS DC-IN touch nothing  (nothing)
+INFO     it sits inside the UPS tray's DC-IN window  (10.5 / 10.5 mm each side across, 6.0 below, 6.0 above), so it plugs in from the pocket before the faceplate goes on
+PASS  a 4.0 mm extension lead from the plug, along the shelf floor, through the gusset arch, into the cradle touches nothing  (nothing)
+WARN  a 5.5 mm extension lead from the plug, along the shelf floor, through the gusset arch, into the cradle touches nothing  (Pi shelf (pinned) 1.3 mm3, 12 V brick cradle (plate 13) 0.2 mm3)
+PASS  the join (extension socket + the brick's straight plug) lies in the cradle's open front  (nothing)
+PASS  the brick's lead with 5 turns of spare coiled beside the join touches nothing  (nothing; the lead leaves the brick's front face)
+PASS  none of it touches the UPS OUT plug or its lead to the adapter (F)  (nothing)
+PASS  nothing in front of the faceplate (its back face is z 0)  (the lead's front-most point is at z 8.5)
+PASS  the faceplate is solid where the DC-IN window and the notch were  ([True, True])
+PASS  a 30 cm right-angle extension is long enough  (it spans 139 mm plug to socket, 153 with slack; coil the rest with the brick's)
+INFO  the brick's own lead  (~39 mm from its face to the join; the 5-turn coil drawn beside the join holds ~618 mm. A 1.0-1.5 m lead leaves ~343 to ~843 mm more: add turns, or lay a second coil on top of the brick (110 x 38 x 40 mm under the dock). Zip-tie the coil; don't wrap it round the brick)
+
+== Power: what the Pi's USB ports and the UPS have to supply (estimates from typical figures) ==
+INFO  Pi 5 USB ports  (with usb_max_current_enable=1 the four ports share 1.6 A; without it, 0.6 A)
+WARN  screen (~0.3-0.5 A at 5 V) + B1 charging (~1 A at 5 V) on the Pi's USB  (about 1.3-1.5 A of the 1.6 A. If the Pi logs USB over-current or the screen flickers while the B1 charges, unplug the B1 once charged, or charge it from a phone charger: it prints over Bluetooth too)
+PASS  UPS OUT (12 V 3 A = 36 W) covers the Pi side  (Pi 5 under load 8-12 W, NVMe 2-3 W, screen 2-2.5 W, B1 charging ~5 W, fan ~0.5 W: ~25 W at 5 V, ~28 W from 12 V through the adapter's converter = ~2.3 A of the 3 A)
+INFO  UPS runtime  (3 x 2900 mAh in series ~ 32 Wh: about 1 h at full load, 2-3 h idle. The UCG-Ultra is NOT on the UPS)
+
+26 PASS, 1 FAIL, 2 WARN

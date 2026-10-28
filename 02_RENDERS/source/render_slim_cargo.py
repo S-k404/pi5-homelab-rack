@@ -5,6 +5,7 @@ directly into the 140 mm Slim Cargo frame.
 """
 import math
 import os
+import shutil
 import sys
 import bpy
 from mathutils import Matrix, Vector
@@ -20,7 +21,7 @@ os.makedirs(OUT_DIR, exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=STUDIO_BLEND)
 scene = bpy.context.scene
 
-# Metal GPU
+# Metal GPU setup
 try:
     prefs = bpy.context.preferences.addons['cycles'].preferences
     prefs.compute_device_type = 'METAL'
@@ -49,11 +50,10 @@ scene.collection.children.link(slim_loaded)
 slim_empty = bpy.data.collections.new("Slim Cargo, empty")
 scene.collection.children.link(slim_empty)
 
-# Materials from existing scene
-mat_silver = bpy.data.materials.get("pla_silver") or bpy.data.materials.get("silver")
-mat_black = bpy.data.materials.get("pla_black") or bpy.data.materials.get("petg_black")
+# Materials from master studio scene
+mat_silver = bpy.data.materials.get("PLA silver")
+mat_black = bpy.data.materials.get("PETG black")
 
-# Fallback materials if not found
 if not mat_silver:
     mat_silver = bpy.data.materials.new("Slim_Silver")
     mat_silver.use_nodes = True
@@ -89,7 +89,7 @@ for f in sorted(os.listdir(PARTS_DIR)):
     obj = bpy.context.selected_objects[0]
     obj.name = f"Slim_{name}"
     
-    # Assign material
+    # Assign material: black cap, handles, and base bars; silver side modules
     if "cap" in name or "handle" in name or "bar" in name:
         obj.data.materials.append(mat_black)
     else:
@@ -104,37 +104,15 @@ for f in sorted(os.listdir(PARTS_DIR)):
     slim_empty.objects.link(obj)
     slim_frame_objs.append(obj)
 
-# Replace stale DC-notch faceplate with the 28 Oct clean faceplate
-CLEAN_FP_STL = os.path.abspath("04_DESIGN_SOURCE/4_Pi_Unit_2U/STL_for_printing/Rack_Faceplate_2U_10in_clean.stl")
-fp_old = bpy.data.objects.get("Pi faceplate")
-if fp_old:
-    for c in list(fp_old.users_collection):
-        c.objects.unlink(fp_old)
-    bpy.data.objects.remove(fp_old, do_unlink=True)
-
-bpy.ops.wm.stl_import(filepath=CLEAN_FP_STL)
-fp_new = bpy.context.selected_objects[0]
-fp_new.name = "Pi faceplate"
-M_STL_TO_BLENDER = Matrix((
-    (-0.001, 0, 0, 0.1270),
-    (0, 0, 0.001, -0.1404),
-    (0, 0.001, 0, 0.0200),
-    (0, 0, 0, 1.0)
-))
-fp_new.matrix_world = M_STL_TO_BLENDER
-fp_new.data.shade_smooth()
-mat_petg_black = bpy.data.materials.get("PETG black") or mat_black
-fp_new.data.materials.append(mat_petg_black)
-for c in list(fp_new.users_collection):
-    c.objects.unlink(fp_new)
-old_rack.objects.link(fp_new)
-
-# Add all unit objects from old_rack into slim_loaded
+# Add unit objects from old_rack into slim_loaded.
+# Skip 200 mm rack frame parts and 200 mm rack cables (which float in air behind 140 mm frame)
+EXCLUDE_PREFIXES = (
+    "Side module", "Cap half", "Handle", "Base bar",
+    "HDMI (adapter", "USB-A -> micro-USB", "slim Cat6", "USB-A -> USB-C", "UCG-Ultra USB-C"
+)
 for o in old_rack.objects:
-    # Skip old 200 mm rack frame parts
-    if any(k in o.name for k in ("Side module", "Cap half", "Handle", "Base bar")):
+    if any(o.name.startswith(p) for p in EXCLUDE_PREFIXES):
         continue
-    # Link into slim_loaded
     if o.name not in slim_loaded.objects:
         slim_loaded.objects.link(o)
 
@@ -202,6 +180,8 @@ SLIM_SHOTS = [
 
 for sname, col, az, el, lens, res, spp in SLIM_SHOTS:
     show_only(col)
+    bpy.context.view_layer.update()
+    
     scene.render.resolution_x, scene.render.resolution_y = res
     scene.render.resolution_percentage = 100
     scene.cycles.samples = spp
@@ -221,12 +201,13 @@ for sname, col, az, el, lens, res, spp in SLIM_SHOTS:
     print(f"Done {sname}!", flush=True)
 
 # Copy 01 as primary isometric
-import shutil
 shutil.copy2(os.path.join(OUT_DIR, "01_slim_cargo_rack_loaded_front.png"),
              os.path.join(OUT_DIR, "01_slim_cargo_rack_isometric.png"))
 
+# Save master studio blend for Slim Cargo
+show_only(slim_loaded)
+bpy.context.view_layer.update()
 blend_out = os.path.join(OUT_DIR, "Slim_Cargo_Rack_studio.blend")
 bpy.ops.wm.save_as_mainfile(filepath=blend_out)
 print("Saved Slim Cargo studio blend ->", blend_out)
 print("All Slim Cargo renders finished successfully!")
-

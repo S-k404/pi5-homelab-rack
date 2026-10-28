@@ -29,6 +29,7 @@ scene.render.resolution_percentage = 100
 target_col = bpy.data.collections.get("Slim Cargo, loaded")
 studio = bpy.data.collections.get("Studio")
 cams = bpy.data.collections.get("Cameras")
+cyc = bpy.data.objects.get("Backdrop")
 
 def show_only(col):
     keep = (col, studio, cams)
@@ -36,8 +37,9 @@ def show_only(col):
         lc.exclude = lc.collection not in keep
 
 show_only(target_col)
+bpy.context.view_layer.update()
 
-# Find bounding box and center
+# Find bounding box and center of target collection
 pts = [o.matrix_world @ Vector(c) for o in target_col.objects for c in o.bound_box]
 arr = np.array([list(p) for p in pts])
 lo, hi = arr.min(0), arr.max(0)
@@ -55,6 +57,27 @@ scene.camera = cam_obj
 elevation_deg = 15.0
 el_rad = math.radians(elevation_deg)
 dist = radius * 2.85
+
+def place_studio(az, el, radius):
+    s = max(radius / 0.33, 0.06)
+    azr = math.radians(az)
+    away = Vector((-math.sin(azr), math.cos(azr), 0))
+    if cyc:
+        cyc.matrix_world = Matrix.Translation(away * 0.75 * s) @ Matrix.Rotation(math.atan2(-away.x, away.y), 4, "Z") @ Matrix.Scale(s, 4)
+    target = Vector((0, 0, radius * 0.55))
+    LIGHTS = {o.name: o for o in studio.objects if o.type == "LIGHT"}
+    for nm, (daz, del_, dist_mul, size, power) in {"Key": (-55, 42, 1.7, 1.1, 80), "Fill": (70, 18, 2.0, 1.6, 26),
+                                                   "Rim": (175, 55, 1.6, 0.9, 55)}.items():
+        a, e = math.radians(az + daz), math.radians(del_)
+        pos = target + Vector((math.sin(a) * math.cos(e), -math.cos(a) * math.cos(e), math.sin(e))) * dist_mul * s
+        if nm in LIGHTS:
+            lo = LIGHTS[nm]
+            lo.location = pos
+            lo.rotation_euler = (target - pos).to_track_quat("-Z", "Y").to_euler()
+            lo.data.size = size * s
+            if lo.data.shape == "RECTANGLE":
+                lo.data.size_y = size * s * 0.7
+            lo.data.energy = power * s * s
 
 TOTAL_FRAMES = 90
 scene.frame_start = 1
@@ -74,15 +97,12 @@ for f in range(1, TOTAL_FRAMES + 1):
     rot_quat = direction.to_track_quat('-Z', 'Y')
     cam_obj.rotation_euler = rot_quat.to_euler()
     
-    cyc = bpy.data.objects.get("Backdrop")
-    if cyc:
-        cyc.location = ctr - Vector((math.sin(az_rad), -math.cos(az_rad), 0)) * (radius * 1.5)
-        cyc.rotation_euler = (0, 0, az_rad)
+    place_studio(angle_deg, elevation_deg, radius)
     
     frame_path = os.path.join(FRAMES_DIR, f"frame_{f:04d}.png")
     scene.render.filepath = frame_path
     bpy.ops.render.render(write_still=True)
-    if f % 20 == 0 or f == TOTAL_FRAMES:
+    if f % 15 == 0 or f == TOTAL_FRAMES:
         print(f"Rendered frame {f}/{TOTAL_FRAMES} ({f/TOTAL_FRAMES*100:.0f}%)", flush=True)
 
 print("All Slim Cargo turntable frames rendered!")
@@ -113,4 +133,3 @@ cmd_gif = [
 ]
 subprocess.run(cmd_gif, check=True)
 print(f"Encoded GIF: {gif_out}")
-

@@ -1,0 +1,19 @@
+Pi 5 unit (2U) — print checks on the STLs in STL_for_printing
+
+Each file was loaded as a mesh and checked: watertight, one body, what touches the bed, the smallest square bed
+it fits, and how much faces down at more than 50 degrees off the bed (bridges/overhangs).
+
+PASS  Pi5_UPS_v3_board_tray_HDMIexit.stl: 118 x 114 x 28.9 mm, first layer 11,857 mm2, needs a 118 mm bed, 585 mm2 facing down off the bed
+PASS  Pi5_UPS_v3_lid.stl: 118 x 114 x 6.4 mm, first layer 10,159 mm2, needs a 118 mm bed, 82 mm2 facing down off the bed  (old file: 31 mm2 (teeth down, top up))
+PASS  Pi5_UPS_v3_shims.stl: 37 x 27 x 2.0 mm, first layer 409 mm2, needs a 37 mm bed, 0 mm2 facing down off the bed
+PASS  Pi5_UPS_v3_ups_tray_pinned.stl: 118 x 91 x 36.5 mm, first layer 10,639 mm2, needs a 118 mm bed, 396 mm2 facing down off the bed  (old file: 314 mm2 (four 3 mm feet; floor in mid-air))
+PASS  Rack_Faceplate_2U_10in.stl: 254 x 88 x 4.0 mm, first layer 19,170 mm2, needs a 240 mm bed, 45 mm2 facing down off the bed  (old file: 1,002 mm2 (standing on its edge))
+PASS  Rack_Faceplate_Left.stl: 127 x 88 x 4.0 mm, first layer 10,110 mm2, needs a 127 mm bed, 0 mm2 facing down off the bed  (old file: 501 mm2 (standing on its edge))
+PASS  Rack_Faceplate_Right.stl: 127 x 88 x 4.0 mm, first layer 9,061 mm2, needs a 127 mm bed, 45 mm2 facing down off the bed  (old file: 501 mm2 (standing on its edge))
+PASS  Rack_Shelf_pinned.stl: 170 x 117 x 68.0 mm, first layer 18,749 mm2, needs a 170 mm bed, 1,992 mm2 facing down off the bed
+
+Fit in the rack (from 1_Rack_8U_T0-look/VERIFICATION_rack.txt, with these parts loaded from STEP_for_Onshape):
+- no collisions with the rack or the other units
+- the faceplate slots sit on the rail inserts (EIA 6.35 / 82.55) with the shelf resting on the front and middle base bars
+- the UPS tray rests on the shelf standoffs at the old height, with the pins in its floor holes
+- the shelf's optional rubber feet hang clear of the base bars

@@ -1,0 +1,21 @@
+Round holes by diameter in each part's STEP (coaxial front/rear rail holes count once)
+
+Rack_BaseBar_x3.step	Ø6.4×2
+Rack_CapHalf_x2.step	Ø5.5×2, Ø6.4×2, Ø10.5×2
+Rack_Handle_x2.step	Ø5.5×2, Ø10.5×2, Ø11×1
+Rack_SideModule_1U_Top_x2.step	Ø5.5×3, Ø6.4×6
+Rack_SideModule_2U_Base_x2.step	Ø5.5×4, Ø6.4×9, Ø10.5×4
+Rack_SideModule_3U_x4.step	Ø5.5×3, Ø6.4×12
+B1_Dock_3U_Body.step	Ø4×4
+B1_Dock_3U_Ear_x2.step	Ø3.4×2, Ø6.6×4
+B1_Spacer_5mm_x2.step	
+Display7C_3U_Body.step	Ø4×12
+Display7C_Clip_x4.step	Ø3.4×1
+Pi5_UPS_v3_board_tray_HDMIexit.step	Ø2×20, Ø2.2×4, Ø2.4×30, Ø2.5×2, Ø3.4×3, Ø3.8×1, Ø4×4, Ø6×4
+Pi5_UPS_v3_lid.step	Ø2.4×30, Ø3.4×2
+Pi5_UPS_v3_ups_tray_pinned.step	Ø1.2×48, Ø2×124, Ø2.4×22, Ø2.5×3, Ø4.4×4, Ø6×8
+Rack_Faceplate_2U_10in.step	Ø2.98×50, Ø3.4×6, Ø6.48×16, Ø8×5, Ø11×1
+Rack_Faceplate_Left.step	Ø2.98×26, Ø3.4×3, Ø6.48×8
+Rack_Faceplate_Right.step	Ø2.98×24, Ø3.4×3, Ø6.48×8, Ø8×5, Ø11×1
+Rack_Shelf_pinned.step	Ø3×4, Ø4×6, Ø5.8×12, Ø6×4, Ø10×4
+UCG_Ultra_1U_Shelf.step	Ø3×16, Ø3.5×26, Ø6×4, Ø6.6×8

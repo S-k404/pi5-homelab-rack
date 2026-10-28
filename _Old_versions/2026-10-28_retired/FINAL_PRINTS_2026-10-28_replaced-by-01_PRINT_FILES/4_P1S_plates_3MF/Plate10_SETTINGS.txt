@@ -1,0 +1,20 @@
+Plate 10: Pi shelf + UPS tray (PETG)
+====================================
+Status: print now
+Material: PETG black, about 158 g (shelf ~96 g + UPS tray ~62 g)
+
+This is the old plate 10 without the shims: they were for the adapter (F) in the bare-Pi board tray, and the
+F holder (plate 11) holds the adapter with 4 x M2.5 x 25 screws instead.
+
+Settings (Bambu P1S):
+  - Profile: 0.20mm Standard @BBL P1S
+  - Filament: Generic PETG
+  - Wall loops: 3
+  - Sparse infill: 20% gyroid
+  - Supports: OFF
+  - Plate: Textured PEI, no glue
+  - Enclosure: CLOSED
+
+On this plate:
+  - Rack_Shelf_pinned x1              (1_ORDER-NOW/10_Pi_Rack_Shelf_pinned__x1__PETG.stl)
+  - Pi5_UPS_v3_ups_tray_pinned x1     (1_ORDER-NOW/11_Pi_UPS_Tray_pinned__x1__PETG.stl)

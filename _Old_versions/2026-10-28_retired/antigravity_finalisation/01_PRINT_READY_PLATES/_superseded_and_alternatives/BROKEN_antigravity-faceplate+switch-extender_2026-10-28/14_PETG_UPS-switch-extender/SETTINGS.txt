@@ -1,0 +1,16 @@
+14_PETG_UPS-switch-extender
+============================
+Status: Optional standalone print (also included on Plate 11)
+Print time: ~8 minutes (approx 2.5 g PETG)
+
+What it is:
+  A custom switch extender lever that clips onto the Cuzor Mini UPS Pro on/off switch nub.
+  It passes through the faceplate switch slot to provide an ergonomic front-panel sliding toggle
+  with tactile grip ridges.
+
+Settings (Bambu P1S):
+  - Profile: 0.20mm Standard @BBL P1S
+  - Filament: Generic PETG (or PLA)
+  - Walls: 3
+  - Infill: 100%
+  - Supports: OFF

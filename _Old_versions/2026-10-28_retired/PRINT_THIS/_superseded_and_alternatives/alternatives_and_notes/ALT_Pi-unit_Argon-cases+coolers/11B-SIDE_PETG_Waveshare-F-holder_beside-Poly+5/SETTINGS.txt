@@ -1,0 +1,31 @@
+11B-SIDE_PETG_Waveshare-F-holder_beside-Poly+5
+==============================================
+Status: optional add-on to plate 11B (the Argon Poly+5 build). Print it only if you want the Waveshare adapter (F)
+        (NVMe + 2.5G Ethernet) to live beside the Poly+5. Read README.md in this folder first.
+Material: PETG, black. About 19 g (base) + 12 g (lid) at 20% infill.
+
+Print BOTH parts. Each STL is already saved the way it prints:
+  - Waveshare_F_holder_base.stl   x1   plinth down (it is 56 x 102.6 x 25.8 mm)
+  - Waveshare_F_holder_lid.stl    x1   TOP FACE DOWN (grooves on the bed, the 4 pillars point up; 56 x 102.6 x 17.3 mm)
+Both fit on one 256 mm bed side by side if you want a single plate (56 + 56 mm wide, 102.6 mm long).
+
+Settings:
+  - Bambu Studio profile: 0.20mm Standard @BBL P1S
+  - Filament: Generic PETG
+  - Wall loops: 3
+  - Sparse infill: 20% gyroid
+  - Supports: OFF (the longest bridge is 5.6 mm: the deck over the plinth ribs)
+  - Plate: Textured PEI, no glue
+  - Enclosure: CLOSED
+  - Brim: off
+
+Hardware:
+  - 4 x M2.5 x 25 pan-head screws. They hold the lid AND clamp the board's four mounting holes to the posts.
+    They cut their own thread in the 2.1 mm pilots (like the Pi screws in the v3 tray). Replaces the 4 x M2.5 x 10 +
+    shims that the bare-board v3 case used for the adapter.
+  - Double-sided foam tape under the right-hand rib (already on the BOM), to stop the holder sliding on the tray.
+  - Adapter (F) with its 16-pin FFC cable, the SSD (M.2 2230 or 2242), the 12 V lead if you use the terminal.
+
+On this plate:
+  - Holder base x1   (Waveshare_F_holder_base.stl)
+  - Holder lid x1    (Waveshare_F_holder_lid.stl)

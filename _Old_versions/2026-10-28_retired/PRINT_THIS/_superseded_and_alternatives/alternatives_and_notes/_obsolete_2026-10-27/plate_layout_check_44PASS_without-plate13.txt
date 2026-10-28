@@ -1,0 +1,58 @@
+Plate01 (PLA, 0.24 mm)  closest to the bed edge: 14.0 mm
+  PASS  Rack_SideModule_2U_Base_x2.stl: x 28.0–228.0, y 14.0–122.9, 40.0 tall
+  PASS  Rack_SideModule_2U_Base_x2.stl: x 28.0–228.0, y 133.0–241.9, 40.0 tall
+  PASS  smallest gap between parts 10.1 mm
+Plate02 (PLA, 0.24 mm)  closest to the bed edge: 10.0 mm
+  PASS  Rack_SideModule_3U_x4.stl: x 28.0–228.0, y 10.0–146.4, 28.0 tall
+  PASS  Rack_BaseBar_x3.stl: x 16.3–239.7, y 160.0–177.0, 11.0 tall
+  PASS  Rack_BaseBar_x3.stl: x 16.3–239.7, y 185.0–202.0, 11.0 tall
+  PASS  Rack_BaseBar_x3.stl: x 16.3–239.7, y 210.0–227.0, 11.0 tall
+  PASS  smallest gap between parts 8.0 mm
+Plate03 (PLA, 0.24 mm)  closest to the bed edge: 5.0 mm
+  PASS  Rack_SideModule_3U_x4.stl: x 28.0–228.0, y 10.0–146.4, 28.0 tall
+  PASS  Rack_Handle_x2.stl: x 42.0–214.0, y 158.0–203.0, 14.0 tall
+  PASS  Rack_Handle_x2.stl: x 42.0–214.0, y 206.0–251.0, 14.0 tall
+  PASS  smallest gap between parts 3.0 mm
+Plate04 (PLA, 0.24 mm)  closest to the bed edge: 10.0 mm
+  PASS  Rack_SideModule_3U_x4.stl: x 28.0–228.0, y 10.0–146.4, 28.0 tall
+  PASS  B1_Dock_3U_Ear_x2.stl: x 14.0–146.6, y 160.0–188.0, 3.0 tall
+  PASS  B1_Dock_3U_Ear_x2.stl: x 14.0–146.6, y 196.0–224.0, 3.0 tall
+  PASS  Display7C_Clip_x4.stl: x 204.0–224.0, y 160.0–169.0, 3.0 tall
+  PASS  Display7C_Clip_x4.stl: x 226.0–246.0, y 160.0–169.0, 3.0 tall
+  PASS  Display7C_Clip_x4.stl: x 204.0–224.0, y 184.0–193.0, 3.0 tall
+  PASS  Display7C_Clip_x4.stl: x 226.0–246.0, y 184.0–193.0, 3.0 tall
+  PASS  smallest gap between parts 2.0 mm
+Plate05 (PLA, 0.24 mm)  closest to the bed edge: 4.5 mm
+  PASS  Rack_SideModule_3U_x4.stl: x 28.0–228.0, y 10.0–146.4, 28.0 tall
+  PASS  Rack_SideModule_1U_Top_x2.stl: x 28.0–228.0, y 152.0–199.5, 28.0 tall
+  PASS  Rack_SideModule_1U_Top_x2.stl: x 28.0–228.0, y 204.0–251.5, 28.0 tall
+  PASS  smallest gap between parts 4.5 mm
+Plate06 (PLA, 0.24 mm)  closest to the bed edge: 22.0 mm
+  PASS  Rack_CapHalf_x2.stl: x 40.0–187.8, y 28.0–228.0, 30.0 tall
+  PASS  B1_Dock_3U_Ear_x2.stl: x 206.0–234.0, y 62.0–194.6, 3.0 tall
+  PASS  smallest gap between parts 18.2 mm
+Plate07 (PLA, 0.24 mm)  closest to the bed edge: 22.0 mm
+  PASS  Rack_CapHalf_x2.stl: x 40.0–187.8, y 28.0–228.0, 30.0 tall
+  PASS  B1_Dock_3U_Ear_x2.stl: x 206.0–234.0, y 62.0–194.6, 3.0 tall
+  PASS  smallest gap between parts 18.2 mm
+Plate08 (PLA, 0.20 mm)  closest to the bed edge: 21.0 mm
+  PASS  B1_Dock_3U_Body.stl: x 21.0–235.0, y 80.0–175.0, 130.0 tall
+  PASS  one part only
+Plate09 (PLA, 0.20 mm)  closest to the bed edge: 21.0 mm
+  PASS  Display7C_3U_Body.stl: x 21.0–235.0, y 63.0–193.0, 30.0 tall
+  PASS  one part only
+Plate10 (PETG, 0.20 mm)  closest to the bed edge: 12.0 mm
+  PASS  Rack_Shelf_pinned.stl: x 43.0–213.1, y 12.0–128.7, 68.0 tall
+  PASS  Pi5_UPS_v3_ups_tray_pinned.stl: x 43.0–161.3, y 140.0–231.4, 36.5 tall
+  PASS  Pi5_UPS_v3_shims.stl: x 180.0–217.2, y 150.0–177.2, 2.0 tall
+  PASS  smallest gap between parts 11.3 mm
+Plate11 (PETG, 0.20 mm)  closest to the bed edge: 1.0 mm
+  PASS  Pi5_UPS_v3_board_tray_HDMIexit.stl: x 8.0–126.3, y 10.0–124.4, 28.9 tall
+  PASS  Pi5_UPS_v3_lid.stl: x 132.0–250.3, y 10.0–124.4, 6.4 tall
+  PASS  Rack_Faceplate_2U_10in.stl: x 1.0–255.0, y 140.0–228.1, 4.0 tall
+  PASS  smallest gap between parts 5.7 mm
+Plate12 (PETG, 0.20 mm)  closest to the bed edge: 22.8 mm
+  PASS  UCG_Ultra_1U_Shelf.stl: x 22.8–233.2, y 22.8–233.2, 137.2 tall
+  PASS  one part only
+
+44 PASS, 0 FAIL

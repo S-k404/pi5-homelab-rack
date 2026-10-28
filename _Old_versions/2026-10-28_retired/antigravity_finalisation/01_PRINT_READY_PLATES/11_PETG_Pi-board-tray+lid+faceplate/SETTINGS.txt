@@ -1,0 +1,17 @@
+11_PETG_Pi-board-tray+lid+faceplate  (BARE-PI option: not the build you chose)
+=============================================================================
+YOUR BUILD (28 Oct) is the Argon Poly+ 5: print from FINAL_PRINTS_2026-10-28/ in the project root, not this folder.
+This folder is only for the bare-Pi alternative (Pi + Active Cooler in the v3 board tray).
+
+Print Plate11_WITH-DC-notch.3mf: board tray + lid + the faceplate with the notch for plate 13's 12 V brick lead.
+(The "final hidden-slit / switch" faceplate and the switch extender were broken; they're in
+ ../_superseded_and_alternatives/BROKEN_antigravity-faceplate+switch-extender_2026-10-28/.)
+
+Material: PETG, about 157 g. Brim OFF: the faceplate is 254 mm on a 256 mm bed.
+Settings (Bambu P1S): 0.20mm Standard @BBL P1S, Generic PETG, 3 walls, 20% gyroid, supports OFF,
+Textured PEI no glue, enclosure CLOSED.
+
+On this plate:
+  - Pi5_UPS_v3_board_tray_HDMIexit.stl x1
+  - Pi5_UPS_v3_lid.stl x1
+  - Rack_Faceplate_2U_10in_DC-notch.stl x1

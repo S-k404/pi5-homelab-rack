@@ -1,0 +1,27 @@
+Printables 942972 UCG-Ultra 10-inch 1U mount (3 keystones) in the T0-look 9U rack: checks (27 Oct 2026)
+Calculations on the downloaded mesh and the rack CAD, not a physical test. Rack frame: x across, y up, z back from the rails.
+
+== The print file (UCG-Ultra_1U_3-keystones_Printables-942972.stl): the download, cleaned, with 0.8 mm taken off the top ==
+INFO  mount placed  x -127.0..127.0, y 355.60..399.25, z -3.0..133.0 (1U slot 355.60..400.05; panel 3 mm in front of the rails, tray 133 mm deep)
+PASS  cleaned mount is one watertight solid (keystone receptacles fused into the panel)  (volume 136.2 cm3)
+PASS  4 ear slots sit on the rail inserts (EIA 6.35 / 38.1, 236.525 apart) and pass an M5  (slots 12.0 x 7.0; worst offset 0.26 mm)
+PASS  no collision with the rack parts or the screen module below  (worst 0.000 mm3 with side_3_1U_L)
+PASS  air between the mount's top and the cap  (0.80 mm to the cap, 0.80 mm to any rack part above (the downloaded panel is a full 44.45 mm; 1U panels are normally 43.65 so they don't rub))
+PASS  air between the mount's floor and the screen module below  (0.40 mm)
+INFO  tray  inner width 143.3 mm for the 141.8 mm gateway (0.75 mm each side), gateway centre -13.1 mm from the rack centre line
+PASS  UCG-Ultra (141.8 x 127.6 x 30) fits: no collision with the mount  
+PASS  gateway is located: floor, panel, both side walls, rear stop  (slides back 2.2 mm to the rear stop)
+INFO  display window  24.1 x 12.4 mm, centre +0.0 mm across and +3.5 mm up from the centre of the gateway's front face
+WARN  rear ports  a 3 mm lip runs across the back, 10.0 mm above the floor and 2.2 mm behind the gateway, and two full-height corner posts cover the last 13.6 mm (right, seen from the front) and 3.1 mm (left) of its back. Check with the real gateway that the RJ45 and USB-C plugs clear them (the asymmetry and the raised display window suggest the designer modelled the real ports)
+PASS  rack depth: tray ends well before the rear posts, cables have room  (tray ends 133 mm behind the rails; rear posts at 188)
+
+8 PASS, 0 FAIL, 1 WARN
+
+== For comparison: the download as it came (full 44.45 mm panel) ==
+PASS  no collision with the rack parts or the screen module below  (worst 0.003 mm3 with cap_R)
+WARN  air between the mount's top and the cap  0.00 mm to the cap, 0.00 mm to any rack part above (the downloaded panel is a full 44.45 mm; 1U panels are normally 43.65 so they don't rub)
+
+== What was done to the download ==
+INFO  cleaned  dropped 2 zero-thickness junk surfaces; the 3 keystone receptacles (separate bodies, sitting exactly in the panel's openings) fused into the panel: one watertight solid, volume unchanged (138.1 cm3)
+INFO  trimmed  0.8 mm off the top edge (panel and the frame behind it) so it's a standard 43.65 mm 1U panel. Ear slots unchanged; 2.0 mm of panel left above the top slots
+INFO  print orientation  panel face down (as plate 12). Only overhangs: the rear stop (3 mm lip + 2 corner posts) at the very top of the print, 10-14 mm out, and 1.4 mm keystone catch ledges. Floor-down would need a 143 mm bridge over the gateway opening, so face down it is

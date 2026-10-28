@@ -1,0 +1,209 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Pi 5 Mini Rack Renders</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500;62..125,700;62..125,800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a studio contact sheet — one big hero frame, then rows of views, units and every printed part, each frame captioned like a print label */
+:root {
+  --bg: #e9ebee;
+  --paper: #f6f7f8;
+  --ink: #16181b;
+  --muted: #5b616a;
+  --line: #cfd3d8;
+  --accent: #c25a1c;
+  --frame: #dfe2e6;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #111315; --paper: #181b1e; --ink: #e8eaed; --muted: #9aa1aa; --line: #2b2f34; --accent: #ec8a4a; --frame: #1f2226; color-scheme: dark }
+}
+:root[data-theme="dark"] { --bg: #111315; --paper: #181b1e; --ink: #e8eaed; --muted: #9aa1aa; --line: #2b2f34; --accent: #ec8a4a; --frame: #1f2226; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font: 400 15px/1.55 var(--body); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 44px; }
+
+header { display: grid; gap: 10px; }
+.eyebrow { font: 500 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+h1 { font: 800 clamp(34px, 6vw, 64px)/1 var(--display); font-stretch: 112%; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.lede { max-width: 62ch; color: var(--muted); margin: 0; }
+.specs { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 6px; font: 400 13px/1.4 var(--mono); color: var(--ink); }
+.specs span b { font-weight: 500; color: var(--muted); margin-right: 6px; }
+
+h2 { font: 700 22px/1.2 var(--display); font-stretch: 105%; margin: 0; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+h2 small { font: 400 13px/1.3 var(--body); color: var(--muted); }
+section { display: grid; gap: 16px; }
+
+figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+.shot { display: block; width: 100%; padding: 0; border: 0; background: var(--frame); border-radius: 4px; overflow: hidden; cursor: zoom-in; }
+.shot img { display: block; width: 100%; height: auto; max-width: 100%; transition: transform .35s ease; }
+.shot:hover img { transform: scale(1.015); }
+.shot:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+figcaption { font-size: 13.5px; color: var(--muted); }
+figcaption b { color: var(--ink); font-weight: 500; }
+
+.hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; align-items: start; }
+.hero .side { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.hero .side figure:last-child { grid-column: 1 / -1; }
+.pair { display: grid; grid-template-columns: 1.15fr 1fr; gap: 16px; align-items: start; }
+.units { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+
+.parts { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+.card .shot { border-radius: 0; }
+.card .meta { padding: 10px 12px 12px; display: grid; gap: 4px; align-content: start; }
+.card h3 { font: 500 14.5px/1.3 var(--body); margin: 0; }
+.card .file { font: 400 11.5px/1.35 var(--mono); color: var(--muted); overflow-wrap: anywhere; }
+.card .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
+.tag { font: 500 11px/1 var(--mono); padding: 4px 6px; border-radius: 3px; border: 1px solid var(--line); color: var(--ink); font-variant-numeric: tabular-nums; }
+.tag.mat { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.card .note { font-size: 12.5px; color: var(--muted); }
+
+.foot { font-size: 13px; color: var(--muted); max-width: 75ch; border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+.foot code { font: 400 12.5px var(--mono); color: var(--ink); overflow-wrap: anywhere; }
+
+dialog { border: 0; padding: 0; background: transparent; max-width: min(96vw, 1600px); max-height: 96vh; }
+dialog::backdrop { background: rgb(8 9 10 / .88); }
+dialog img { display: block; max-width: min(96vw, 1600px); max-height: 88vh; width: auto; height: auto; border-radius: 4px; }
+dialog p { margin: 10px 2px 0; color: #e8eaed; font-size: 14px; }
+dialog button { position: absolute; top: 8px; right: 8px; font: 500 13px var(--mono); background: rgb(20 22 24 / .8); color: #e8eaed; border: 1px solid #444; border-radius: 3px; padding: 6px 10px; cursor: pointer; }
+
+@media (max-width: 860px) {
+  .hero, .pair { grid-template-columns: 1fr; }
+  .units { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .units, .hero .side { grid-template-columns: 1fr; }
+  .parts { grid-template-columns: 1fr 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .shot img { transition: none; } .shot:hover img { transform: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">rework-01 · v7.2 · rendered in Blender Cycles</div>
+    <h1>Pi 5 Mini Rack</h1>
+    <p class="lede">The printed 10-inch, 9U rack in the RackMate T0 style: silver sides, a black vented cap, and four units from the bottom up. Those are the Pi 5 + UPS, the NIIMBOT B1 dock, the 7-inch touch screen and the UniFi UCG-Ultra. Tap any image to see it full size.</p>
+    <div class="specs">
+      <span><b>Footprint</b>280 × 200 mm</span>
+      <span><b>Height</b>450 mm cap · 495 mm handles</span>
+      <span><b>Rails</b>10-inch, 236.525 mm hole pitch</span>
+      <span><b>Prints</b>20 STLs · 12 P1S plates</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="h-whole">
+    <h2 id="h-whole">The whole rack <small>loaded with all four units</small></h2>
+    <div class="hero">
+      <figure><button class="shot" data-full="01_rack_loaded_front.jpg"><img src="01_rack_loaded_front.jpg" alt="Loaded 9U rack seen from the front left" width="1120" height="1400"></button>
+        <figcaption><b>Front, three-quarter.</b> From the bottom: Pi unit (2U), B1 dock (3U), screen (3U), UCG-Ultra shelf (1U).</figcaption></figure>
+      <div class="side">
+        <figure><button class="shot" data-full="03_rack_front_straight.jpg"><img src="03_rack_front_straight.jpg" alt="Loaded rack seen straight from the front" width="980" height="1400"></button>
+          <figcaption><b>Straight on.</b> What you see at the desk.</figcaption></figure>
+        <figure><button class="shot" data-full="02_rack_loaded_back.jpg"><img src="02_rack_loaded_back.jpg" alt="Loaded rack seen from the back right" width="1120" height="1400"></button>
+          <figcaption><b>Back.</b> Open for cables. The Pi's ports and the gateway's ports face this way.</figcaption></figure>
+        <figure><button class="shot" data-full="05_rack_empty.jpg"><img src="05_rack_empty.jpg" alt="Empty rack frame" width="1105" height="1400"></button>
+          <figcaption><b>Empty frame.</b> Side modules 2U + 3U + 3U + 1U, three base bars, the cap and two handles.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-exp">
+    <h2 id="h-exp">Exploded <small>every printed part and device pulled apart</small></h2>
+    <div class="pair">
+      <figure><button class="shot" data-full="04_rack_exploded.jpg"><img src="04_rack_exploded.jpg" alt="Exploded view of the whole rack and its units" width="1145" height="1400"></button>
+        <figcaption><b>Everything.</b> The side modules spread left and right, the cap and handles lift off, and each unit slides out of the front.</figcaption></figure>
+      <figure><button class="shot" data-full="08_pi_unit_exploded.jpg"><img src="08_pi_unit_exploded.jpg" alt="Exploded Pi unit" width="1400" height="1313"></button>
+        <figcaption><b>Pi unit.</b> Bottom to top: the shelf, the UPS tray and UPS, the board tray with the Pi 5, adapter (F) and cooler, then the lid. The faceplate sits in front.</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-units">
+    <h2 id="h-units">The four units <small>each as it goes into the rack</small></h2>
+    <div class="units">
+      <figure><button class="shot" data-full="06_pi_unit.jpg"><img src="06_pi_unit.jpg" alt="Pi unit, front" width="1400" height="963"></button>
+        <figcaption><b>Pi 5 + UPS (2U), front.</b> Power-button hole, 12 V DC-IN window, vents.</figcaption></figure>
+      <figure><button class="shot" data-full="07_pi_unit_back_ports.jpg"><img src="07_pi_unit_back_ports.jpg" alt="Pi unit, back with ports" width="1400" height="963"></button>
+        <figcaption><b>Pi unit, back.</b> HDMI, 2.5G, Ethernet and USB face the rack's open back.</figcaption></figure>
+      <figure><button class="shot" data-full="09_b1_dock.jpg"><img src="09_b1_dock.jpg" alt="B1 dock with the label printer" width="1400" height="1050"></button>
+        <figcaption><b>NIIMBOT B1 dock (3U).</b> The printer stands top-out, so labels feed straight out of the front.</figcaption></figure>
+      <figure><button class="shot" data-full="10_screen_module.jpg"><img src="10_screen_module.jpg" alt="7-inch screen module, front" width="1400" height="1050"></button>
+        <figcaption><b>7-inch screen (3U), front.</b> Waveshare (C)-type panel behind a 160 × 94 mm bezel window.</figcaption></figure>
+      <figure><button class="shot" data-full="11_screen_module_back.jpg"><img src="11_screen_module_back.jpg" alt="Screen module, back" width="1400" height="1050"></button>
+        <figcaption><b>Screen, back.</b> Four clips on the corner tabs; both sides are open for the HDMI and USB plugs.</figcaption></figure>
+      <figure><button class="shot" data-full="12_ucg_shelf.jpg"><img src="12_ucg_shelf.jpg" alt="UCG-Ultra shelf, front" width="1400" height="875"></button>
+        <figcaption><b>UCG-Ultra shelf (1U).</b> One PETG print. The window frames the gateway's front and display.</figcaption></figure>
+      <figure><button class="shot" data-full="13_ucg_shelf_back.jpg"><img src="13_ucg_shelf_back.jpg" alt="UCG-Ultra shelf, back" width="1400" height="875"></button>
+        <figcaption><b>UCG shelf, back.</b> Side rails and two corner stops; the middle stays clear for the ports and power.</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-parts">
+    <h2 id="h-parts">Every printed part <small>shown the way it sits in the rack; “print” is how many to make</small></h2>
+    <div class="parts" id="parts"></div>
+  </section>
+
+  <div class="foot">
+    <p>Path-traced in Blender 5.2 (Cycles, Metal GPU) from the CadQuery sources in <code>rework-01</code>, with the same part positions as the interactive 3D page. The Pi 5 and the 7-inch screen use the makers' 3D models. The B1, UCG-Ultra, UPS and cooler are simplified shapes at their real sizes. The screen and gateway displays show sample images.</p>
+    <p>Full-size PNGs and the Blender scene (<code>Pi5_MiniRack_v7.2_studio.blend</code>, one camera per view) are in <code>VISUALS/blender/</code>.</p>
+  </div>
+</div>
+
+<dialog id="lb" aria-label="Full-size image">
+  <button type="button" id="lb-close">Close</button>
+  <img id="lb-img" alt="">
+  <p id="lb-cap"></p>
+</dialog>
+
+<script>
+const PARTS = [
+  ["side2U", "Side module, 2U base", "Rack_SideModule_2U_Base_x2.stl", 2, 93, "PLA"],
+  ["side3U", "Side module, 3U", "Rack_SideModule_3U_x4.stl", 4, 104, "PLA"],
+  ["side1U", "Side module, 1U top", "Rack_SideModule_1U_Top_x2.stl", 2, 50, "PLA"],
+  ["cap", "Cap half", "Rack_CapHalf_x2.stl", 2, 96, "PLA"],
+  ["handle", "Handle", "Rack_Handle_x2.stl", 2, 36, "PLA"],
+  ["bar", "Base bar", "Rack_BaseBar_x3.stl", 3, 21, "PLA"],
+  ["dock", "B1 dock body", "B1_Dock_3U_Body.stl", 1, 125, "PLA"],
+  ["ear", "Rack ear", "B1_Dock_3U_Ear_x2.stl", 4, 10, "PLA", "2 for the dock, 2 for the screen"],
+  ["spacer", "B1 spacer, 5 mm", "B1_Spacer_5mm_x2.stl", 2, 9, "PLA", "only for a 62 mm B1"],
+  ["disp", "Screen module body", "Display7C_3U_Body.stl", 1, 71, "PLA"],
+  ["clip0", "Screen clip", "Display7C_Clip_x4.stl", 4, 0.6, "PLA"],
+  ["pi_shelf", "Pi shelf", "Rack_Shelf_pinned.stl", 1, 96, "PETG"],
+  ["pi_ups", "Pi UPS tray", "Pi5_UPS_v3_ups_tray_pinned.stl", 1, 62, "PETG"],
+  ["pi_board", "Pi board tray", "Pi5_UPS_v3_board_tray_HDMIexit.stl", 1, 65, "PETG"],
+  ["pi_lid", "Pi case lid", "Pi5_UPS_v3_lid.stl", 1, 28, "PETG"],
+  ["pi_face", "Pi faceplate, one piece", "Rack_Faceplate_2U_10in.stl", 1, 64, "PETG", "fits the P1S's 256 mm bed"],
+  ["pi_faceL", "Pi faceplate, left half", "Rack_Faceplate_Left.stl", 0, 34, "PETG", "only for 220 mm beds"],
+  ["pi_faceR", "Pi faceplate, right half", "Rack_Faceplate_Right.stl", 0, 31, "PETG", "only for 220 mm beds"],
+  ["pi_shims", "Adapter shims", "Pi5_UPS_v3_shims.stl", 1, 1, "PETG", "a set: 4 each of 0.5, 1 and 2 mm"],
+  ["ucg", "UCG-Ultra shelf", "UCG_Ultra_1U_Shelf.stl", 1, 95, "PETG"],
+];
+const grid = document.getElementById("parts");
+for (const [key, label, file, qty, g, mat, note] of PARTS) {
+  const card = document.createElement("article");
+  card.className = "card";
+  card.innerHTML = `<button class="shot" data-full="parts/${key}.jpg" data-cap="${label} · ${file}"><img src="parts/${key}.jpg" alt="${label}" width="640" height="640" loading="lazy"></button>
+    <div class="meta"><h3>${label}</h3><div class="file">${file}</div>
+    <div class="tags"><span class="tag mat">${mat}</span><span class="tag">${qty ? "print " + qty : "optional"}</span><span class="tag">≈${g} g</span></div>
+    ${note ? `<div class="note">${note}</div>` : ""}</div>`;
+  grid.appendChild(card);
+}
+const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img"), lbCap = document.getElementById("lb-cap");
+document.addEventListener("click", (e) => {
+  const b = e.target.closest(".shot");
+  if (!b) return;
+  lbImg.src = b.dataset.full;
+  const img = b.querySelector("img");
+  lbImg.alt = img ? img.alt : "";
+  const fc = b.closest("figure")?.querySelector("figcaption");
+  lbCap.textContent = b.dataset.cap || (fc ? fc.textContent : "");
+  lb.showModal();
+});
+document.getElementById("lb-close").addEventListener("click", () => lb.close());
+lb.addEventListener("click", (e) => { if (e.target === lb) lb.close(); });
+</script>
+
+</body></html>

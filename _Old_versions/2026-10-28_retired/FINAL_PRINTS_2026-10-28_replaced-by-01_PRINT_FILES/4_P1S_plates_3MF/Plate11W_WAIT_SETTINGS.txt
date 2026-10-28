@@ -1,0 +1,24 @@
+Plate 11W (PETG): Argon Poly+ 5 tray + Waveshare adapter (F) holder base + lid  --  WAIT
+=====================================================================================
+Status: WAIT for two things:
+  1. The Poly+ 5 tray: measure the case. It takes up to 96.0 long x 66.5 wide (listed 93.5 x 64 x 30, +-1 cm).
+     Bigger: don't print, ask Claude to widen the pocket.
+  2. The holder (base + lid): the TEST FIT below. The holder sits 3-5 mm from the case's side ports (USB-C power,
+     both micro-HDMI). It only works if the adapter (F)'s own USB-C and micro-HDMI plugs reach the Pi through the
+     Poly+ 5's side cut-outs. If they don't, nothing else can plug into those ports while the holder is there,
+     so don't print the holder: power the Pi from a 12 V -> 5 V USB-C step-down and use the UGREEN micro-HDMI
+     extender instead (no NVMe / 2.5G then).
+     Test: Pi in the Poly+ 5, lid on. Hold the adapter flat beside the case, plug edge towards the case, and push
+     its USB-C and micro-HDMI plugs into the cut-outs. Both must click fully home (about 6 mm in) with the adapter
+     level. Also check the 16-pin FFC can leave the case and reach the adapter.
+Material: PETG black, about 95 g (tray ~43 g, holder base ~35 g, lid ~17 g)
+
+Settings (Bambu P1S): 0.20mm Standard @BBL P1S, Generic PETG, 3 walls, 20% gyroid, supports OFF,
+Textured PEI no glue, enclosure CLOSED. The holder lid is saved TOP FACE DOWN: print it as it is.
+
+On this plate:
+  - Argon Poly+ 5 tray x1     (2_WAIT_measure-first/W1_Argon_Poly5_Tray__x1__PETG__WAIT-measure-case.stl)
+  - Adapter (F) holder base x1 (2_WAIT_measure-first/W3_Waveshare_F_Holder_Base__x1__PETG__WAIT-test-fit.stl)
+  - Adapter (F) holder lid x1  (2_WAIT_measure-first/W4_Waveshare_F_Holder_Lid__x1__PETG__WAIT-test-fit.stl)
+The tray screws onto the UPS tray (plate 10) with 3 x M3 x 12 countersunk: fit them before the case (two end up under it).
+Holder hardware: 4 x M2.5 x 25 pan head, foam tape under its right-hand rib.

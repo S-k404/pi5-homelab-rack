@@ -1,0 +1,21 @@
+05_PLA_3U-module+1U-tops
+========================
+Status: print now
+Material: PLA, about 204 g
+
+How: double-click the .3mf (or File > Open Project in Bambu Studio). Every part is already placed.
+If Bambu Studio asks, choose to load the geometry only. Then pick the settings below and Slice.
+(The loose STLs are here too, in case you'd rather import them yourself.)
+
+Settings:
+  - Bambu Studio profile: 0.24mm Draft @BBL P1S
+  - Filament: Generic PLA
+  - Wall loops: 3 (default is 2)
+  - Sparse infill: 15% gyroid
+  - Supports: OFF
+  - Plate: Textured PEI
+  - Enclosure: top lid or front door OPEN (PLA heat-creeps in a closed P1S)
+
+On this plate:
+  - Side 3U x1   (Rack_SideModule_3U_x4.stl)
+  - Side 1U top x2   (Rack_SideModule_1U_Top_x2.stl)

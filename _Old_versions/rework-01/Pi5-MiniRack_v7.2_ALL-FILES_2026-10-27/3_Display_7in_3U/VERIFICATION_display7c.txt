@@ -1,0 +1,27 @@
+7" screen module, C-type (3U) — checks against Waveshare's 3D model of the 7inch HDMI LCD (C)
+
+PASS  body is one valid solid  
+PASS  screen sits in the module without touching, sockets on the left  (0.000 mm3)
+PASS  screen rests on the bezel (0.2 mm forward collides), sockets on the left  
+PASS  flanges and corner walls locate it to within 0.5 mm, sockets on the left  (4/4 directions stopped)
+PASS  clips clear the screen at rest, sockets on the left  
+PASS  each clip bears on an ear through the 1 mm foam, sockets on the left  (overlap if pushed 1.3 mm: 14-14 mm3)
+PASS  HDMI and micro-USB plugs (flat HDMI cable folded back) clear the module, sockets on the left  (0.000 mm3)
+PASS  plug spaces start at the sockets (no overlap with the screen), sockets on the left  (0.00 mm3)
+PASS  screen sits in the module without touching, turned 180 deg (sockets on the right)  (0.000 mm3)
+PASS  screen rests on the bezel (0.2 mm forward collides), turned 180 deg (sockets on the right)  
+PASS  flanges and corner walls locate it to within 0.5 mm, turned 180 deg (sockets on the right)  (4/4 directions stopped)
+PASS  clips clear the screen at rest, turned 180 deg (sockets on the right)  
+PASS  each clip bears on an ear through the 1 mm foam, turned 180 deg (sockets on the right)  (overlap if pushed 1.3 mm: 14-14 mm3)
+PASS  HDMI and micro-USB plugs (flat HDMI cable folded back) clear the module, turned 180 deg (sockets on the right)  (0.000 mm3)
+PASS  plug spaces start at the sockets (no overlap with the screen), turned 180 deg (sockets on the right)  (0.00 mm3)
+PASS  4 clips clear the body  
+PASS  each clip's screw hole lines up with a boss insert  
+PASS  ear inserts in place (ears are the B1 dock's ears)  
+PASS  bezel window shows the whole active area even when it sits off centre  (window 160 x 94, active 154.2 x 85.9: 2.9 / 4.0 mm spare)
+PASS  bezel covers the glass edge by >= 1 mm all round (screen pushed to one side)  (2.1 mm at the sides, 1.2 mm at the narrow edge)
+PASS  body fits between 10-inch rails and inside 3U  (214 x 130 mm)
+PASS  body fits a 220 mm bed face down  (214 x 130 x 30 mm)
+PASS  no overhangs face down: everything rises from the bezel  
+
+23 PASS, 0 FAIL

@@ -1,0 +1,40 @@
+3MF plate audit (read back from the files): every part on the 256 x 256 bed, identified by volume
+
+PASS  Plate01.3mf: 2 part(s), x 28.0..228.0, y 14.0..241.9, tallest 40.0 mm  ->  01_Rack_SideModule_2U_Base__x2__PLA.stl, 01_Rack_SideModule_2U_Base__x2__PLA.stl
+PASS  Plate02.3mf: 4 part(s), x 16.3..239.7, y 10.0..227.0, tallest 28.0 mm  ->  02_Rack_SideModule_3U__x4__PLA.stl, 06_Rack_BaseBar__x3__PLA.stl, 06_Rack_BaseBar__x3__PLA.stl, 06_Rack_BaseBar__x3__PLA.stl
+PASS  Plate03.3mf: 3 part(s), x 28.0..228.0, y 10.0..251.0, tallest 28.0 mm  ->  02_Rack_SideModule_3U__x4__PLA.stl, 05_Rack_Handle__x2__PLA.stl, 05_Rack_Handle__x2__PLA.stl
+PASS  Plate04.3mf: 7 part(s), x 14.0..246.0, y 10.0..224.0, tallest 28.0 mm  ->  02_Rack_SideModule_3U__x4__PLA.stl, 07_Unit_Ear_3U__x4__PLA.stl, 07_Unit_Ear_3U__x4__PLA.stl, 08_Display7C_Clip__x4__PLA.stl, 08_Display7C_Clip__x4__PLA.stl, 08_Display7C_Clip__x4__PLA.stl, 08_Display7C_Clip__x4__PLA.stl
+PASS  Plate05.3mf: 3 part(s), x 28.0..228.0, y 10.0..251.4, tallest 28.0 mm  ->  02_Rack_SideModule_3U__x4__PLA.stl, 03_Rack_SideModule_1U_Top__x2__PLA.stl, 03_Rack_SideModule_1U_Top__x2__PLA.stl
+PASS  Plate06.3mf: 2 part(s), x 40.0..234.0, y 28.0..228.0, tallest 30.0 mm  ->  04_Rack_CapHalf__x2__PLA.stl, 07_Unit_Ear_3U__x4__PLA.stl
+PASS  Plate07.3mf: 2 part(s), x 40.0..234.0, y 28.0..228.0, tallest 30.0 mm  ->  04_Rack_CapHalf__x2__PLA.stl, 07_Unit_Ear_3U__x4__PLA.stl
+PASS  Plate08.3mf: 1 part(s), x 21.0..235.0, y 80.0..175.0, tallest 130.0 mm  ->  09_B1_Dock_v5_Body__x1__PLA.stl
+PASS  Plate09.3mf: 1 part(s), x 21.0..235.0, y 63.0..193.0, tallest 30.0 mm  ->  W2_Display7C_3U_Body__x1__PLA__WAIT-measure-screen.stl
+PASS  Plate10.3mf: 2 part(s), x 43.0..213.1, y 12.0..231.4, tallest 68.0 mm  ->  10_Pi_Rack_Shelf_pinned__x1__PETG.stl, 11_Pi_UPS_Tray_pinned__x1__PETG.stl
+PASS  Plate11.3mf: 1 part(s), x 1.0..255.0, y 84.0..172.1, tallest 4.0 mm  ->  12_Pi_Faceplate_2U_DC-notch__x1__PETG.stl
+PASS  Plate11W_WAIT.3mf: 3 part(s), x 6.0..248.3, y 70.8..185.2, tallest 25.8 mm  ->  W1_Argon_Poly5_Tray__x1__PETG__WAIT-measure-case.stl, W3_Waveshare_F_Holder_Base__x1__PETG__WAIT-test-fit.stl, W4_Waveshare_F_Holder_Lid__x1__PETG__WAIT-test-fit.stl
+PASS  Plate12-ALT2.3mf: 1 part(s), x 23.9..232.1, y 23.9..232.1, tallest 136.0 mm  ->  15_UCG-Ultra_1U_Mount_Printables-942972__x1__PETG.stl
+PASS  Plate13.3mf: 5 part(s), x 12.0..190.0, y 20.0..221.4, tallest 35.4 mm  ->  13_Brick_Cradle_12V__x1__PETG.stl, O3_Brick_Spacer_2mm__x1__PETG__only-if-brick-34.5-36.5mm.stl, O2_Brick_Spacer_4mm__x1__PETG__only-if-brick-32.5-34.5mm.stl, O1_Brick_Spacer_6mm__x1__PETG__only-if-brick-30.5-32.5mm.stl, 14_Brick_Spacer_8mm__x1__PETG.stl
+
+Totals across all plates vs the parts list (3MF count / parts-list qty):
+PASS  01_Rack_SideModule_2U_Base__x2__PLA.stl: 2 on the plates, 2 needed
+PASS  02_Rack_SideModule_3U__x4__PLA.stl: 4 on the plates, 4 needed
+PASS  03_Rack_SideModule_1U_Top__x2__PLA.stl: 2 on the plates, 2 needed
+PASS  04_Rack_CapHalf__x2__PLA.stl: 2 on the plates, 2 needed
+PASS  05_Rack_Handle__x2__PLA.stl: 2 on the plates, 2 needed
+PASS  06_Rack_BaseBar__x3__PLA.stl: 3 on the plates, 3 needed
+PASS  07_Unit_Ear_3U__x4__PLA.stl: 4 on the plates, 4 needed
+PASS  08_Display7C_Clip__x4__PLA.stl: 4 on the plates, 4 needed
+PASS  09_B1_Dock_v5_Body__x1__PLA.stl: 1 on the plates, 1 needed
+PASS  10_Pi_Rack_Shelf_pinned__x1__PETG.stl: 1 on the plates, 1 needed
+PASS  11_Pi_UPS_Tray_pinned__x1__PETG.stl: 1 on the plates, 1 needed
+PASS  12_Pi_Faceplate_2U_DC-notch__x1__PETG.stl: 1 on the plates, 1 needed
+PASS  13_Brick_Cradle_12V__x1__PETG.stl: 1 on the plates, 1 needed
+PASS  14_Brick_Spacer_8mm__x1__PETG.stl: 1 on the plates, 1 needed
+PASS  15_UCG-Ultra_1U_Mount_Printables-942972__x1__PETG.stl: 1 on the plates, 1 needed
+PASS  W1_Argon_Poly5_Tray__x1__PETG__WAIT-measure-case.stl: 1 on the plates, 1 needed
+PASS  W2_Display7C_3U_Body__x1__PLA__WAIT-measure-screen.stl: 1 on the plates, 1 needed
+PASS  W3_Waveshare_F_Holder_Base__x1__PETG__WAIT-test-fit.stl: 1 on the plates, 1 needed
+PASS  W4_Waveshare_F_Holder_Lid__x1__PETG__WAIT-test-fit.stl: 1 on the plates, 1 needed
+PASS  O1_Brick_Spacer_6mm__x1__PETG__only-if-brick-30.5-32.5mm.stl: 1 on the plates, 1 needed
+PASS  O2_Brick_Spacer_4mm__x1__PETG__only-if-brick-32.5-34.5mm.stl: 1 on the plates, 1 needed
+PASS  O3_Brick_Spacer_2mm__x1__PETG__only-if-brick-34.5-36.5mm.stl: 1 on the plates, 1 needed

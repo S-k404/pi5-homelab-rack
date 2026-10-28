@@ -1,0 +1,25 @@
+10_PETG_Pi-shelf+UPS-tray+shims
+===============================
+Status: print now
+Material: PETG, about 159 g
+
+How: double-click the .3mf (or File > Open Project in Bambu Studio). Every part is already placed.
+If Bambu Studio asks, choose to load the geometry only. Then pick the settings below and Slice.
+(The loose STLs are here too, in case you'd rather import them yourself.)
+
+Settings:
+  - Bambu Studio profile: 0.20mm Standard @BBL P1S
+  - Filament: Generic PETG
+  - Wall loops: 3
+  - Sparse infill: 20% gyroid
+  - Supports: OFF
+  - Plate: Textured PEI, no glue
+  - Enclosure: CLOSED
+
+Notes:
+  The shims file is 12 tiny pieces in one file; that's correct.
+
+On this plate:
+  - Pi shelf x1   (Rack_Shelf_pinned.stl)
+  - UPS tray x1   (Pi5_UPS_v3_ups_tray_pinned.stl)
+  - Shims x1   (Pi5_UPS_v3_shims.stl)

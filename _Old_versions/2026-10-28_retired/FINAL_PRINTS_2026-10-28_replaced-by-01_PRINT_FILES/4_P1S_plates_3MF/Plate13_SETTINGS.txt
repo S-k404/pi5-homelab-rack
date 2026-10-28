@@ -1,0 +1,47 @@
+13_PETG_12V-brick-cradle
+========================
+Status: print now (fits the brick in your Robu cart, and most other 60 W bricks)
+Material: PETG, about 116 g (cradle ~63 g, spacers 10-17 g each)
+
+What it is: a cradle for the 12 V 5 A brick, in the empty bay to the right of the Pi unit (behind the right half
+of the Pi faceplate). It drops onto the rack's middle and rear base bars. No screws. See Plate13_in_the_rack.png.
+
+Cable routing:
+The 12 V lead runs forward along the cradle, over the front base bar and out through the 8 x 9 mm notch in the
+bottom edge of the Pi faceplate (12_Pi_Faceplate_2U_DC-notch, on Plate 11 in this folder), then about 13 mm left
+along the front into the UPS DC-IN window. Without that notch the faceplate blocks the lead (checked: 42 PASS).
+The mains lead goes straight out of the back.
+
+How: double-click Plate13.3mf (or File > Open Project in Bambu Studio). Every part is already placed.
+If Bambu Studio asks, choose to load the geometry only. Then pick the settings below and Slice.
+
+Settings:
+  - Bambu Studio profile: 0.20mm Standard @BBL P1S
+  - Filament: Generic PETG
+  - Wall loops: 3
+  - Sparse infill: 20% gyroid
+  - Supports: OFF
+  - Plate: Textured PEI, no glue
+  - Enclosure: CLOSED
+
+Notes:
+  The cradle prints floor down. The two notches under the floor are short bridges (13 mm), fine in PETG.
+  Four spacers are on the plate; you'll use one. If you're short of PETG, delete the ones you won't need:
+    brick 29-30.5 mm thick -> 8 mm spacer (Robu's brick is listed 110 x 50 x 30)
+    30.5-32.5 -> 6 mm   32.5-34.5 -> 4 mm   34.5-36.5 -> 2 mm   36.5-38.2 -> none
+  Takes bricks up to 140 long x 60 tall (standing on edge) x 38.2 thick.
+
+Fitting it:
+  1. Clip the spacer over the cradle's LEFT wall (the side towards the Pi), flange on the wall top.
+  2. Stand the brick on its long edge in the cradle, mains socket at the BACK, pushed back against the low kerb.
+  3. Two hook-and-loop straps (or zip ties) round the cradle and the brick, between the two notches.
+  4. Lower it into the bay right of the Pi unit so the floor notches sit over the middle and rear base bars.
+  5. Mains cord: plug into the brick from behind the rack. 12 V lead: run it forward along the cradle, coil the
+     spare in front of the brick (zip-tie it to the anchor), then over the front base bar, and into the UPS DC-IN.
+
+On this plate:
+  - 12 V brick cradle x1   (Brick_Cradle_12V.stl)
+  - Spacer 2 mm x1   (Brick_Spacer_2mm.stl)
+  - Spacer 4 mm x1   (Brick_Spacer_4mm.stl)
+  - Spacer 6 mm x1   (Brick_Spacer_6mm.stl)
+  - Spacer 8 mm x1   (Brick_Spacer_8mm.stl)

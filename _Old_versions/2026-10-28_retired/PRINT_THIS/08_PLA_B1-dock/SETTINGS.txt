@@ -1,0 +1,25 @@
+08_PLA_B1-dock
+==============
+Status: print now (dock v5: the real B1, 132 x 91 x 62)
+Material: PLA, about 120 g
+
+How: double-click the .3mf (or File > Open Project in Bambu Studio). Every part is already placed.
+If Bambu Studio asks, choose to load the geometry only. Then pick the settings below and Slice.
+(The loose STLs are here too, in case you'd rather import them yourself.)
+
+Settings:
+  - Bambu Studio profile: 0.20mm Standard @BBL P1S
+  - Filament: Generic PLA
+  - Wall loops: 3
+  - Sparse infill: 15% gyroid
+  - Supports: OFF
+  - Plate: Textured PEI
+  - Enclosure: top lid OPEN
+
+Notes:
+  Dock v5 (27 Oct): sized to the B1's official 132 x 91 x 62 mm (NIIMBOT manual) and laid out from your photos.
+  No spacers any more. Stand the B1 face out with its open slide on TOP: the lid end is then on your right,
+  and the lid can swing open in the rack to change the label roll.
+
+On this plate:
+  - B1 dock body x1   (B1_Dock_3U_Body.stl)

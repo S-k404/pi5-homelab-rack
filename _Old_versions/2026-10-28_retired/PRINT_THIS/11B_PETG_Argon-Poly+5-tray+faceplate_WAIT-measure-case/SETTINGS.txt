@@ -1,0 +1,36 @@
+NOTE 28 Oct: the faceplate here is now the DC-notch one (the 'final' switch/slit faceplate was broken).
+Your full print list: FINAL_PRINTS_2026-10-28/ in the project root.
+
+11B_PETG_Argon-Poly+5-tray+faceplate_WAIT-measure-case
+======================================================
+Status: WAIT until the Argon Poly+5 case arrives and you've measured it (see below)
+Material: PETG, about 107 g (tray ~42 g + faceplate ~65 g)
+
+Print this INSTEAD OF plate 11 when the Pi lives in this case. Still print plate 10 (shelf + UPS tray).
+
+How: double-click the .3mf (or File > Open Project in Bambu Studio). Both parts are already placed.
+If Bambu Studio asks, choose to load the geometry only. Then pick the settings below and Slice.
+
+Settings:
+  - Bambu Studio profile: 0.20mm Standard @BBL P1S
+  - Filament: Generic PETG
+  - Wall loops: 3
+  - Sparse infill: 20% gyroid
+  - Supports: OFF
+  - Plate: Textured PEI, no glue
+  - Enclosure: CLOSED
+
+Notes:
+  Brim: OFF. The faceplate is 254 mm on a 256 mm bed, so a brim would run off the plate.
+  Measure the case first: length (port end to microSD end), width (side ports to GPIO side), height.
+  The tray takes any case up to 96.0 long x 66.5 wide (the largest published size
+  is 95.5 x 66.0). Listed size 93.5 x 64.0 x 30.0.
+  - Bigger than that: don't print, ask Claude to widen the pocket.
+  - Up to ~3 mm smaller: fine. Push it into the rear-right corner and stick it down with the foam tape.
+  - More than ~3 mm smaller: it still works on the foam tape, or ask Claude for a snug version.
+  The faceplate is the same file as plate 11's. If you've already printed plate 11, you only need the tray:
+  in Bambu Studio, delete the faceplate from the plate before slicing.
+
+On this plate:
+  - Argon Poly+5 tray x1   (Pi5_ArgonPoly5_tray.stl)
+  - Pi faceplate (1 piece) x1   (Rack_Faceplate_2U_10in_DC-notch.stl)

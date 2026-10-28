@@ -1,0 +1,40 @@
+12-ALT2_PETG_UCG-Ultra-1U-3-keystones_Printables-942972
+========================================================
+Status: optional. Print this INSTEAD OF plate 12 if you want the ready-made mount (checked against your rack 27 Oct)
+Material: PETG, about 120 g
+Design: "Unifi Cloud Gateway Ultra 10" rackmount", Printables 942972
+        https://www.printables.com/model/942972-unifi-cloud-gateway-ultra-10-rackmount
+        For your own printing only: don't re-share the file.
+
+How: double-click the .3mf (or File > Open Project in Bambu Studio). The part is already placed.
+If Bambu Studio asks, choose to load the geometry only. Then pick the settings below and Slice.
+(The loose STL is here too, in case you'd rather import it yourself.)
+
+Settings:
+  - Bambu Studio profile: 0.20mm Standard @BBL P1S
+  - Filament: Generic PETG
+  - Wall loops: 3
+  - Sparse infill: 20% gyroid
+  - Supports: OFF
+  - Plate: Textured PEI, no glue
+  - Enclosure: CLOSED
+
+Notes:
+  Changed from the download (the original is untouched in ../_downloads/):
+  - 0.8 mm taken off the top edge. As downloaded it's a full 44.45 mm tall and touches your rack's cap (0.00 mm gap).
+    Now it's a standard 43.65 mm 1U panel with 0.8 mm of air under the cap. The ear slots haven't moved.
+  - Two zero-thickness junk surfaces removed. The 3 keystone holders were separate pieces sitting in the panel
+    openings; they're now one part with the panel.
+  It prints panel face down and stands 136 mm tall (like plate 12). Clean the plate with dish soap first.
+  It's turned 45 degrees on purpose: that leaves 24 mm all round, so you can add a 5 mm brim if your plate is worn.
+  Supports OFF: the only overhang is the rear stop at the very top of the print (a 3 mm lip and two corner posts,
+  10-14 mm out). Its underside comes out a bit rough. It faces the gateway's back, so it doesn't matter. If you want
+  it clean, paint supports on just those faces.
+  The 3 keystone slots take standard keystone jacks or blanks (not on the BOM). Without them they're open holes.
+  Hardware: 4 x M5 x 12 button head + washers into the rail inserts, the same as plate 12.
+  BEFORE RACKING: put the gateway in and plug in its rear cables. A 10 mm lip runs across the back, 2 mm behind
+  the gateway, and a corner post covers the last 14 mm of its back on the right (seen from the front). Check the
+  RJ45 and USB-C plugs clear them. If one doesn't, ask Claude to cut that part down.
+
+On this plate:
+  - UCG-Ultra 1U mount, 3 keystones x1   (UCG-Ultra_1U_3-keystones_Printables-942972.stl)

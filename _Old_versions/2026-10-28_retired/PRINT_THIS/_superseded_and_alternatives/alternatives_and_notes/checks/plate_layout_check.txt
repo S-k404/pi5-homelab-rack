@@ -1,0 +1,76 @@
+Plate layout check, 27 Oct 2026 (evening): every object inside the 256 x 256 bed with >= 1 mm to the edge, flat on the bed,
+watertight, and >= 2 mm between parts (real footprints where the boxes are closer).
+
+01_PLA_side-modules-2U-base/Plate01.3mf  (PLA, 0.24 mm)
+  PASS  Rack_SideModule_2U_Base_x2_1: x 28.0-228.0, y 14.0-122.9, 40.0 tall, on the bed
+  PASS  Rack_SideModule_2U_Base_x2_2: x 28.0-228.0, y 133.0-241.9, 40.0 tall, on the bed
+  PASS  smallest gap between parts 10.1 mm
+02_PLA_3U-module+base-bars/Plate02.3mf  (PLA, 0.24 mm)
+  PASS  Rack_SideModule_3U_x4: x 28.0-228.0, y 10.0-146.4, 28.0 tall, on the bed
+  PASS  Rack_BaseBar_x3_1: x 16.3-239.7, y 160.0-177.0, 11.0 tall, on the bed
+  PASS  Rack_BaseBar_x3_2: x 16.3-239.7, y 185.0-202.0, 11.0 tall, on the bed
+  PASS  Rack_BaseBar_x3_3: x 16.3-239.7, y 210.0-227.0, 11.0 tall, on the bed
+  PASS  smallest gap between parts 8.0 mm
+03_PLA_PRINT-FIRST_3U-module+handles/Plate03.3mf  (PLA, 0.24 mm)
+  PASS  Rack_SideModule_3U_x4: x 28.0-228.0, y 10.0-146.4, 28.0 tall, on the bed
+  PASS  Rack_Handle_x2_1: x 42.0-214.0, y 158.0-203.0, 14.0 tall, on the bed
+  PASS  Rack_Handle_x2_2: x 42.0-214.0, y 206.0-251.0, 14.0 tall, on the bed
+  PASS  smallest gap between parts 3.0 mm
+04_PLA_3U-module+ears+clips/Plate04.3mf  (PLA, 0.24 mm)
+  PASS  Rack_SideModule_3U_x4: x 28.0-228.0, y 10.0-146.4, 28.0 tall, on the bed
+  PASS  B1_Dock_3U_Ear_x2_1: x 14.0-146.6, y 160.0-188.0, 3.0 tall, on the bed
+  PASS  B1_Dock_3U_Ear_x2_2: x 14.0-146.6, y 196.0-224.0, 3.0 tall, on the bed
+  PASS  Display7C_Clip_x4_1: x 204.0-224.0, y 160.0-169.0, 3.0 tall, on the bed
+  PASS  Display7C_Clip_x4_2: x 226.0-246.0, y 160.0-169.0, 3.0 tall, on the bed
+  PASS  Display7C_Clip_x4_3: x 204.0-224.0, y 184.0-193.0, 3.0 tall, on the bed
+  PASS  Display7C_Clip_x4_4: x 226.0-246.0, y 184.0-193.0, 3.0 tall, on the bed
+  PASS  smallest gap between parts 2.0 mm
+05_PLA_3U-module+1U-tops/Plate05.3mf  (PLA, 0.24 mm)
+  PASS  Rack_SideModule_3U_x4: x 28.0-228.0, y 10.0-146.4, 28.0 tall, on the bed
+  PASS  Rack_SideModule_1U_Top_x2_1: x 28.0-228.0, y 152.0-199.4, 28.0 tall, on the bed
+  PASS  Rack_SideModule_1U_Top_x2_2: x 28.0-228.0, y 204.0-251.4, 28.0 tall, on the bed
+  PASS  smallest gap between parts 4.6 mm
+06_PLA_cap-half+ear/Plate06.3mf  (PLA, 0.24 mm)
+  PASS  Rack_CapHalf_x2: x 40.0-187.8, y 28.0-228.0, 30.0 tall, on the bed
+  PASS  B1_Dock_3U_Ear_x2: x 206.0-234.0, y 62.0-194.6, 3.0 tall, on the bed
+  PASS  smallest gap between parts 18.2 mm
+07_PLA_cap-half+ear/Plate07.3mf  (PLA, 0.24 mm)
+  PASS  Rack_CapHalf_x2: x 40.0-187.8, y 28.0-228.0, 30.0 tall, on the bed
+  PASS  B1_Dock_3U_Ear_x2: x 206.0-234.0, y 62.0-194.6, 3.0 tall, on the bed
+  PASS  smallest gap between parts 18.2 mm
+08_PLA_B1-dock/Plate08.3mf  (PLA, 0.20 mm)
+  PASS  B1_Dock_3U_Body: x 21.0-235.0, y 80.0-175.0, 130.0 tall, on the bed
+  PASS  one part only
+09_PLA_screen-module_WAIT-measure-screen-first/Plate09.3mf  (PLA, 0.20 mm)
+  PASS  Display7C_3U_Body: x 21.0-235.0, y 63.0-193.0, 30.0 tall, on the bed
+  PASS  one part only
+10_PETG_Pi-shelf+UPS-tray+shims/Plate10.3mf  (PETG, 0.20 mm)
+  PASS  Rack_Shelf_pinned: x 43.0-213.1, y 12.0-128.7, 68.0 tall, on the bed
+  PASS  Pi5_UPS_v3_ups_tray_pinned: x 43.0-161.3, y 140.0-231.4, 36.5 tall, on the bed
+  PASS  Pi5_UPS_v3_shims: x 180.0-217.2, y 150.0-177.2, 2.0 tall, on the bed
+  PASS  smallest gap between parts 11.3 mm
+11_PETG_Pi-board-tray+lid+faceplate/Plate11_WITH-DC-notch.3mf  (PETG, 0.20 mm)
+  PASS  Pi5_UPS_v3_board_tray_HDMIexit: x 8.0-126.3, y 10.0-124.4, 28.9 tall, on the bed
+  PASS  Pi5_UPS_v3_lid: x 132.0-250.3, y 10.0-124.4, 6.4 tall, on the bed
+  PASS  Rack_Faceplate_2U_10in_DC-notch: x 1.0-255.0, y 140.0-228.1, 4.0 tall, on the bed
+  PASS  smallest gap between parts 5.7 mm
+ALT_Geerling-list_ready-made-prints/12-ALT2_PETG_UCG-Ultra-1U-3-keystones_Printables-942972/Plate12-ALT2.3mf  (PETG, 0.20 mm)
+  PASS  UCG-Ultra_1U_3-keystones_Printables-942972: x 23.9-232.1, y 23.9-232.1, 136.0 tall, on the bed
+  PASS  one part only
+13_PETG_12V-brick-cradle/Plate13.3mf  (PETG, 0.20 mm)
+  PASS  Brick_Cradle_12V: x 12.0-55.3, y 34.0-221.4, 35.4 tall, on the bed
+  PASS  Brick_Spacer_2mm: x 80.0-190.0, y 20.0-51.6, 4.4 tall, on the bed
+  PASS  Brick_Spacer_4mm: x 80.0-190.0, y 60.0-91.6, 6.4 tall, on the bed
+  PASS  Brick_Spacer_6mm: x 80.0-190.0, y 100.0-131.6, 8.4 tall, on the bed
+  PASS  Brick_Spacer_8mm: x 80.0-190.0, y 140.0-171.6, 10.4 tall, on the bed
+  PASS  smallest gap between parts 8.4 mm
+11_PETG_Pi-board-tray+lid+faceplate/Plate11.3mf  (PETG, 0.20 mm)  [alternative, not in the option-2 set]
+  PASS  Pi5_UPS_v3_board_tray_HDMIexit: x 8.0-126.3, y 10.0-124.4, 28.9 tall, on the bed
+  PASS  Pi5_UPS_v3_lid: x 132.0-250.3, y 10.0-124.4, 6.4 tall, on the bed
+  PASS  Rack_Faceplate_2U_10in: x 1.0-255.0, y 140.0-228.1, 4.0 tall, on the bed
+  PASS  smallest gap between parts 5.7 mm
+12_PETG_UCG-Ultra-shelf/Plate12.3mf  (PETG, 0.20 mm)  [alternative, not in the option-2 set]
+  PASS  UCG_Ultra_1U_Shelf: x 22.8-233.2, y 22.8-233.2, 137.2 tall, on the bed
+  PASS  one part only
+
+56 PASS, 0 FAIL  (15 plate files: the 13 of option 2 plus Plate11.3mf and Plate12.3mf; read from the .3mf files themselves)

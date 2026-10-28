@@ -73,6 +73,11 @@ POST_Y = (PY0 - 8.0, PY0)
 POST_Z1 = 60.0
 LIP_Z1 = 2.0                        # front lip top, below the DC-IN window (z 5)
 M3_INSERT = 4.0
+# 28 Oct (ultrareview): the brick's 12 V lead stays behind the faceplate. It runs from the pocket in front of the UPS tray
+# through an arch at the foot of the right gusset (rack z 9.5..18.5, 7 high, clear of the post and its inserts) into the
+# open front of the brick cradle, so the faceplate needs no DC-IN window and no notch (faceplate(dcin_window=False)).
+PASS_Y = (PY0 - 18.5, PY0 - 9.5)    # v3 y: 1 mm of gusset left in front of it, behind the 8 mm post
+PASS_H, PASS_R = 7.0, 3.0           # arch height above the shelf top, top corner radius
 FP_SCREWS = [(sum(POST_X[0]) / 2, 12.0), (sum(POST_X[0]) / 2, 50.0),
              (sum(POST_X[1]) / 2, 12.0), (sum(POST_X[1]) / 2, 50.0),
              (30.0, -3.0), (85.0, -3.0)]
@@ -119,7 +124,7 @@ def ugreen_origin():
 EXIT_Y, EXIT_Z = (38.0, 50.0), (47.0, 57.0)
 
 
-def faceplate(x_lo=PX0, x_hi=PX1):
+def faceplate(x_lo=PX0, x_hi=PX1, dcin_window=True):
     p = box(PX0, PX1, PY0, PY1, Z0, Z0 + PANEL_H).edges("|Y").fillet(2.0)
     # M6 ear slots
     for xs in (CX - HOLE_PITCH / 2, CX + HOLE_PITCH / 2):
@@ -128,8 +133,9 @@ def faceplate(x_lo=PX0, x_hi=PX1):
     # Pi power button (press through to the v3 tube)
     p = p.cut(cyl_y(BTN_X, PY0 - 1, PY1 + 1, BTN_Z, 8.0))
     p = p.cut(cyl_y(BTN_X, PY1 - 1.0, PY1 + 1, BTN_Z, 11.0))     # finger dish
-    # UPS DC-IN access window (plug reaches the recessed jack)
-    p = p.cut(rounded_slot_y(sum(DCIN_X) / 2, sum(DCIN_Z) / 2, DCIN_X[1] - DCIN_X[0] + 4, DCIN_Z[1] - DCIN_Z[0] + 4, PY0 - 1, PY1 + 1, r=4.0))
+    # UPS DC-IN access window (plug reaches the recessed jack); the clean front (28 Oct) plugs in from behind instead
+    if dcin_window:
+        p = p.cut(rounded_slot_y(sum(DCIN_X) / 2, sum(DCIN_Z) / 2, DCIN_X[1] - DCIN_X[0] + 4, DCIN_Z[1] - DCIN_Z[0] + 4, PY0 - 1, PY1 + 1, r=4.0))
     # vent slots exactly in line with every v3 back-wall vent slot (2 mm slots -> 3 mm here)
     for vx in V3_BACK_VENT_X:
         p = p.cut(rounded_slot_y(vx, sum(BACK_VENTS_Z) / 2, 3.0, BACK_VENTS_Z[1] - BACK_VENTS_Z[0] + 2.0,
@@ -195,6 +201,9 @@ def shelf():
                                           (POST_Y[0], POST_Z1 - 10)]).close().extrude(xb - xa)
              .translate((xa, 0, 0)))
         s = s.union(g)
+    # brick-lead arch through the foot of the right gusset (28 Oct)
+    xa, xb = POST_X[1]
+    s = s.cut(box(xa - 0.1, xb + 0.1, PASS_Y[0], PASS_Y[1], SHELF_TOP, SHELF_TOP + PASS_H).edges("|X and >Z").fillet(PASS_R))
     # heat-set insert holes (M3, horizontal, from the faceplate side)
     for sx, sz in FP_SCREWS:
         s = s.cut(cyl_y(sx, PY0 - 6.0, PY0 + 0.1, sz, M3_INSERT))

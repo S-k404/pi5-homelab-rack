@@ -184,17 +184,18 @@ d.text((2340, SD_Y0 + 140), "• Saves 60 mm (2.36 inches) depth\n• Easily cle
 
 # ---------------- SECTION 3: SUBSYSTEM DEPTH ENVELOPE AUDIT ----------------
 d.rectangle([(1100, 1050), (2740, 1920)], fill=(255, 255, 255), outline=(203, 213, 225), width=2)
-d.text((1130, 1075), "VIEW C: SUBSYSTEM DEPTH ENVELOPE AUDIT (PROOF OF 140 mm FIT)", font=font_sec, fill=LINE_COLOR)
-d.text((1130, 1112), "Verification that every one of the 4 rack modules fits completely inside the 140 mm depth boundary:",
+d.text((1130, 1075), "VIEW C: HOW DEEP EACH UNIT IS vs THE 140 mm SLIM RACK (measured 28 Oct)", font=font_sec, fill=LINE_COLOR)
+d.text((1130, 1112), "Measured on the CAD models (03_CHECKS/VERIFICATION_slim-cargo_fit_28Oct.txt). The 4 units fit; the 12 V brick cradle does NOT:",
        font=font_body, fill=TEXT_MUTED)
 
 # Depth bar chart
+# 28 Oct (ultrareview): measured on the models (these were typed-in numbers with a fixed PASS; the brick cradle doesn't fit)
 UNITS_AUDIT = [
-    ("1U UniFi Cloud Gateway Ultra Shelf", 135.0, "Deepest module in rack; fits with 5.0 mm rear clearance"),
-    ("Plate 13: 12V 3A Power Brick in Cradle", 120.0, "Sits in bottom cradle; fits with 20.0 mm rear clearance"),
-    ("2U Pi 5 Unit (Argon Poly+ 5 + Waveshare F)", 117.0, "Includes rear HDMI tower; fits with 23.0 mm rear clearance"),
-    ("3U NIIMBOT B1 Clamshell Printer Dock", 95.0, "Sideways printer orientation; fits with 45.0 mm rear clearance"),
-    ("3U Waveshare 7-inch LCD (C) Touch Display", 40.0, "Ultra-thin display module; fits with 100.0 mm rear clearance"),
+    ("12V 5A brick in the plate 13 cradle", 201.4, "Cradle is 187 mm long: hits the slim middle + rear base bars. Brick goes outside this rack"),
+    ("1U UCG-Ultra mount (Printables 942972)", 133.0, "Gateway 127.6 deep; its rear plugs stick out ~20 mm behind when cabled"),
+    ("2U Pi unit (Poly+ 5 + adapter (F) holder)", 117.1, "Shelf stands on the slim front + middle bars; UPS OUT plug ends at 127.9"),
+    ("3U NIIMBOT B1 dock", 92.0, "Fits"),
+    ("3U 7-inch screen module", 30.0, "Fits"),
 ]
 
 CHART_X0 = 1150
@@ -208,20 +209,23 @@ d.text((LIMIT_X - 100, CHART_Y0 - 45), "SLIM LIMIT: 140.0 mm", font=font_lbl, fi
 
 for idx, (uname, udepth, udesc) in enumerate(UNITS_AUDIT):
     by = CHART_Y0 + idx * 72
-    bw = int(udepth * BAR_SCALE)
+    bw = int(min(udepth, 160.0) * BAR_SCALE)
     color = (30, 41, 59) if udepth > 125 else (51, 65, 85) if udepth > 100 else (71, 85, 105)
     # bar
     d.rectangle([(CHART_X0, by), (CHART_X0 + bw, by + 36)], fill=color)
     d.text((CHART_X0 + 15, by + 8), f"{uname} · {udepth:.1f} mm", font=font_lbl, fill=(255, 255, 255))
     # annotation text
-    d.text((CHART_X0 + bw + 15, by + 8), f"PASS ({140.0 - udepth:.1f} mm margin)", font=font_lbl, fill=(34, 197, 94))
+    if udepth <= 140.0:
+        d.text((CHART_X0 + bw + 15, by + 8), f"FITS ({140.0 - udepth:.1f} mm spare)", font=font_lbl, fill=(34, 197, 94))
+    else:
+        d.text((CHART_X0 + bw + 15, by + 8), f"DOESN'T FIT (+{udepth - 140.0:.1f} mm)", font=font_lbl, fill=HIGHLIGHT_COLOR)
     d.text((CHART_X0, by + 42), udesc, font=font_small, fill=TEXT_MUTED)
 
 # Summary notes at bottom
 d.rectangle([(1130, 1630), (2710, 1890)], fill=(248, 250, 252), outline=(226, 232, 240))
 d.text((1150, 1650), "MANUFACTURING & WORKSHOP SPECIFICATION (FOR ONSHAPE / CAD / 3D PRINTING):", font=font_lbl, fill=LINE_COLOR)
 d.text((1150, 1685), "1. PRINT MATERIAL FOR CARGO: Print Slim Cargo frame in PETG, ABS/ASA, or PETG-CF (4-5 perimeters, 35%+ Gyroid infill). Do NOT use plain PLA for cargo flight travel.", font=font_body, fill=(51, 65, 85))
-d.text((1150, 1720), "2. FASTENERS (ONE SIZE FOR RACK): 38x M5 x 12 mm Button Head Socket Cap Screws + 38x M5 Brass Heat-Set Inserts (Ø6.4 mm x 10 mm depth).", font=font_body, fill=(51, 65, 85))
+d.text((1150, 1720), "2. FASTENERS (ONE SIZE FOR RACK): 48x M5 x 12 mm button head + 48x M5 heat-set inserts (Ø6.4 x 10): 18 joints, 4 cap, 4 handles, 6 bars, 16 units.", font=font_body, fill=(51, 65, 85))
 d.text((1150, 1755), "3. MODULAR PACK-FLAT CAPABILITY: Can be fully disassembled in 3 minutes into flat side modules to pack like books inside a suitcase for maximum crush protection.", font=font_body, fill=(51, 65, 85))
 d.text((1150, 1790), "4. ONSHAPE ASSEMBLY STEP: Exported byte-validated 3D solid assembly available at: 04_DESIGN_SOURCE/10_Slim_Cargo_Rack_140mm/STEP_for_Onshape/SlimCargo_Rack_9U_140mm_ASSEMBLY.step", font=font_body, fill=(51, 65, 85))
 

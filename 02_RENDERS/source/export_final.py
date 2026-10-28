@@ -1,12 +1,15 @@
 """
 FINAL BUILD (28 Oct 2026, FINAL_PRINTS_2026-10-28): v7.2 rack + B1 dock v5 + ready-made UCG-Ultra mount (Printables 942972)
-+ Pi unit = shelf + UPS tray + Argon Poly+ 5 tray (W1) + Waveshare adapter (F) holder (W3/W4) + DC-notch faceplate
++ Pi unit = shelf + UPS tray + Argon Poly+ 5 tray (W1) + Waveshare adapter (F) holder (W3/W4) + faceplate
+28 Oct (ultrareview): the clean front. The brick's 12 V lead stays behind the faceplate (brick_lead_route.py in the Pi unit's
+source: right-angle DC-IN plug, extension through the shelf's gusset arch, the join and the coiled spare in the cradle), and
+the UCG-Ultra's display sits where Ubiquiti's front view puts it (18.5 mm above its base, not at mid-height).
 + 12 V brick in the plate 13 cradle (8 mm spacer), with the brick lead into the UPS DC-IN and the right-angle UPS OUT
 lead to the adapter's screw terminal (the route checked in verify_pi_power_path.py).
 Colours as ordered: every PLA part silver, every PETG part black.
 Export the rack, units and parts as meshes + a scene description for Blender (build_final.py).
 Positions and explode offsets follow the option-2 pipeline. Rack frame: x across, y up, z back, mm.
-Usage: python export_final.py <rack source dir> <Pi unit folder> <out dir> <UCG mesh dir> <Argon folder> <brick_cradle.py dir> <DC-notch faceplate STEP>
+Usage: python export_final.py <rack source dir> <Pi unit folder> <out dir> <UCG mesh dir> <Argon folder> <brick_cradle.py dir> <faceplate STEP>
 """
 import json
 import math
@@ -18,6 +21,7 @@ import cadquery as cq
 
 SRC, PI_DIR, OUT, UCG2, ARGON, BRICK_SRC, FP_NOTCH = sys.argv[1:8]
 sys.path.insert(0, SRC)
+sys.path.insert(0, os.path.join(PI_DIR, "source"))      # brick_lead_route.py
 sys.path.insert(0, os.path.join(ARGON, "source"))
 sys.path.insert(0, BRICK_SRC)
 import rack_t0 as r              # noqa: E402
@@ -120,7 +124,7 @@ add("ucg_gw", trimesh.load(os.path.join(UCG2, "ucg_ultra_in_option2_rack.stl"), 
 
 # ---------------- Pi unit (Argon Poly+ 5 build), PETG black ----------------
 add("pi_shelf", step(os.path.join(PI_STEP, "Rack_Shelf_pinned.step")), "petg_black", "Pi shelf (pinned)", "Pi unit", "Rack_Shelf_pinned.stl", 1, 96)
-add("pi_face", step(FP_NOTCH), "petg_black", "Pi faceplate (DC-notch)", "Pi unit", "12_Pi_Faceplate_2U_DC-notch__x1__PETG.stl", 1, 64)
+add("pi_face", step(FP_NOTCH), "petg_black", "Pi faceplate", "Pi unit", "C2_Pi_Faceplate_2U_clean__x1__PETG.stl", 1, 68)
 add("pi_ups", step(os.path.join(PI_STEP, "Pi5_UPS_v3_ups_tray_pinned.step")), "petg_black", "Pi UPS tray (pinned)", "Pi unit", "Pi5_UPS_v3_ups_tray_pinned.stl", 1, 62)
 add("pi_argon", step(os.path.join(AR_STEP, "Pi5_ArgonPoly5_tray.step")), "petg_black", "Argon Poly+ 5 tray (plate 11B)", "Pi unit", "Pi5_ArgonPoly5_tray.stl", 1, None)
 add("pi_hbase", step(os.path.join(AR_STEP, "Waveshare_F_holder_base.step")), "petg_black", "Adapter (F) holder, base", "Pi unit", "W3_Waveshare_F_Holder_Base__x1__PETG__WAIT-test-fit.stl", 1, 35)
@@ -266,51 +270,36 @@ add("c13", b(bxc - 16.75, bxc + 16.75, byc - 12.0, byc + 12.0, BR.zmax, BR.zmax 
 add("mains", tube_mesh([(bxc, byc, BR.zmax + 38.0), (bxc, byc - 2.0, BR.zmax + 46.0), (bxc, byc - 12.0, BR.zmax + 52.0),
                         (bxc, byc - 28.0, BR.zmax + 56.0), (bxc, -r.PLINTH + 3.5, BR.zmax + 60.0), (bxc, -r.PLINTH + 3.5, BR.zmax + 75.0)], 7.0),
     "dev_cable", "Mains cord", "Pi unit")
-# brick lead (rack frame): compact right-angle plug in the UPS DC-IN and flush-routed lead
-NX = BC.NOTCH_X
-jack_x, jack_y = 96.0 - un.PI_CX, 17.0 - un.PI_Z0                # DC-IN plug at the window centre (as the windows intend)
-jack_z = un.PI_PY0 - 80.6                                          # the UPS's front face (31.9 mm)
-ze = jack_z - 3.0                                                 # right-angle elbow centre (28.9 mm)
-dcin_body = (b(jack_x - 4.5, jack_x + 4.5, jack_y - 4.5, jack_y + 4.5, jack_z - 6.0, jack_z).edges("|Z").fillet(1.5)
-             .union(cq.Workplane("YZ").circle(2.9).extrude(7.0).translate((jack_x, jack_y, ze)))
-             .union(cq.Workplane("YZ").circle(2.3).extrude(4.0).translate((jack_x + 7.0, jack_y, ze)))
-             .union(cq.Workplane("XY").circle(2.75).extrude(4.0).translate((jack_x, jack_y, jack_z))))
-add("dcin_plug", dcin_body, "dev_fan", "Right-angle DC plug in the UPS DC-IN", "Pi unit")
-BRICK_PATH = [(bxc, byc, BR.zmin),
-              (bxc, 4.4, 80.0),
-              (NX, 4.4, 25.0),
-              (NX, 4.4, 14.0),
-              (NX, 4.4, 8.0),
-              (50.05, 4.4, 8.0),
-              (50.05, 14.0, 12.0),
-              (50.05, 25.0, ze)]
-add("brick_lead", tube_mesh(BRICK_PATH, 4.0), "dev_cable", "Brick 12 V lead", "Pi unit")
-# UPS OUT compact right-angle plug + hidden internal lead (v3 frame)
+# brick lead (rack frame), 28 Oct: behind the faceplate (brick_lead_route.py; checked in verify_wiring_all.py)
+import brick_lead_route as BL  # noqa: E402
+
+
+def cyl_between(a, b_, d):
+    return trimesh.creation.cylinder(radius=d / 2, segment=[a, b_], sections=28)
+
+
+x0_, x1_, y0_, y1_, z0_, z1_ = BL.PLUG_BOX
+dcin = b(x0_, x1_, y0_, y1_, z0_, z1_).edges("|Y").fillet(2.5).edges("|X").fillet(1.5)
+add("dcin_plug", trimesh.util.concatenate([tess(dcin), cyl_between(BL.SR[0], BL.SR[1], BL.SR[2])]), "dev_fan",
+    "Right-angle plug in the UPS DC-IN (extension)", "Pi unit")
+add("brick_ext", tube_mesh(BL.EXT_PATH, BL.LEAD_D), "dev_cable", "12 V extension: DC-IN to the cradle (through the gusset arch)", "Pi unit")
+add("brick_join", trimesh.util.concatenate([cyl_between(*BL.SOCKET), cyl_between(*BL.BRICK_PLUG), cyl_between(*BL.BRICK_SR)]),
+    "dev_fan", "Extension socket + the brick's plug", "Pi unit")
+add("brick_lead", tube_mesh(BL.brick_lead_path(), 3.5), "dev_cable", "Brick 12 V lead, spare coiled in the cradle", "Pi unit")
+# UPS OUT right-angle plug + lead to the adapter's screw terminal (v3 frame, route from verify_pi_power_path.py)
 OX, OY, OZ = 86.6, 0.6, 11.5
-YE = OY - 3.0
-plug_body = (b(OX - 4.5, OX + 4.5, OY - 6.0, OY, OZ - 4.5, OZ + 4.5).edges("|Z").fillet(1.5)
-             .union(cq.Workplane("YZ").circle(2.9).extrude(7.0).translate((OX, YE, OZ)))
-             .union(cq.Workplane("YZ").circle(2.3).extrude(4.0).translate((OX + 7.0, YE, OZ)))
-             .union(cq.Workplane("XZ").circle(2.75).extrude(3.5).translate((OX, OY, OZ))))
-add("out_plug", plug_body, "dev_fan", "Right-angle DC plug in the UPS OUT", "Pi unit")
+YE = OY - 16.0 + 5.5
+add("out_plug", b(OX - 5.5, OX + 5.5, OY - 16.0, OY, OZ - 6.0, OZ + 6.0).edges("|Y").fillet(2.5)
+    .union(cq.Workplane("YZ").circle(3.25).extrude(10.0).translate((OX + 5.5, YE, OZ))), "dev_fan", "Right-angle DC plug in the UPS OUT", "Pi unit")
 TX = sum(WH.TERM_X) / 2
 TZ = WH.PCB_TOP + 5.0
 TY = WH.PCB_Y0 + 97.0
 cx_, cy_, w_, h_ = AT.LEAD_HOLE
-# Wire exits right-angle plug directly into the internal channel (hidden inside tray):
-OUT_PATH = [(OX + 11.0, YE, OZ),
-            (101.5, 1.0, 10.0),
-            (104.0, 10.0, 8.0),
-            (104.0, 45.0, 8.0),
-            (104.0, 75.0, 8.0),
-            (104.0, 92.0, 12.0),
-            (100.0, 100.0, 26.0),
-            (cx_ + 2.0, 101.0, 29.0),
-            (cx_, cy_, 33.0),
-            (cx_, cy_, AT.ZS + 4.0),
-            (TX, WH.OY1 + 4.0, TZ + 3.0),
-            (TX, WH.OY1 + 0.5, TZ)]
-add("out_lead", tube_mesh(OUT_PATH, 3.5), "dev_cable", "UPS OUT lead to the adapter terminal", "Pi unit")
+OUT_PATH = [(OX + 15.5, YE, OZ), (104.5, YE + 2.0, OZ), (106.3, -3.5, OZ), (106.3, 4.0, OZ), (106.5, 22.0, 14.0),
+            (102.0, 33.0, 31.6), (102.0, 47.0, 31.6), (107.0, 58.0, 16.0), (107.0, 84.0, 14.0), (107.0, 95.0, 14.0),
+            (100.0, 101.0, 27.0), (cx_ + 2.0, 101.0, 29.0), (cx_, cy_, 33.0), (cx_, cy_, AT.ZS + 4.0),
+            (TX, WH.OY1 + 4.0, TZ + 3.0), (TX, WH.OY1 + 0.5, TZ)]
+add("out_lead", tube_mesh(OUT_PATH, 4.0), "dev_cable", "UPS OUT lead to the adapter terminal", "Pi unit")
 WX = [WH.d2v(90.0, yd)[0] for yd in (4.6, 12.0)]
 add("wire_red", tube_mesh([(TX + 0.9, WH.OY1 + 0.5, TZ), (WX[0], TY - 3.0, TZ - 1.0)], 1.6), "dev_wire_red", "+12 V wire", "Pi unit")
 add("wire_blk", tube_mesh([(TX - 0.9, WH.OY1 + 0.5, TZ), (WX[1], TY - 3.0, TZ - 1.0)], 1.6), "dev_cable", "0 V wire", "Pi unit")
@@ -371,7 +360,7 @@ node("pi_face", PI_M, "pi", (0, 0, -330))
 node("cradle", np.eye(4), "pi", (160, 0, 0))
 node("spacer8", np.eye(4), "pi", (160, 40, 0))
 node("brick", np.eye(4), "pi", (160, 80, 0))
-for k in ("c13", "mains", "dcin_plug", "brick_lead"):
+for k in ("c13", "mains", "dcin_plug", "brick_ext", "brick_join", "brick_lead"):
     node(k, np.eye(4), "pi_cables", (0, 0, 0))
 for k in ("out_plug", "out_lead", "wire_red", "wire_blk"):
     node(k, PI_M, "pi_cables", (0, 0, 0))
@@ -392,8 +381,11 @@ gcy = (v[:, 1].min() + v[:, 1].max()) / 2
 gcx = (v[:, 0].min() + v[:, 0].max()) / 2
 panels = [dict(name="Screen image", group="screen", explode=[0, 140, -290], center=[float(cx), float(cy), float(zf - 0.05)],
                size=[154.2, 85.9], image="screen_ui.png", strength=2.2),
-          dict(name="UCG status display", group="ucg", explode=[0, 250, -300], center=[float(gcx), float(gcy), float(gz - 0.05)],
-               size=[24.0, 12.0], image="ucg_ui.png", strength=2.0)]
+          # Ubiquiti's straight front view: the 0.96" display is centred across, its centre 18.5 mm above the gateway's base
+          # (11.5 below its top), about 21.5 x 10 mm. It was drawn at mid-height before, 3.5 mm below the mount's window
+          dict(name="UCG status display", group="ucg", explode=[0, 250, -300],
+               center=[float(gcx), float(v[:, 1].min() + 18.5), float(gz - 0.05)],
+               size=[21.5, 10.0], image="ucg_ui.png", strength=2.0)]
 
 # ---------------- clearance sanity: nothing new pokes into the shelf/tray/holder it sits on ----------------
 def placed(key):

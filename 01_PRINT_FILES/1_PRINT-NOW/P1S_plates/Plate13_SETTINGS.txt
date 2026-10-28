@@ -7,9 +7,9 @@ What it is: a cradle for the 12 V 5 A brick, in the empty bay to the right of th
 of the Pi faceplate). It drops onto the rack's middle and rear base bars. No screws. See Plate13_in_the_rack.png.
 
 Cable routing:
-The 12 V lead runs forward along the cradle, over the front base bar and out through the 8 x 9 mm notch in the
-bottom edge of the Pi faceplate (C2_Pi_Faceplate_2U_DC-notch, plate 11), then about 13 mm along the front into the
-UPS DC-IN window. Without that notch the faceplate blocks the lead (checked: 42 PASS). The mains lead goes straight
+The 12 V lead stays behind the faceplate (28 Oct): a 30 cm right-angle 5.5 x 2.1 extension goes from the UPS
+DC-IN along the shelf floor, through the arch in the shelf's right gusset, into this cradle's open front, where the
+brick's own plug pushes into its socket. Coil the brick's spare lead beside the join. The mains lead goes straight
 out of the back.
 
 How: double-click Plate13.3mf (or File > Open Project in Bambu Studio). Every part is already placed.

@@ -28,7 +28,7 @@ Why Display7C fits the Touch (C) panel:
 
 How to slice & print:
   - Bambu Studio profile: 0.20mm Standard @BBL P1S
-  - Filament: Generic PLA (black / dark grey)
+  - Filament: Generic PLA, silver like the rest of the PLA parts (Robu: PLA silver, 15 %)
   - Wall loops: 3
   - Sparse infill: 15% gyroid
   - Supports: OFF (bezel prints face down on textured PEI bed)
@@ -38,8 +38,10 @@ Caliper Checklist (Upon Screen Arrival):
   1. Width across glass / PCB: 164.9 - 165.0 mm
   2. Total vertical height over corner tabs: 124.0 - 124.4 mm
   3. Thickness from front glass to rear PCB surface: 7.8 - 8.2 mm
-  4. Tab hole center-to-center span: ~159 mm horizontal x ~114 mm vertical
-  If all 4 numbers match within ±0.5 mm, slice Plate09.3mf and print immediately!
+  4. Tab holes (short slots, Ø3.3): centres 157.0 mm apart across; up/down the slot centres are ~114.9 mm apart
+     (112.8 between the slots' inner ends, 117.0 between their outer ends). Corrected 28 Oct from "~159 x ~114":
+     measured on Waveshare's STEP of the screen.
+  If numbers 1-3 match within ±0.5 mm and the holes are where item 4 says, slice Plate09.3mf and print.
 
 Sources:
   - Waveshare 7inch HDMI LCD (C) Wiki: https://waveshare.com/wiki/7inch_HDMI_LCD_(C)

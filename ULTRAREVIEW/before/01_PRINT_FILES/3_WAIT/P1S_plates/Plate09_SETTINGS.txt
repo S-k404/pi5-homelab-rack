@@ -1,0 +1,50 @@
+09_PLA_screen-module_WAIT-measure-screen-first
+==============================================
+Status: WAIT: measure screen with calipers upon arrival (arrives 4 Nov)
+Material: PLA, about 71 g (or PETG 73 g)
+
+Model Type: Waveshare 7inch 1024×600 HDMI, IPS, Low Power Capacitive LCD (C) Touch Screen
+=========================================================================================
+This 3U module is specifically modeled for the capacitive touch "C-type" screen
+(glass panel with bonded rear driver PCB and 4 corner mounting tabs):
+
+Key Dimensional Comparison:
+  - Non-touch panel (legacy v7): 165 x 100 x 5 mm, active 154.08 x 85.92 mm
+  - Touch (C) panel (v7.3 Display7C):
+      * Board outline (W x H x D): 164.90 x 106.96 x 8.00 mm
+      * Height over corner tabs: 124.16 mm (approx 124.2 mm)
+      * Glass front to PCB back: 8.00 mm
+      * Active display area: 154.21 x 85.92 mm
+      * Corner ear tabs: ~5.5 mm wide x 8.5 mm long (with M3 mounting holes)
+      * Side connectors: Full-size HDMI + micro-USB touch/power on one short edge
+
+Why Display7C fits the Touch (C) panel:
+  - Pocket recess: 165.8 x 124.96 mm (0.4 mm clearance around 164.9 x 124.16 mm outline)
+  - Bezel window: 160.0 x 94.0 mm (completely displays the 154.21 x 85.92 mm active area
+    with 2.9 mm lateral / 4.0 mm vertical positioning tolerance, while concealing glass edges)
+  - Depth recess: 8.0 mm pocket depth + 1.0 mm foam tape under the 4 clamping clips
+  - Clamping: 4 corner clips (Display7C_Clip_x4.stl on Plate 04) hold the tabs securely
+    using M3 heat-set inserts and M3x8 button head screws.
+
+How to slice & print:
+  - Bambu Studio profile: 0.20mm Standard @BBL P1S
+  - Filament: Generic PLA (black / dark grey)
+  - Wall loops: 3
+  - Sparse infill: 15% gyroid
+  - Supports: OFF (bezel prints face down on textured PEI bed)
+  - Enclosure: Top lid OPEN
+
+Caliper Checklist (Upon Screen Arrival):
+  1. Width across glass / PCB: 164.9 - 165.0 mm
+  2. Total vertical height over corner tabs: 124.0 - 124.4 mm
+  3. Thickness from front glass to rear PCB surface: 7.8 - 8.2 mm
+  4. Tab hole center-to-center span: ~159 mm horizontal x ~114 mm vertical
+  If all 4 numbers match within ±0.5 mm, slice Plate09.3mf and print immediately!
+
+Sources:
+  - Waveshare 7inch HDMI LCD (C) Wiki: https://waveshare.com/wiki/7inch_HDMI_LCD_(C)
+  - REES52 7" Capacitive Touch Display (Flipkart / Amazon India)
+
+On this plate:
+  - Screen module body x1   (Display7C_3U_Body.stl)
+  (The 4 clamping clips are located on Plate 04: Display7C_Clip_x4.stl)

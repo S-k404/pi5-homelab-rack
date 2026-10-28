@@ -47,6 +47,8 @@ parts = {
     "Rack_Faceplate_2U_10in": (load("Rack_Faceplate_2U_10in.step"), [((1, 0, 0), -90)]),   # front face down
     "Rack_Faceplate_Left": (load("Rack_Faceplate_Left.step"), [((1, 0, 0), -90)]),
     "Rack_Faceplate_Right": (load("Rack_Faceplate_Right.step"), [((1, 0, 0), -90)]),
+    # 28 Oct: the clean front (brick lead behind the faceplate): no DC-IN window, no notch
+    "Rack_Faceplate_2U_10in_clean": (R.faceplate(dcin_window=False), [((1, 0, 0), -90)]),
 }
 if __name__ == "__main__":
     for nm, (shape, rots) in parts.items():

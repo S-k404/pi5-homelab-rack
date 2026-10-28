@@ -1,11 +1,13 @@
-Plate 11 (PETG): DC-notch faceplate + UPS tray  --  CHECK THE UPS FIRST
-=======================================================================
+Plate 11 (PETG): faceplate (clean front) + UPS tray  --  CHECK THE UPS FIRST
+============================================================================
+28 Oct: the faceplate has no DC-IN window and no notch any more (the brick's lead stays behind it), so it no longer
+depends on the UPS: it's here because it shares the plate. The UPS tray and the right-angle DC-IN plug still do.
 Status: print once you've checked the real Cuzor Mini UPS Pro (a photo of it is enough):
   - switch, LED and OUT on one end face (it goes to the rack REAR: tray window x 58..110 of the 100 mm face)
-  - DC-IN on the opposite end face, at the end that lines up with the faceplate's DC-IN window (x 80..112)
+  - DC-IN on the opposite end face, at the end that lines up with the UPS tray's DC-IN window (x 80..112)
   - at most 101 x 81 x 28.5 mm (Cuzor's page: 10 x 8 x 2.8 cm; one listing says 10.2 long)
   If the DC-IN sits at the other end of its face, don't print: ask Claude to move the windows.
-Material: PETG black, about 126 g (faceplate ~64 g, UPS tray ~62 g)
+Material: PETG black, about 130 g (faceplate ~68 g, UPS tray ~62 g)
 
 BRIM OFF: the faceplate is 254 mm long on the 256 mm bed (1 mm from each edge). Faceplate front face down,
 UPS tray floor down.
@@ -13,6 +15,6 @@ Settings (Bambu P1S): 0.20mm Standard @BBL P1S, Generic PETG, 3 walls, 20% gyroi
 Textured PEI no glue, enclosure CLOSED.
 
 On this plate:
-  - Faceplate, 2U, with the 12 V lead notch x1   (../C2_Pi_Faceplate_2U_DC-notch__x1__PETG__CHECK-UPS-jacks.stl)
+  - Faceplate, 2U, clean front x1               (../C2_Pi_Faceplate_2U_clean__x1__PETG.stl)
   - UPS tray (pinned) x1                         (../C1_Pi_UPS_Tray_pinned__x1__PETG__CHECK-UPS-jacks.stl)
 Hardware: 6 x M3 x 8 countersunk (faceplate to the shelf); foam tape on the UPS tray's ribs.

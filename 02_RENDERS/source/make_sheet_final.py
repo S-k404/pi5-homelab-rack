@@ -23,16 +23,18 @@ CAP = {
     "14_ucg_mount_back": "UCG-Ultra mount, back",
     "15_pi_power_rear_ups_out_plug": "Rear: right-angle plug in the UPS OUT",
     "16_pi_power_path_cutaway": "Cutaway: UPS OUT lead route",
+    "17_rack_wiring_side_open": "Wiring, side panel off",
+    "18_rack_wiring_rear": "Wiring, from the back",
 }
 shots = [k for k in CAP if os.path.exists(os.path.join(REN, k + ".png"))]
 cols, cw, ch, pad, cap = 4, 600, 600, 22, 54
 rows = (len(shots) + cols - 1) // cols
 sheet = Image.new("RGB", (cols * cw + (cols + 1) * pad, 190 + rows * (ch + cap + pad) + pad), (236, 238, 241))
 d = ImageDraw.Draw(sheet)
-d.text((pad, 30), "Pi 5 Mini Rack: final build (FINAL_PRINTS_2026-10-28)", font=f_title, fill=(28, 31, 36))
+d.text((pad, 30), "Pi 5 Mini Rack: final build (01_PRINT_FILES, ultrareview 28 Oct)", font=f_title, fill=(28, 31, 36))
 d.text((pad, 92), "PLA silver: rack, B1 dock, ears, clips, screen module · PETG black: Pi unit, Poly+ 5 tray, adapter (F) holder, DC-notch faceplate, brick cradle, UCG-Ultra mount",
        font=f_sub, fill=(90, 96, 106))
-d.text((pad, 128), "Poly+ 5, adapter (F) and UPS jack positions are stand-ins (listings, Waveshare drawing, CAD model), not measured · 28 Oct 2026",
+d.text((pad, 128), "Poly+ 5, adapter (F) and UPS jack positions are stand-ins (listings, Waveshare drawing, CAD model), not measured · cables routed as in VERIFICATION_wiring_all-cables · 28 Oct 2026",
        font=f_sub, fill=(90, 96, 106))
 for i, k in enumerate(shots):
     im = Image.open(os.path.join(REN, k + ".png")).convert("RGB")

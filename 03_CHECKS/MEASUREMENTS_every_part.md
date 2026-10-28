@@ -18,7 +18,7 @@
 | `12_Brick_Spacer_8mm__x1__PETG.stl` | print / order now | 1 | PETG | 110.0 × 31.6 × 10.4 | 1 body, watertight | 17 | yes | yes |
 | `13_UCG-Ultra_1U_Mount_Printables-942972__x1__PETG.stl` | print / order now | 1 | PETG | 254.0 × 43.7 × 136.0 | 1 body, watertight | 117 | yes | yes |
 | `C1_Pi_UPS_Tray_pinned__x1__PETG__CHECK-UPS-jacks.stl` | check the UPS first | 1 | PETG | 118.3 × 91.4 × 36.5 | 1 body, watertight | 62 | yes | yes |
-| `C2_Pi_Faceplate_2U_DC-notch__x1__PETG__CHECK-UPS-jacks.stl` | check the UPS first | 1 | PETG | 254.0 × 88.1 × 4.0 | 1 body, watertight | 64 | yes | yes |
+| `C2_Pi_Faceplate_2U_clean__x1__PETG.stl` | check the UPS first | 1 | PETG | 254.0 × 88.1 × 4.0 | 1 body, watertight | 67 | yes | yes |
 | `W1_Argon_Poly5_Tray__x1__PETG__WAIT-measure-case.stl` | wait | 1 | PETG | 118.3 × 114.4 × 12.4 | 1 body, watertight | 43 | yes | yes |
 | `W2_Waveshare_F_Holder_Base__x1__PETG__WAIT-fit-test.stl` | wait | 1 | PETG | 56.0 × 102.6 × 25.8 | 1 body, watertight | 35 | yes | yes |
 | `W3_Waveshare_F_Holder_Lid__x1__PETG__WAIT-fit-test.stl` | wait | 1 | PETG | 56.0 × 102.6 × 17.3 | 1 body, watertight | 17 | yes | yes |
@@ -29,7 +29,7 @@
 
 | Totals | PLA ≈ g | PETG ≈ g |
 |---|---|---|
-| print / order now | 1189 | 293 |
-| check the UPS first | 0 | 126 |
+| print / order now | 1189 | 292 |
+| check the UPS first | 0 | 129 |
 | wait | 71 | 95 |
 | optional | 0 | 36 |

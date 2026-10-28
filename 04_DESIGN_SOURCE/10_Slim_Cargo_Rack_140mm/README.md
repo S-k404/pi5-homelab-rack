@@ -18,22 +18,30 @@ This prototype is a specialized **140 mm depth, high-strength travel variant** o
 
 ---
 
-## 2. All 4 Subsystems Fit Inside the 140 mm Envelope
+> **Corrected 28 Oct (ultrareview).** Section 2 used to list made-up depths ("brick cradle 120 mm, fits with 20 mm"; "12 V 3 A"). Measured on the models (`../../03_CHECKS/VERIFICATION_slim-cargo_fit_28Oct.txt`), the four units fit but the 12 V brick cradle doesn't, and the fastener count is 48, not 38.
+
+## 2. The 4 units fit inside the 140 mm envelope; the 12 V brick cradle doesn't
 
 All four units in the homelab mount to standard 10-inch EIA-310 rails ($236.5\text{ mm}$ hole pitch, $224\text{ mm}$ clear opening) and fit comfortably within the 140 mm depth:
 
-1. **1U: UniFi Cloud Gateway Ultra Shelf:** $135.0\text{ mm}$ deep (deepest unit in the rack; fits with $5.0\text{ mm}$ rear post clearance).
-2. **2U: Raspberry Pi 5 Unit (Argon Poly+ 5 + Waveshare F):** $117.0\text{ mm}$ deep (fits with $23.0\text{ mm}$ clearance).
-3. **12 V 3 A Power Brick in Cradle (Plate 13):** $120.0\text{ mm}$ deep (fits in the bottom bay with $20.0\text{ mm}$ clearance).
-4. **3U: NIIMBOT B1 Face-Out Printer Dock:** $95.0\text{ mm}$ deep (fits with $45.0\text{ mm}$ clearance).
-5. **3U: Waveshare 7-inch LCD (C) Touch Display:** $40.0\text{ mm}$ deep (ultra-slim profile; fits with $100.0\text{ mm}$ clearance).
+Measured on the models (rack frame, z back from the front rails):
+
+| Unit | Ends at z | In 140 mm |
+|---|---|---|
+| 1U UCG-Ultra mount (Printables 942972) + gateway (127.6) | 133.0 | fits; the gateway's rear plugs stick out ~20 mm behind |
+| 2U Pi unit: shelf, trays, Poly+ 5, adapter (F) holder | 117.1 | fits; the right-angle plug in the UPS OUT ends at 127.9 |
+| **12 V 5 A brick in the plate 13 cradle** | **201.4** | **doesn't fit**: the cradle is 187 mm long and hits the slim middle and rear bars (z 63–77, 126–139) |
+| 3U NIIMBOT B1 dock | 92.0 | fits |
+| 3U 7" screen module | 30.0 | fits |
+
+The Pi shelf rests on the slim front and middle bars (z 1–14, 63–77), so the Pi unit itself is supported.
 
 ---
 
 ## 3. Hardware & Fasteners (Uniform One-Size System)
 
-* **Screws:** $38\times\text{ M5}\times 12\text{ mm}$ Button Head Socket Cap Screws (ISO 7380).
-* **Inserts:** $38\times\text{ M5}$ Brass Heat-Set Threaded Inserts (outer $\varnothing 6.4\text{ mm}\times 10\text{ mm}$ depth).
+* **Screws:** 48 × M5 × 12 mm button head (ISO 7380): 18 module joints + 4 cap + 4 handles + 6 base bars + 16 unit ears (counted from `slim_rack.py`, 28 Oct; it was given as 38).
+* **Inserts:** 48 × M5 brass heat-set inserts (Ø6.4 × 10 mm holes).
 * **Tool:** $3\text{ mm}$ Allen hex key.
 
 ---

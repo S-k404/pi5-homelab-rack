@@ -1,5 +1,7 @@
 # Pi unit alternatives: Argon cases and other coolers (27 Oct 2026)
 
+> **Updated 28 Oct (ultrareview).** These are the 27 Oct notes, written before the build was decided. The current plan is in `01_PRINT_FILES/README.md`: Poly+ 5 **with** this holder, after a **fit test** (do the adapter's own plugs reach the Pi through the case's side cut-outs?). If they do, the adapter's HDMI-A and 12 V terminal are used. **28 Oct change:** the holder base's rear wall is cut back 23 mm wide round the HDMI jack (`HDMI_RELIEF_W` in `source/waveshare_f_holder.py`): the old 18.6 mm notch stopped a 20–22 mm HDMI plug moulding 2.4 mm short. The holder check now tests the plugs: 26 PASS (`checks/VERIFICATION_waveshare_f_holder.txt`).
+
 These files are for the case and cooler options in your Amazon cart. Each one is compared with the bare-board v3 case (plates 10 + 11) that the rack was designed around:
 - Argon NEO 5
 - Argon Poly+5 with THRML

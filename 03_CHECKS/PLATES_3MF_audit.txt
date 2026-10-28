@@ -11,7 +11,7 @@ PASS  1_PRINT-NOW/P1S_plates/Plate08.3mf: 1 part(s), x 21.0..235.0, y 80.0..175.
 PASS  1_PRINT-NOW/P1S_plates/Plate10.3mf: 1 part(s), x 43.0..213.1, y 12.0..128.7, tallest 68.0 mm  ->  10_Pi_Rack_Shelf_pinned__x1__PETG.stl
 PASS  1_PRINT-NOW/P1S_plates/Plate12-ALT2.3mf: 1 part(s), x 23.9..232.1, y 23.9..232.1, tallest 136.0 mm  ->  13_UCG-Ultra_1U_Mount_Printables-942972__x1__PETG.stl
 PASS  1_PRINT-NOW/P1S_plates/Plate13.3mf: 5 part(s), x 12.0..190.0, y 20.0..221.4, tallest 35.4 mm  ->  11_Brick_Cradle_12V__x1__PETG.stl, O3_Brick_Spacer_2mm__x1__PETG__only-if-brick-34.5-36.5mm.stl, O2_Brick_Spacer_4mm__x1__PETG__only-if-brick-32.5-34.5mm.stl, O1_Brick_Spacer_6mm__x1__PETG__only-if-brick-30.5-32.5mm.stl, 12_Brick_Spacer_8mm__x1__PETG.stl
-PASS  2_CHECK-UPS-FIRST/P1S_plates/Plate11_CHECK-UPS.3mf: 2 part(s), x 1.0..255.0, y 8.0..201.5, tallest 36.5 mm  ->  C2_Pi_Faceplate_2U_DC-notch__x1__PETG__CHECK-UPS-jacks.stl, C1_Pi_UPS_Tray_pinned__x1__PETG__CHECK-UPS-jacks.stl
+PASS  2_CHECK-UPS-FIRST/P1S_plates/Plate11_CHECK-UPS.3mf: 2 part(s), x 1.0..255.0, y 8.0..201.5, tallest 36.5 mm  ->  C2_Pi_Faceplate_2U_clean__x1__PETG.stl, C1_Pi_UPS_Tray_pinned__x1__PETG__CHECK-UPS-jacks.stl
 PASS  3_WAIT/P1S_plates/Plate09.3mf: 1 part(s), x 21.0..235.0, y 63.0..193.0, tallest 30.0 mm  ->  W4_Display7C_3U_Body__x1__PLA__WAIT-screen-4Nov.stl
 PASS  3_WAIT/P1S_plates/Plate11W_WAIT.3mf: 3 part(s), x 6.0..248.3, y 70.8..185.2, tallest 25.8 mm  ->  W1_Argon_Poly5_Tray__x1__PETG__WAIT-measure-case.stl, W2_Waveshare_F_Holder_Base__x1__PETG__WAIT-fit-test.stl, W3_Waveshare_F_Holder_Lid__x1__PETG__WAIT-fit-test.stl
 
@@ -30,7 +30,7 @@ PASS  11_Brick_Cradle_12V__x1__PETG.stl: 1 on the plates, 1 needed
 PASS  12_Brick_Spacer_8mm__x1__PETG.stl: 1 on the plates, 1 needed
 PASS  13_UCG-Ultra_1U_Mount_Printables-942972__x1__PETG.stl: 1 on the plates, 1 needed
 PASS  C1_Pi_UPS_Tray_pinned__x1__PETG__CHECK-UPS-jacks.stl: 1 on the plates, 1 needed
-PASS  C2_Pi_Faceplate_2U_DC-notch__x1__PETG__CHECK-UPS-jacks.stl: 1 on the plates, 1 needed
+PASS  C2_Pi_Faceplate_2U_clean__x1__PETG.stl: 1 on the plates, 1 needed
 PASS  W1_Argon_Poly5_Tray__x1__PETG__WAIT-measure-case.stl: 1 on the plates, 1 needed
 PASS  W2_Waveshare_F_Holder_Base__x1__PETG__WAIT-fit-test.stl: 1 on the plates, 1 needed
 PASS  W3_Waveshare_F_Holder_Lid__x1__PETG__WAIT-fit-test.stl: 1 on the plates, 1 needed

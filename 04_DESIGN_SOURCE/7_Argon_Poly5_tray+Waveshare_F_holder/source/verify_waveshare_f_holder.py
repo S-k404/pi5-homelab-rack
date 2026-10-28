@@ -112,8 +112,14 @@ m_rj = min(rj.xmin - H.RJ45_X[0], H.RJ45_X[1] - rj.xmax)
 m_hd = min(hd.xmin - H.HDMI_X[0], H.HDMI_X[1] - hd.xmax)
 rec("PASS" if m_rj >= 0.9 and m_hd >= 0.9 else "FAIL", "RJ45 and HDMI-A jacks sit centred in their rear notches, >= 0.9 mm each side",
     f"RJ45 {m_rj:.2f}, HDMI {m_hd:.2f}; notches {H.RJ45_X[1]-H.RJ45_X[0]:.1f} and {H.HDMI_X[1]-H.HDMI_X[0]:.1f} wide, open to the lid")
-rec("PASS", "jack faces are recessed only 2.45 mm from the rear face of the holder",
-    f"face y {H.PCB_Y0-1.0:.2f}, holder rear y {H.OY0:.2f}; an RJ45 plug (about 14 x 15) and an HDMI plug (about 21 x 12) fit the notches")
+# 28 Oct (ultrareview): this used to be a fixed PASS. The plugs' mouldings sit in the rear wall's last 2.45 mm, so test them.
+jy = H.PCB_Y0 - 1.0                                              # jack faces
+for nm, (cx, w, h, zc) in (("RJ45 plug + boot (14 x 15)", ((rj.xmin + rj.xmax) / 2, 14.0, 15.0, (rj.zmin + rj.zmax) / 2)),
+                           ("HDMI plug moulding (22 x 12)", ((hd.xmin + hd.xmax) / 2, 22.0, 12.0, (hd.zmin + hd.zmax) / 2))):
+    pb = box(cx - w / 2, cx + w / 2, jy - 30.0, jy - 0.2, zc - h / 2, zc + h / 2)
+    v = common_vol(pb, base_s) + common_vol(pb, lid_s)
+    rec("PASS" if v < 0.5 else "FAIL", f"{nm} pushed fully home clears the holder's rear wall and lid",
+        f"{v:.1f} mm3; jack faces y {jy:.2f}, holder rear y {H.OY0:.2f}")
 plug_ys = [H.PCB_Y0 + 34.4, H.PCB_Y0 + 59.2, H.PCB_Y0 + 73.6]
 rec("PASS" if H.PLUG_WIN[0] < plug_ys[0] - 4 and H.PLUG_WIN[1] > plug_ys[2] + 5.5 else "FAIL",
     "plug window in the right wall covers the SH1.0, micro-HDMI and USB-C plugs",

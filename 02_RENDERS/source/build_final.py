@@ -1,5 +1,7 @@
 """
 Build the Pi 5 Mini Rack FINAL-build studio scene (FINAL_PRINTS_2026-10-28) in Blender from export_final.py and render it with Cycles.
+28 Oct (ultrareview): the scene can also carry the rack wiring from verify_wiring_all.py (group "rack_cables": HDMI, micro-USB,
+USB-C to the B1, Cat6, the UCG-Ultra's power), shown in the loaded rack and in two wiring shots (17, 18).
 Usage: blender -b -P build_final.py -- <scene dir> <out dir> [final|preview] [shot,shot,...]
 Writes <out dir>/*.png (whole rack and units), <out dir>/parts/*.png (one per printed part) and
 <out dir>/Pi5_MiniRack_FINAL_studio.blend (every set as a collection, one camera per shot).
@@ -80,6 +82,7 @@ MATS = {
     "dev_brick": principled("Power brick", srgb("#2a2c30"), 0.6),
     "dev_cable": principled("Cable black", srgb("#0e0f10"), 0.48),
     "dev_wire_red": principled("Wire red", srgb("#c4231c"), 0.45),
+    "dev_cat6": principled("Cat6 blue", srgb("#2f6fd6"), 0.45),
 }
 
 
@@ -229,7 +232,9 @@ def make_set(name, groups, t=0.0, pi_components=True):
 
 ALL = ("rack", "dock", "screen", "ucg", "pi")
 CAB = ("pi_cables",)
-make_set("Rack, loaded", ALL + CAB)
+WIRES = ("rack_cables",)                  # verify_wiring_all.py; empty if the scene has none
+make_set("Rack, loaded", ALL + CAB + WIRES)
+make_set("Rack, wiring", ALL + CAB + WIRES)
 make_set("Rack, exploded", ALL, 1.0)
 make_set("Rack, empty", ("rack",))
 make_set("Pi unit", ("pi",) + CAB)
@@ -245,6 +250,10 @@ for set_name, drop in (("Pi unit, faceplate off", ("Pi faceplate",)), ("Pi unit,
     for o in list(SETS[set_name].objects):
         if o.name.startswith(drop):
             SETS[set_name].objects.unlink(o)
+# wiring view: the cables run up the -x side (the "left" modules, the viewer's right from the front): take that side off
+for o in list(SETS["Rack, wiring"].objects):
+    if "(left)" in o.name and o.name.startswith(("Side module", "Cap half", "Handle")):   # names may carry .001 etc.
+        SETS["Rack, wiring"].objects.unlink(o)
 make_set("Screen module", ("screen",))
 make_set("UCG-Ultra mount", ("ucg",))
 # (final build: no per-part renders)
@@ -383,6 +392,8 @@ SHOTS = [  # name, set, azimuth (0 = front, + = to the right), elevation, lens m
     ("14_ucg_mount_back", "UCG-Ultra mount", 210, 28, 70, (1600, 1000), 192),
     ("15_pi_power_rear_ups_out_plug", "Pi unit, power path", 200, 30, 70, (1600, 1200), 192),
     ("16_pi_power_path_cutaway", "Pi unit, power path", -55, 60, 60, (1600, 1300), 192),
+    ("17_rack_wiring_side_open", "Rack, wiring", 118, 12, 60, (1600, 2000), 256),
+    ("18_rack_wiring_rear", "Rack, loaded", 180, 6, 85, (1400, 2000), 192),
 ]
 
 cams = new_collection("Cameras")

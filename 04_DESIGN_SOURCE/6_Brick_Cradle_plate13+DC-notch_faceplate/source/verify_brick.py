@@ -161,7 +161,7 @@ out.append("")
 out.append("== 12 V lead to the UPS DC-IN ==")
 xc, yc, zf = lead
 nx = B.NOTCH_X
-path = [(xc, yc, zf), (xc, 4.4, 80.0), (nx, 4.4, 18.0), (nx, 4.4, 14.0), (nx, 3.4, 4.0), (nx, 3.4, -2.0)]
+path = [(xc, yc, zf), (xc, yc, 40.0), (nx, 9.0, 22.0), (nx, 3.4, 8.0), (nx, 3.4, -12.0)]
 cable = tube(path, 5.5)
 w = worst(cable, EVERYTHING)
 check("a 5.5 mm lead runs from the brick's front, along the cradle, over the front base bar and out through the notch",

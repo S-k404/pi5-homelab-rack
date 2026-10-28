@@ -66,6 +66,9 @@ PLUG_WIN = (28.0, 79.0)        # y span of the plug-edge window (SH1.0 / micro-H
 RJ45_X = (XP - 30.7 - 9.2, XP - 30.7 + 9.2)        # 18.4 wide
 HDMI_X = (XP - 10.05 - 9.3, XP - 10.05 + 9.3)      # 18.6 wide
 TERM_X = (28.0, 42.0)          # front notch for the 12 V lead (terminal wire entries face the front)
+# 28 Oct (ultrareview): an HDMI plug's moulding is 20-22 mm wide and up to 12 tall and sits in the rear wall's last
+# 2.4 mm, so the 18.6 mm HDMI notch stopped it short. The rear wall is cut away round it: 23 wide, down to the deck.
+HDMI_RELIEF_W = 23.0
 
 POST_D, COL_D, PILOT_D, PILOT_DEPTH = 6.2, 7.0, 2.1, 8.0
 TUBE_D, THRU_D, CB_D, CB_DEPTH = 5.0, 2.8, 5.4, 1.4
@@ -123,6 +126,9 @@ def base():
     # ---- port notches: open at the top, the lid closes them
     for xa, xb in (RJ45_X, HDMI_X):
         b = b.cut(box(xa, xb, OY0 - 1, INY0 + 0.01, SILL_REAR, LID_Z0 + 1))
+    # HDMI plug relief (28 Oct): rear wall cut away 23 wide round the HDMI jack, down to just above the deck
+    hc = XP - 10.05
+    b = b.cut(box(hc - HDMI_RELIEF_W / 2, OX1 + 1, OY0 - 1, PCB_Y0 - 1.0, DECK_Z1 + 0.4, LID_Z0 + 1))   # to the jack face
     b = b.cut(box(INX1 - 0.01, OX1 + 1, PLUG_WIN[0], PLUG_WIN[1], SILL_RIGHT, LID_Z0 + 1))
     b = b.cut(box(TERM_X[0], TERM_X[1], INY1 - 0.01, OY1 + 1, SILL_REAR, LID_Z0 + 1))
     return b

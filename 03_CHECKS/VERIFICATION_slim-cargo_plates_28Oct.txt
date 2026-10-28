@@ -1,0 +1,69 @@
+Slim Cargo 140 mm: print plates, overhangs and filament (28 Oct 2026)
+Made by 04_DESIGN_SOURCE/10_Slim_Cargo_Rack_140mm/source/build_slim_plates.py. Nothing here has been printed.
+
+1. The parts, measured from the STLs in the print folder
+
+PASS  SlimCargo_SideModule_2U_Base_x2.stl: byte-identical to 10_Slim_Cargo_Rack_140mm/STL_for_printing
+PASS  SlimCargo_SideModule_2U_Base_x2.stl: 1 body, watertight, sits on z=0; 140.0 x 106.9 x 40.0 mm
+PASS  SlimCargo_SideModule_3U_x4.stl: byte-identical to 10_Slim_Cargo_Rack_140mm/STL_for_printing
+PASS  SlimCargo_SideModule_3U_x4.stl: 1 body, watertight, sits on z=0; 140.0 x 136.4 x 28.0 mm
+PASS  SlimCargo_SideModule_1U_Top_x2.stl: byte-identical to 10_Slim_Cargo_Rack_140mm/STL_for_printing
+PASS  SlimCargo_SideModule_1U_Top_x2.stl: 1 body, watertight, sits on z=0; 140.0 x 47.5 x 28.0 mm
+PASS  SlimCargo_CapHalf_x2.stl: byte-identical to 10_Slim_Cargo_Rack_140mm/STL_for_printing
+PASS  SlimCargo_CapHalf_x2.stl: 1 body, watertight, sits on z=0; 147.8 x 140.0 x 22.0 mm
+PASS  SlimCargo_LowProfile_Handle_x2.stl: byte-identical to 10_Slim_Cargo_Rack_140mm/STL_for_printing
+PASS  SlimCargo_LowProfile_Handle_x2.stl: 1 body, watertight, sits on z=0; 116.0 x 18.0 x 16.0 mm
+PASS  SlimCargo_BaseBar_x3.stl: byte-identical to 10_Slim_Cargo_Rack_140mm/STL_for_printing
+PASS  SlimCargo_BaseBar_x3.stl: 1 body, watertight, sits on z=0; 165.7 x 165.7 x 13.0 mm
+PASS  07_Unit_Ear_3U__x4__PLA.stl: 1 body, watertight, sits on z=0; 28.0 x 132.6 x 3.0 mm
+PASS  08_Display7C_Clip__x4__PLA.stl: 1 body, watertight, sits on z=0; 20.0 x 9.0 x 3.0 mm
+
+2. The plates (Bambu P1S, 256 x 256): written, then read back from the 3MF
+
+PASS  SlimPlate01.3mf: 2 part(s), x 58.0..198.0, y 18.1..237.9, tallest 40.0 mm, closest parts 6.0 mm  ->  base2u, base2u
+PASS  SlimPlate02.3mf: 4 part(s), x 16.3..239.7, y 28.3..227.7, tallest 28.0 mm, closest parts 6.0 mm  ->  side3u, bar, bar, bar
+PASS  SlimPlate03.3mf: 3 part(s), x 58.0..198.0, y 35.8..220.2, tallest 28.0 mm, closest parts 6.0 mm  ->  side3u, handle, handle
+PASS  SlimPlate04.3mf: 7 part(s), x 8.0..242.0, y 10.0..146.4, tallest 28.0 mm, closest parts 6.0 mm  ->  side3u, ear, ear, clip, clip, clip, clip
+PASS  SlimPlate05.3mf: 3 part(s), x 58.0..198.0, y 6.4..249.6, tallest 28.0 mm, closest parts 6.0 mm  ->  side3u, top1u, top1u
+PASS  SlimPlate06.3mf: 2 part(s), x 37.1..218.9, y 58.0..198.0, tallest 22.0 mm, closest parts 6.0 mm  ->  cap, ear
+PASS  SlimPlate07.3mf: 2 part(s), x 37.1..218.9, y 58.0..198.0, tallest 22.0 mm, closest parts 6.0 mm  ->  cap, ear
+
+Totals across the plates vs what the rack needs (Slim parts x qty; ears and clips as for the standard rack):
+PASS  SlimCargo_SideModule_2U_Base_x2.stl: 2 on the plates, 2 needed
+PASS  SlimCargo_SideModule_3U_x4.stl: 4 on the plates, 4 needed
+PASS  SlimCargo_SideModule_1U_Top_x2.stl: 2 on the plates, 2 needed
+PASS  SlimCargo_CapHalf_x2.stl: 2 on the plates, 2 needed
+PASS  SlimCargo_LowProfile_Handle_x2.stl: 2 on the plates, 2 needed
+PASS  SlimCargo_BaseBar_x3.stl: 3 on the plates, 3 needed
+PASS  07_Unit_Ear_3U__x4__PLA.stl: 4 on the plates, 4 needed
+PASS  08_Display7C_Clip__x4__PLA.stl: 4 on the plates, 4 needed
+
+3. Overhangs (faces pointing down steeper than 45 deg from vertical, not on the bed)
+   The Slim README said 'Supports: NONE required (all overhangs <= 45 deg)'. They are not all <= 45 deg:
+
+   SlimCargo_SideModule_2U_Base_x2.stl  flat ceilings    227 mm2, sloped    684 mm2 (1.5% of the surface)   | standard rack's part:    239 +    734 mm2 (1.2%)
+   SlimCargo_SideModule_3U_x4.stl       flat ceilings    340 mm2, sloped    914 mm2 (1.8% of the surface)   | standard rack's part:    338 +    903 mm2 (1.4%)
+   SlimCargo_SideModule_1U_Top_x2.stl   flat ceilings    225 mm2, sloped    416 mm2 (2.0% of the surface)   | standard rack's part:    223 +    405 mm2 (1.5%)
+   SlimCargo_CapHalf_x2.stl             flat ceilings    190 mm2, sloped      0 mm2 (0.3% of the surface)   | standard rack's part:    190 +      0 mm2 (0.2%)
+   SlimCargo_LowProfile_Handle_x2.stl   flat ceilings     18 mm2, sloped     78 mm2 (1.1% of the surface)   | standard rack's part:    103 +    447 mm2 (3.1%)
+   SlimCargo_BaseBar_x3.stl             flat ceilings     16 mm2, sloped     83 mm2 (0.8% of the surface)   | standard rack's part:     16 +     83 mm2 (0.8%)
+   The Slim modules have the same joint bosses / key slots as the standard rack's, so the same small overhangs.
+   The standard rack is planned with supports OFF; the Slim plates say the same. Nothing was test-printed for either.
+
+4. Filament (slicer-like estimate, 0.2 mm layers; PETG = PLA grams x 1.27 / 1.24)
+
+   SlimCargo_SideModule_2U_Base_x2.stl  4 walls 25%:  115.3 g PETG each x 2 =  230.6 g
+   SlimCargo_SideModule_3U_x4.stl       4 walls 25%:  134.4 g PETG each x 4 =  537.8 g
+   SlimCargo_SideModule_1U_Top_x2.stl   4 walls 25%:   60.7 g PETG each x 2 =  121.4 g
+   SlimCargo_CapHalf_x2.stl             4 walls 20%:   80.1 g PETG each x 2 =  160.1 g
+   SlimCargo_LowProfile_Handle_x2.stl   5 walls 35%:   24.0 g PETG each x 2 =   48.1 g
+   SlimCargo_BaseBar_x3.stl             5 walls 30%:   31.8 g PETG each x 3 =   95.3 g
+   07_Unit_Ear_3U__x4__PLA.stl          4 walls 25%:   11.0 g PETG each x 4 =   43.8 g
+   08_Display7C_Clip__x4__PLA.stl       4 walls 30%:    0.6 g PETG each x 4 =    2.4 g
+
+   Slim frame (6 files): 1193 g PETG  (= 1165 g if printed in PLA); plus the shared ears + clips 46 g
+   Standard frame (01-06, 3 walls / 15 %, PLA): 1027 g
+   Slim parts at the STANDARD's settings (3 walls / 15 %, PLA): 959 g  -> the Slim frame is -7% vs the standard at equal settings, +14% at the README's settings
+   Frame only: no Pi, UPS, brick, screen, dock or gateway, no screws.
+
+FAILS: 0

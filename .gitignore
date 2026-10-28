@@ -1,0 +1,29 @@
+# CAD & 3D Printing manufacturing binaries
+*.stl
+*.step
+*.stp
+*.3mf
+
+# Renders and media assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.blend
+*.blend1
+
+# Archives & spreadsheets
+*.zip
+*.xlsx
+
+# Python cache & build
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# OS metadata
+.DS_Store
+Thumbs.db

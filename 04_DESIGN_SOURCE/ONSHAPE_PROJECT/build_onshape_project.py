@@ -49,7 +49,7 @@ import slim_rack as sr
 PI_STEP = os.path.join(PI_DIR, "STEP_for_Onshape")
 PI_COMP = os.path.join(PI_DIR, "Component_Models")
 AR_STEP = os.path.join(ARGON, "STEP_for_Onshape")
-FP_NOTCH = os.path.join(BASE_DIR, "04_DESIGN_SOURCE", "6_Brick_Cradle_plate13+DC-notch_faceplate", "STEP_for_Onshape", "Rack_Faceplate_2U_10in_DC-notch.step")
+FP_CLEAN = os.path.join(PI_STEP, "Rack_Faceplate_2U_10in_clean.step")
 
 
 def b(x0, x1, y0, y1, z0, z1):
@@ -134,7 +134,7 @@ def get_units_list():
 
     # 4. 2U Pi Unit
     parts.append((pi_to_rack(step(os.path.join(PI_STEP, "Rack_Shelf_pinned.step"))), "Pi5_Rack_Shelf", dark_metal))
-    parts.append((pi_to_rack(step(FP_NOTCH)), "Pi5_Faceplate_2U_DC_notch", dark_metal))
+    parts.append((pi_to_rack(step(FP_CLEAN)), "Pi5_Faceplate_2U_clean", dark_metal))
     parts.append((pi_to_rack(step(os.path.join(PI_STEP, "Pi5_UPS_v3_ups_tray_pinned.step"))), "Pi5_UPS_Tray", dark_metal))
     c_ups = step(os.path.join(PI_COMP, "Cuzor_MiniUPS_Pro_12V3A.step")).translate((50.6, 40.6, 1.0))
     parts.append((pi_to_rack(c_ups), "Cuzor_MiniUPS_Pro_12V3A", cq.Color(0.12, 0.16, 0.23)))
@@ -298,7 +298,7 @@ def copy_individual_steps():
         ("04_DESIGN_SOURCE/2_B1_Dock_3U/STEP_for_Onshape/B1_Dock_3U_ASSEMBLY.step", "05_B1_Dock_3U_ASSEMBLY.step"),
         # 2U Pi Unit
         ("04_DESIGN_SOURCE/4_Pi_Unit_2U/STEP_for_Onshape/Rack_Shelf_pinned.step", "06_PI5_Rack_Shelf_pinned.step"),
-        ("04_DESIGN_SOURCE/6_Brick_Cradle_plate13+DC-notch_faceplate/STEP_for_Onshape/Rack_Faceplate_2U_10in_DC-notch.step", "06_PI5_Faceplate_2U_DC_notch.step"),
+        ("04_DESIGN_SOURCE/4_Pi_Unit_2U/STEP_for_Onshape/Rack_Faceplate_2U_10in_clean.step", "06_PI5_Faceplate_2U_clean.step"),
         ("04_DESIGN_SOURCE/4_Pi_Unit_2U/STEP_for_Onshape/Pi5_UPS_v3_ups_tray_pinned.step", "06_PI5_UPS_Tray_pinned.step"),
         ("04_DESIGN_SOURCE/7_Argon_Poly5_tray+Waveshare_F_holder/STEP_for_Onshape/Pi5_ArgonPoly5_tray.step", "06_PI5_ArgonPoly5_tray.step"),
         ("04_DESIGN_SOURCE/7_Argon_Poly5_tray+Waveshare_F_holder/STEP_for_Onshape/Waveshare_F_holder_base.step", "06_PI5_Waveshare_F_holder_base.step"),

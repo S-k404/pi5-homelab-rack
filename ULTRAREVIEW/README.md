@@ -92,10 +92,10 @@ The CadQuery venv is in the project memory.
 Copy `screen_ui.png` and `ucg_ui.png` into the scene folder before step 4.
 
 ## Not done
-- The Onshape master STEPs (~100 MB) weren't regenerated.
-- The Slim Cargo has no plates or weight estimate.
+- The Onshape master STEPs (~100 MB) weren't regenerated in the review itself. **Done afterwards, same day** (clean faceplate, shelf with the arch, holder base with the HDMI relief).
+- The Slim Cargo has no plates or weight estimate. (Being added afterwards: see `01_PRINT_FILES/5_SLIM_CARGO_…/README.md`.)
 - Nothing physical was tested: the UPS jacks, the Poly+ 5 fit test, the gateway's port heights and the B1's USB-C position are still to-dos.
-- Nothing was committed to git.
+- Nothing was committed to git during the review. **Committed afterwards, same day**, in two commits: the text (docs, scripts, checks) and the binaries (print files, renders, STEP).
 
 ## Every file changed (old versions in `before/`, same paths)
 

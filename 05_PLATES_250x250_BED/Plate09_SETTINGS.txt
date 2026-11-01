@@ -1,0 +1,24 @@
+======================================================================
+Plate09: B1 Dock Body & Display Clips (5 Parts)
+Bed: 250 x 250 x 250 mm | Material: PLA - Silver
+Infill & Walls: Dock: 3w 15% · Clips: 4w 30%
+Parts on Bed: 5 pieces (100% verified inside bed margins)
+======================================================================
+
+DEBOSSED INTERIOR ONE-WORD PART IDENTIFIERS:
+  - Molded Label: DOCK
+  - Molded Label: CLIP (1/4)
+  - Molded Label: CLIP (2/4)
+  - Molded Label: CLIP (3/4)
+  - Molded Label: CLIP (4/4)
+
+QUICK-BREAK TREE SUPPORT RECIPE:
+  Tree Slim (0.20 mm Z) inside dock rear cavity.
+
+SLICER CONFIGURATION:
+  - Layer Height: 0.20 mm Standard
+  - Support Type: Tree (auto) / Tree Slim
+  - Top Z-Distance: 0.20 mm
+  - Top Interface: 2 dense layers @ 0.8 mm spacing
+  - Overhang Threshold: 55°
+  - XY Separation: 0.50 mm

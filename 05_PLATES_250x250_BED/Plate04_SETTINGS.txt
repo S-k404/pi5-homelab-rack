@@ -1,0 +1,22 @@
+======================================================================
+Plate04: Vented Cap Half 2 & Base Bars (3 Parts)
+Bed: 250 x 250 x 250 mm | Material: PETG - Black
+Infill & Walls: Bars: 5w 30% · Cap: 4w 20%
+Parts on Bed: 3 pieces (100% verified inside bed margins)
+======================================================================
+
+DEBOSSED INTERIOR ONE-WORD PART IDENTIFIERS:
+  - Molded Label: CAP (2/2)
+  - Molded Label: BAR (2/3)
+  - Molded Label: BAR (3/3)
+
+QUICK-BREAK TREE SUPPORT RECIPE:
+  Supports OFF (Zero Supports · 100% Flat Geometry)
+
+SLICER CONFIGURATION:
+  - Layer Height: 0.20 mm Standard
+  - Support Type: Tree (auto) / Tree Slim
+  - Top Z-Distance: 0.22 mm (Clean manual release)
+  - Top Interface: 2 dense layers @ 0.8 mm spacing
+  - Overhang Threshold: 55°
+  - XY Separation: 0.60 mm

@@ -1,0 +1,23 @@
+======================================================================
+Plate02: Chassis 3U Side Modules (4 Parts)
+Bed: 250 x 250 x 250 mm | Material: PETG - Black
+Infill & Walls: 4 walls · 25% Gyroid infill
+Parts on Bed: 4 pieces (100% verified inside bed margins)
+======================================================================
+
+DEBOSSED INTERIOR ONE-WORD PART IDENTIFIERS:
+  - Molded Label: SIDE (1/4)
+  - Molded Label: SIDE (2/4)
+  - Molded Label: SIDE (3/4)
+  - Molded Label: SIDE (4/4)
+
+QUICK-BREAK TREE SUPPORT RECIPE:
+  Tree Slim (0.22 mm Z) on lower joint bosses.
+
+SLICER CONFIGURATION:
+  - Layer Height: 0.20 mm Standard
+  - Support Type: Tree (auto) / Tree Slim
+  - Top Z-Distance: 0.22 mm (Clean manual release)
+  - Top Interface: 2 dense layers @ 0.8 mm spacing
+  - Overhang Threshold: 55°
+  - XY Separation: 0.60 mm

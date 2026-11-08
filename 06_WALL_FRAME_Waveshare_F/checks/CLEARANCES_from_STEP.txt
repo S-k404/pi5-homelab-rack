@@ -1,0 +1,60 @@
+Wall frame for the Waveshare adapter (F): clearance check of the delivered STEP files
+Exact OpenCASCADE distances between the STEP solids (read back from disk, moved to their assembled place) and
+the adapter model, the screws and the cable plugs. Adapter positions: Waveshare's drawing, +-0.3 mm
+(DIMENSIONS_adapter_F.txt). TIGHT = under 0.25 mm, may rub once printed. Not a physical test.
+
+PASS  WallFrame_F_box.step (print position) read back; moved to its assembled place it is the same solid as STEP_for_Onshape/WallFrame_F_box.step  (difference 0.0000 mm3, volume 38.255 cm3)
+PASS  WallFrame_F_front.step (print position) read back; moved to its assembled place it is the same solid as STEP_for_Onshape/WallFrame_F_front.step  (difference 0.0000 mm3, volume 11.040 cm3)
+
+      part                                                         to box  to front
+PASS  PCB                                                            0.00     15.00  (sits on the 4 posts)
+PASS  RJ45 (13.5 tall)                                               7.10      1.50
+PASS  HDMI-A (6.5 tall)                                              3.10      8.50
+PASS  PWR rod (est. 3 tall)                                          2.15     12.25
+PASS  7-24 V terminal (est. 12 tall)                                 1.12      3.00
+PASS  terminal screws                                                6.05      3.40
+PASS  UART sockets (est. 6 tall)                                     1.60     12.90
+PASS  3-pin socket (est. 6 tall)                                     2.03      9.93
+PASS  micro-HDMI plug                                                5.73     11.50
+PASS  USB-C plug                                                     1.28     11.50
+PASS  PoE transformer (est. 10 tall)                                 3.60      5.46
+PASS  inductors (est. 7 tall)                                        2.60      8.77
+PASS  22 uF / 470 uF caps (est. 8 tall)                              3.60     12.74
+PASS  M.2 socket (est. 4.2 tall)                                     3.60     16.44
+PASS  2230 SSD                                                       6.00     16.97
+PASS  SSD chips                                                      6.80     19.19
+PASS  FFC socket                                                     7.52     20.85
+PASS  RTL8125 chip                                                   3.78     26.93
+PASS  pin tails under RJ45 / HDMI / terminal (est. 2.5)              0.30     16.60
+
+PASS  board screw 1 M2.5 x 6 pan head                              thread     13.48  (4.4 mm into the post's Ø2.1 pilot, tip 4.1 mm above its floor)
+PASS  board screw 2 M2.5 x 6 pan head                              thread     13.48  (4.4 mm into the post's Ø2.1 pilot, tip 4.1 mm above its floor)
+PASS  board screw 3 M2.5 x 6 pan head                              thread     13.48  (4.4 mm into the post's Ø2.1 pilot, tip 4.1 mm above its floor)
+PASS  board screw 4 M2.5 x 6 pan head                              thread     13.48  (4.4 mm into the post's Ø2.1 pilot, tip 4.1 mm above its floor)
+PASS  front screw 1 M3 x 12 countersunk                            thread       csk  (7.5 mm into the column's Ø2.5 pilot, tip 2.5 mm above its floor; 5.20 to the board)
+PASS  front screw 2 M3 x 12 countersunk                            thread       csk  (7.5 mm into the column's Ø2.5 pilot, tip 2.5 mm above its floor; 10.90 to the board)
+PASS  front screw 3 M3 x 12 countersunk                            thread       csk  (7.5 mm into the column's Ø2.5 pilot, tip 2.5 mm above its floor; 8.75 to the board)
+PASS  front screw 4 M3 x 12 countersunk                            thread       csk  (7.5 mm into the column's Ø2.5 pilot, tip 2.5 mm above its floor; 14.46 to the board)
+PASS  wall screw 1 head 2 mm off the wall (9.0 x 2.8, shank 4.0)     0.20     23.12  (set by hand, not a printed fit: a 2.8 mm head works from 1.8 to 3.2 mm off the wall)
+PASS  wall screw 1 head 3 mm off the wall (9.0 x 2.8, shank 4.0)     0.20     22.21  (set by hand, not a printed fit: a 2.8 mm head works from 1.8 to 3.2 mm off the wall)
+PASS  wall screw 2 head 2 mm off the wall (9.0 x 2.8, shank 4.0)     0.20     23.12  (set by hand, not a printed fit: a 2.8 mm head works from 1.8 to 3.2 mm off the wall)
+PASS  wall screw 2 head 3 mm off the wall (9.0 x 2.8, shank 4.0)     0.20     22.21  (set by hand, not a printed fit: a 2.8 mm head works from 1.8 to 3.2 mm off the wall)
+
+PASS  RJ45 plug + boot 14 x 15, pushed home                          6.39      1.03
+PASS  HDMI plug moulding 22 x 12, pushed home                        1.39      5.79
+PASS  HDMI moulding if the jack sits 1.0 back                        1.20      5.75
+PASS  terminal plug pulled 25 mm out                                 1.70      3.00
+PASS  FFC 10 wide, out of the bottom                                10.10     10.40
+PASS  lead on the micro-HDMI plug                                    5.10      8.00
+PASS  lead on the USB-C plug                                         0.80      8.00
+PASS  lead on the 3-pin socket                                       0.50      8.00
+
+INFO  PCB edge to the left wall (top-left stub)  (0.40 mm)
+INFO  terminal end to the right wall  (1.20 mm)
+INFO  plug tips to the bottom wall line  (1.20 mm)
+INFO  RJ45 top to the front frame  (1.50 mm)
+INFO  jack faces proud of the left wall  (0.50 mm)
+INFO  keyhole boss top to the PCB underside  (2.00 mm)
+
+41 PASS, 0 TIGHT, 0 FAIL
+Parts marked est. have estimated heights or positions (the drawing is a top view); pin tails are a guess.

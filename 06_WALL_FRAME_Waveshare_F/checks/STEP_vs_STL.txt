@@ -1,0 +1,8 @@
+PASS  WallFrame_F_box.step: one valid solid, same place and size as WallFrame_F_box.stl
+      104.30 x 72.50 x 26.10 mm (STL 104.30 x 72.50 x 26.10); volume STEP 38.255 cm3, STL 38.254 cm3
+      STL vertices from the STEP surface: max 0.0003 mm, mean 0.0000 mm (5788 vertices)
+      140 exact faces: 4 cone, 36 cylinder, 100 plane
+PASS  WallFrame_F_front.step: one valid solid, same place and size as WallFrame_F_front.stl
+      104.30 x 72.50 x 4.50 mm (STL 104.30 x 72.50 x 4.50); volume STEP 11.040 cm3, STL 11.040 cm3
+      STL vertices from the STEP surface: max 0.0010 mm, mean 0.0000 mm (10520 vertices)
+      395 exact faces: 4 bspline, 8 cone, 8 cylinder, 175 extrusion, 200 plane

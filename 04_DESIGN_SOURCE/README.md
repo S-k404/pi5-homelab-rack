@@ -4,7 +4,7 @@
 
 ### 🌟 Official Onshape Project & Master Schematics
 For opening or importing the entire 9U rack and all components into **Onshape**, go to:
-👉 **[`ONSHAPE_PROJECT/`](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/)**
+👉 **[`ONSHAPE_PROJECT/`](ONSHAPE_PROJECT)**
 - **`Pi5_HomeLab_9U_Complete_ASSEMBLY.step`**: Full 35+ part solid master assembly (Standard 200 mm DeskPi T0-look rack + all 4 units in place).
 - **`SlimCargo_HomeLab_9U_Complete_ASSEMBLY.step`**: Full master assembly for the 140 mm Slim Cargo travel prototype.
 - **`Pi5_HomeLab_9U_Onshape_Project_Package.zip`**: Complete one-click drag-and-drop import archive.

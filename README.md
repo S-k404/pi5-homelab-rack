@@ -1,16 +1,44 @@
+<!-- datasheet:banner -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/banner-dark.svg">
+    <img src=".github/assets/banner-light.svg" alt="Pi 5 HomeLab Rack: A printed 10-inch, 9U mini rack in the DeskPi RackMate look, built around a Raspberry Pi 5, a 7-inch screen and a UPS." width="100%">
+  </picture>
+</p>
+<!-- /datasheet:banner -->
+
 # Pi 5 HomeLab mini rack (updated 28 Oct 2026, ultrareview in the evening)
 
 **To do: `FINAL_TODO/FINAL_TODO.md`.** What the 28 Oct review checked, found and changed: `ULTRAREVIEW/README.md`.
 
 A **printed 10-inch, 9U mini rack** in the DeskPi RackMate T0 look: 280 W × 200 D, silver sides, a vented cap and U handles. It's printed by Robu's print service or on a **Bambu P1S** (256 mm bed): PLA for the rack, dock and screen; PETG near heat.
 
+<!-- datasheet:figure -->
+## At a glance
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/diagram-dark.svg">
+    <img src=".github/assets/diagram-light.svg" alt="Block diagram: the 9U build, decided 28 Oct" width="100%">
+  </picture>
+</p>
+
+| Characteristic | Detail |
+| --- | --- |
+| **Size** | 10-inch, 9U mini rack, 280 W × 200 D, silver sides, vented cap, U handles |
+| **Standard** | Follows Jeff Geerling's 10-inch standard: 236.525 mm rail holes, EIA pattern, 224 mm clear; M5 mounts |
+| **Print** | Robu's print service or a Bambu P1S (256 mm bed); PLA for the rack, dock and screen, PETG near heat |
+| **CAD** | Master 2-in-1 STEP and an Onshape import package in the repo root |
+| **Checklist** | [`FINAL_TODO/FINAL_TODO.md`](FINAL_TODO/FINAL_TODO.md) covers orders, printing, building, wiring and power-up |
+<!-- /datasheet:figure -->
+
 ## Folders & CAD Downloads
 | Folder / file | What it is |
 |---|---|
 | **`FINAL_TODO/`** | **The one to-do list** (orders, measuring, printing, building, wiring, power-up) |
 | `ULTRAREVIEW/` | The 28 Oct review: findings, every change (with the old files in `before/`), new checks and renders |
-| 🌟 **[`Pi5_HomeLab_9U_COMBINED_FOR_ONSHAPE.step`](file://~/Downloads/Pi%205%20HomeLab%201/Pi5_HomeLab_9U_COMBINED_FOR_ONSHAPE.step)** | **Master 2-in-1 Combined STEP**: Standard 200 mm & Slim Cargo 140 mm racks side-by-side in one file for Onshape. For viewing only: its UCG unit is the unused custom shelf, it has the pre-28-Oct holder, and its Slim Cargo rack shows a brick cradle that doesn't fit there (`04_DESIGN_SOURCE/ONSHAPE_PROJECT/README.md`) |
-| 📦 **[`Pi5_HomeLab_9U_Onshape_Project_Package.zip`](file://~/Downloads/Pi%205%20HomeLab%201/Pi5_HomeLab_9U_Onshape_Project_Package.zip)** | **Complete Onshape Import Archive**: Both master assemblies, 30 component STEPs, and dimensioned schematics |
+| 🌟 **[`Pi5_HomeLab_9U_COMBINED_FOR_ONSHAPE.step`](Pi5_HomeLab_9U_COMBINED_FOR_ONSHAPE.step)** | **Master 2-in-1 Combined STEP**: Standard 200 mm & Slim Cargo 140 mm racks side-by-side in one file for Onshape. For viewing only: its UCG unit is the unused custom shelf, it has the pre-28-Oct holder, and its Slim Cargo rack shows a brick cradle that doesn't fit there (`04_DESIGN_SOURCE/ONSHAPE_PROJECT/README.md`) |
+| 📦 **[`Pi5_HomeLab_9U_Onshape_Project_Package.zip`](Pi5_HomeLab_9U_Onshape_Project_Package.zip)** | **Complete Onshape Import Archive**: Both master assemblies, 30 component STEPs, and dimensioned schematics |
 | **`01_PRINT_FILES/`** | **Every print file, and nothing else**, sorted: `1_PRINT-NOW`, `2_CHECK-UPS-FIRST`, `3_WAIT`, `4_OPTIONAL_spare-spacers`, and `5_SLIM_CARGO_140mm_TRAVEL_PROTOTYPE` (an *alternative* rack frame, not part of the order: the brick cradle doesn't fit it). STLs for Robu plus P1S plates. Start with its `README.md` |
 | `02_RENDERS/` | 18 renders of this build, re-rendered 28 Oct with every cable (`FINAL_sheet.png` = all on one page; 17–18 = the wiring), the Blender scene; plus 360° turntable / exploded videos made by another tool before the review |
 | `03_CHECKS/` | Every check report (calculations on the 3D models, not physical tests) |

@@ -16,11 +16,11 @@ Everything is provided in **standard AP214 STEP format (`.step` / `.stp`)**, whi
 
 | File | Type | Depth | Description | Link |
 | :--- | :--- | :--- | :--- | :--- |
-| **`Pi5_HomeLab_9U_ALL_IN_ONE_COMBINED.step`** | **Master Combined 2-in-1** | **200 mm & 140 mm** | **Both Racks Side-by-Side in One File**: Standard 200 mm Desktop Edition on the left + Slim Cargo 140 mm Travel Edition on the right. Both with all 4 units loaded. Immediate visual comparison in Onshape! | [Download Combined STEP](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/Pi5_HomeLab_9U_ALL_IN_ONE_COMBINED.step) |
-| **`Pi5_HomeLab_9U_Complete_ASSEMBLY.step`** | **Master STEP Assembly** | **200 mm** | **Complete Standard Homelab**: Full 9U rack frame (DeskPi T0 aesthetic) + all 4 units loaded in place (1U UCG-Ultra, 3U 7" Screen, 3U NIIMBOT B1 Dock, 2U Pi 5 + Cuzor UPS + 12V Brick Cradle + Spacers). | [Download STEP](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/Pi5_HomeLab_9U_Complete_ASSEMBLY.step) |
-| **`SlimCargo_HomeLab_9U_Complete_ASSEMBLY.step`** | **Master STEP Assembly** | **140 mm** | **Complete Slim Cargo Edition**: 140 mm depth reinforced travel frame + low-profile flush handles + all 4 units fully verified inside the suitcase travel envelope. | [Download STEP](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/SlimCargo_HomeLab_9U_Complete_ASSEMBLY.step) |
-| **`Pi5_HomeLab_9U_SingleBody_Compound_STUDIO.step`** | **Multi-Body Part Studio Compound** | **200 mm** | **Single Part Studio Model**: All 50 solid bodies united in place as a compound solid. Opens directly in an Onshape Part Studio tab without needing assembly mates! | [Download Compound STEP](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/Pi5_HomeLab_9U_SingleBody_Compound_STUDIO.step) |
-| **`Pi5_HomeLab_9U_Onshape_Project_Package.zip`** | **Complete Project ZIP** | — | **One-Click Onshape Import**: Zip archive containing all master assemblies, 30 individual component STEPs, and full engineering schematics. | [Download ZIP](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/Pi5_HomeLab_9U_Onshape_Project_Package.zip) |
+| **`Pi5_HomeLab_9U_ALL_IN_ONE_COMBINED.step`** | **Master Combined 2-in-1** | **200 mm & 140 mm** | **Both Racks Side-by-Side in One File**: Standard 200 mm Desktop Edition on the left + Slim Cargo 140 mm Travel Edition on the right. Both with all 4 units loaded. Immediate visual comparison in Onshape! | [Download Combined STEP](Pi5_HomeLab_9U_ALL_IN_ONE_COMBINED.step) |
+| **`Pi5_HomeLab_9U_Complete_ASSEMBLY.step`** | **Master STEP Assembly** | **200 mm** | **Complete Standard Homelab**: Full 9U rack frame (DeskPi T0 aesthetic) + all 4 units loaded in place (1U UCG-Ultra, 3U 7" Screen, 3U NIIMBOT B1 Dock, 2U Pi 5 + Cuzor UPS + 12V Brick Cradle + Spacers). | [Download STEP](Pi5_HomeLab_9U_Complete_ASSEMBLY.step) |
+| **`SlimCargo_HomeLab_9U_Complete_ASSEMBLY.step`** | **Master STEP Assembly** | **140 mm** | **Complete Slim Cargo Edition**: 140 mm depth reinforced travel frame + low-profile flush handles + all 4 units fully verified inside the suitcase travel envelope. | [Download STEP](SlimCargo_HomeLab_9U_Complete_ASSEMBLY.step) |
+| **`Pi5_HomeLab_9U_SingleBody_Compound_STUDIO.step`** | **Multi-Body Part Studio Compound** | **200 mm** | **Single Part Studio Model**: All 50 solid bodies united in place as a compound solid. Opens directly in an Onshape Part Studio tab without needing assembly mates! | [Download Compound STEP](Pi5_HomeLab_9U_SingleBody_Compound_STUDIO.step) |
+| **`Pi5_HomeLab_9U_Onshape_Project_Package.zip`** | **Complete Project ZIP** | — | **One-Click Onshape Import**: Zip archive containing all master assemblies, 30 individual component STEPs, and full engineering schematics. | [Download ZIP](Pi5_HomeLab_9U_Onshape_Project_Package.zip) |
 
 ---
 
@@ -28,12 +28,12 @@ Everything is provided in **standard AP214 STEP format (`.step` / `.stp`)**, whi
 
 High-resolution engineering drawings showing all standard dimensions, EIA-310 10-inch mounting pitches, U-spacing, clearances, and fastener specifications:
 
-- 📊 **[00_HOMELAB_RACK_ENGINEERING_SCHEMATIC.png](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/00_HOMELAB_RACK_ENGINEERING_SCHEMATIC.png)**:
+- 📊 **[00_HOMELAB_RACK_ENGINEERING_SCHEMATIC.png](00_HOMELAB_RACK_ENGINEERING_SCHEMATIC.png)**:
   - **View A**: Front Elevation schematic with 10" EIA-310 standard spacing (236.525 mm hole pitch, 254 mm faceplates).
   - **View B**: Side Elevation comparison between 200 mm Desktop and 140 mm Slim Cargo profile.
   - **View C**: Component depth envelope bar chart (all units verified < 140 mm).
   - **View D**: Complete fastener, material, and manufacturing specifications.
-- 📊 **[00_SLIM_CARGO_RACK_SCHEMATIC.png](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/00_SLIM_CARGO_RACK_SCHEMATIC.png)**: Dedicated schematic for the 140 mm Slim Cargo travel prototype.
+- 📊 **[00_SLIM_CARGO_RACK_SCHEMATIC.png](00_SLIM_CARGO_RACK_SCHEMATIC.png)**: Dedicated schematic for the 140 mm Slim Cargo travel prototype.
 
 ---
 
@@ -57,7 +57,7 @@ High-resolution engineering drawings showing all standard dimensions, EIA-310 10
 
 ### Method 3: Modular Assembly with Mate Connectors
 If you want to create interactive kinematics (e.g., sliding the B1 printer in/out or opening the printer lid):
-1. Import individual parts from the **[`INDIVIDUAL_STEP_PARTS/`](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/ONSHAPE_PROJECT/INDIVIDUAL_STEP_PARTS/)** directory.
+1. Import individual parts from the **[`INDIVIDUAL_STEP_PARTS/`](INDIVIDUAL_STEP_PARTS)** directory.
 2. In an Onshape **Assembly tab**:
    - Fix `Rack_SideModule_2U_Base_R` to the Origin.
    - Use **Fastened Mates** at the screw/insert centers for the side modules and base bars.

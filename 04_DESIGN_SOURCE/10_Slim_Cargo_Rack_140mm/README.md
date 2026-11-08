@@ -49,7 +49,7 @@ The Pi shelf rests on the slim front and middle bars (z 1–14, 63–77), so the
 ## 4. CAD & Manufacturing Files
 
 * **Onshape-Ready 3D Assembly STEP:**  
-  [`STEP_for_Onshape/SlimCargo_Rack_9U_140mm_ASSEMBLY.step`](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/10_Slim_Cargo_Rack_140mm/STEP_for_Onshape/SlimCargo_Rack_9U_140mm_ASSEMBLY.step)
+  [`STEP_for_Onshape/SlimCargo_Rack_9U_140mm_ASSEMBLY.step`](STEP_for_Onshape/SlimCargo_Rack_9U_140mm_ASSEMBLY.step)
 * **Print-Ready STLs (fit standard $220\times 220\text{ mm}$ and Bambu $256\times 256\text{ mm}$ beds):**
   * `SlimCargo_SideModule_2U_Base_x2.stl`
   * `SlimCargo_SideModule_3U_x4.stl`
@@ -59,5 +59,5 @@ The Pi shelf rests on the slim front and middle bars (z 1–14, 63–77), so the
   * `SlimCargo_BaseBar_x3.stl`
 * **Print plates, overhang check and filament estimate (28 Oct):** `source/build_slim_plates.py <project root>` writes the seven P1S plates into `../../01_PRINT_FILES/5_SLIM_CARGO_140mm_TRAVEL_PROTOTYPE/P1S_plates/` and the report `../../03_CHECKS/VERIFICATION_slim-cargo_plates_28Oct.txt` (frame ≈ 1,193 g PETG). The earlier "no supports, all overhangs ≤ 45°" is not true; see that report.
 * **Studio Renders:**  
-  Located in [`02_RENDERS/SLIM_CARGO_PROTOTYPE/`](file://~/Downloads/Pi%205%20HomeLab%201/02_RENDERS/SLIM_CARGO_PROTOTYPE/).
+  Located in [`02_RENDERS/SLIM_CARGO_PROTOTYPE/`](../../02_RENDERS/SLIM_CARGO_PROTOTYPE).
 

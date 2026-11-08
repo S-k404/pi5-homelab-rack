@@ -4,7 +4,7 @@ import bpy
 import bmesh
 from mathutils import Matrix, Vector, Euler
 
-BASE = "~/Downloads/Pi 5 HomeLab 1"
+BASE = os.path.expanduser("~/Downloads/Pi 5 HomeLab 1")
 ORIG_BLEND = os.path.join(BASE, "_Old_versions", "rework-01", "Pi5-MiniRack_v7.2_ALL-FILES_2026-10-27", "VISUALS", "blender_option2", "Pi5_MiniRack_option2_studio.blend")
 RENDERS_DIR = os.path.join(BASE, "antigravity_finalisation", "03_BLENDER_RENDERS")
 RACK_RENDERS_ROOT = os.path.join(BASE, "Pi 5 Mini Rack Renders")

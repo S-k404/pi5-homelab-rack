@@ -5,7 +5,7 @@ import os
 import sys
 from PIL import Image, ImageDraw, ImageFont
 
-BASE = "~/Downloads/Pi 5 HomeLab 1"
+BASE = os.path.expanduser("~/Downloads/Pi 5 HomeLab 1")
 REN = os.path.join(BASE, "antigravity_finalisation", "03_BLENDER_RENDERS")
 
 F = "/System/Library/Fonts/Helvetica.ttc"

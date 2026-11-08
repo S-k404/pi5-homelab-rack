@@ -4,7 +4,7 @@ import sys
 import bpy
 from mathutils import Matrix, Vector
 
-BASE = "~/Downloads/Pi 5 HomeLab 1"
+BASE = os.path.expanduser("~/Downloads/Pi 5 HomeLab 1")
 BLEND_FILE = os.path.join(BASE, "antigravity_finalisation", "03_BLENDER_RENDERS", "Pi5_MiniRack_antigravity_studio.blend")
 OUT_DIR = os.path.join(BASE, "antigravity_finalisation", "03_BLENDER_RENDERS")
 os.makedirs(OUT_DIR, exist_ok=True)

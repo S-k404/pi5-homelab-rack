@@ -1,0 +1,40 @@
+Waveshare Pi5 Connector Adapter (F): dimensions checked, 8 Nov 2026
+====================================================================
+Sources
+  A  Waveshare's dimension drawing ("Pi5-Connector-Adapter-F-details-size", 960 x 555 px, the same file on
+     docs.waveshare.com and waveshare.com). Printed figures: 85.00 / 86.00 long, 52.50 wide, holes 58.00 x 46.50,
+     49.50 (top edge to the far hole row).
+  B  waveshare.com product page: 86.0 x 52.5 mm, 47 g, 2230 / 2242 SSDs, 16-pin FFC 100 mm, SH1.0 3-pin leads.
+  C  Raspberry Pi 5 mechanical drawing (datasheets.raspberrypi.com): USB-C at 11.2, micro-HDMI 0 at 25.8 and 1 at 39.2
+     from the board end, holes 3.5 in, 58 x 49, Ø2.7.
+  D  Pixel analysis of A (scripts measure_*.py): edges, hole rings and parts found by colour, positions taken
+     relative to the four hole centres, because the holes are what locate the board in the frame.
+
+Scale found in A: 6.775 px/mm along (hole rings 392.9 px = 58.00), 6.817 px/mm across (317 px = 46.50). The photo
+is not a true-scale drawing: the board measures 85.24 long against the printed 85.00, and the 46.50 / 49.50 arrows
+end at the board edge rather than at the hole centre. Treat everything below as good to about +-0.3 mm.
+
+                                  model 8 Nov (first)   measured (D)          now in the model     frame margin now
+Board                             85.00 x 52.50         85.24 x 51.6..52.7    85.00 x 52.50        -
+Holes                             58.00 x 46.50         58.00 x 46.50 (cal.)  58.00 x 46.50        posts at the holes
+Hole size                         M2.5 assumed          Ø2.84..2.97           M2.5 (Ø2.1 pilots)   -   (not M2)
+Hole insets from the ends         24.05 / 2.95          23.77 / 3.47          24.05 / 2.95         left wall gap 0.4..0.7
+RJ45 across (y)                   22.0..38.5            22.2..38.5            22.0..38.5           in the 52 mm side opening
+HDMI-A across (y)                 0.2..17.4             0.6..18.6             0.6..18.6            in the side opening
+Jack faces past the PCB (x)       3.5                   3.1..3.4              3.3                  stand 0.5 proud; 1.0 also checked
+PWR rod (y)                       44.5..47.0            45.0..47.2, Ø2.2      44.8..47.4           in the side opening
+Terminal end (x)                  97.6                  97.84                 97.9                 1.2 to the right wall
+Terminal across (y)               6.5..15.4             6.85..15.4            6.4..15.4            notch 4.5..17.5
+Plug tips past the tabs (y)       -6.2                  -5.9..-6.35           -6.4                 1.2 to the bottom wall
+micro-HDMI plug centre (x)        59.75                 60.2 (C gives 59.75)  60.2                 bottom slot 27..80
+USB-C plug centre (x)             74.1                  74.4 (C gives 74.35)  74.35                slot edge 1.8 past it
+UART socket end (x)               86.0                  86.0 (A, printed)     86.0                 13 mm free
+
+Cross-check C: when the adapter is plugged into a Pi 5, its plugs sit on the Pi's USB-C and micro-HDMI 0, 14.6 apart.
+D measures the plug centres 14.2 apart; C puts them at 59.75 / 74.35, D at 60.2 / 74.4: the same to within 0.45 mm.
+
+What changed in the frame after this check: right inner wall +0.7 (terminal end), bottom and top margins +0.2
+(plug tips), HDMI and rod positions; outline 103.6 x 72.1 -> 104.3 x 72.5. Keyholes still 28.0 apart.
+
+Not measurable from any source: heights (the drawing is a top view). RJ45 13.5 and HDMI 6.5 come from typical parts;
+the frame leaves 15.0 mm above the board.

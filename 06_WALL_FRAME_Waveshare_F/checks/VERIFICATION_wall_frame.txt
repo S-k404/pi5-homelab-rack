@@ -1,0 +1,48 @@
+Waveshare adapter (F) wall frame: box + front frame, PETG — checks
+Calculations on the CAD models, not a physical test. Frame: x along the 85 mm side (0 = ports-end PCB edge),
+y up the wall (0 = plug edge), z out of the wall. Board data from Waveshare's dimension drawing; heights marked
+est. are estimates (the drawing is a top view).
+
+PASS  box: one valid solid
+PASS  front frame: one valid solid
+INFO  outline  (104.3 x 72.5 mm, 30.6 deep on the wall)
+PASS  the adapter, its parts, plugs and pin tails don't hit the box or the front  (overlap box 0.00 mm3, front 0.00 mm3)
+INFO  closest part to the box  (pin tails under RJ45 / HDMI / terminal (est. 2.5): 0.30 mm)
+PASS  PCB to the inside walls  (left 0.40, top 7.60; plug tips to the bottom wall 1.20; terminal end to the right wall 1.20)
+PASS  4 posts under the board's holes (58.00 x 46.50), 2.1 mm pilots for self-tapping M2.5  (PCB underside z 9.5; pilots z 1.0..9.5 so M2.5 x 5 to x 10 bite 3.4..7.9 mm (x 10 ends 0.1 mm above the pilot floor))
+PASS  keyhole bosses stay under the board and clear of its pin tails (est.)  (boss top z 7.5, PCB underside z 9.5; 9.9 mm to the nearest pin tails (they are not over the bosses))
+INFO  jack faces vs the left wall's outer face  (drawing: faces at x -3.3, wall outer at x -2.8, so the jacks stand 0.5 mm proud)
+PASS  RJ45 plug + boot (14 x 15), pushed home, jack face at x -3.3  (0.0 mm3 in the frame)
+PASS  HDMI plug moulding (22 x 12), pushed home, jack face at x -3.3  (0.0 mm3 in the frame)
+PASS  RJ45 plug + boot (14 x 15), pushed home, jack face at x -1.0  (0.0 mm3 in the frame)
+PASS  HDMI plug moulding (22 x 12), pushed home, jack face at x -1.0  (0.0 mm3 in the frame)
+PASS  PWR rod passes through the side opening  (opening y -2.6..49.5, rod y 44.8..47.4)
+PASS  the green plug-in terminal slides 25 mm out to the right through the notch  (0.0 mm3; notch y 4.5..17.5, z 8.0..26.1)
+PASS  16-pin FFC (10 wide) leaves through the bottom slot  (0.00 mm3; slot x 27.0..80.0)
+PASS  a lead or extension on the micro-HDMI has a clear path out of the bottom slot  (0.00 mm3)
+PASS  a lead or extension on the USB-C has a clear path out of the bottom slot  (0.00 mm3)
+PASS  a lead or extension on the 3-pin socket has a clear path out of the bottom slot  (0.00 mm3)
+INFO  window  (x 5.2..93.5, y -2.0..54.5; shows 94% of the board (the left 5.2 mm, the jack backs, sit under the border))
+PASS  front frame clears the tallest parts  (RJ45 1.5 mm, terminal (est.) 3.0 mm)
+PASS  4 corner columns carry the front frame, 2.5 mm pilots for self-tapping M3  (seat area 30 mm2 each under a 6 x 6 probe; M3 x 12 countersunk: 7.5 mm in the column, pilot 10 deep)
+PASS  countersinks stay clear of the window's bevelled corner  (1.14 mm of plastic)
+PASS  columns clear the board  (2.50 mm)
+PASS  keyholes: a 9.0 x 2.8 mm head, 2.0 to 3.0 mm off the wall, goes in and hangs; 4.0 mm shank in the neck  (x 35.4 and 63.4 (28.0 apart), entry y 33.0, hang point y 41.0; neck 1.8 mm thick)
+INFO  balance  (frame centre x 49.4, keyholes centred on x 49.4; box centre of mass y 28.9, hang point y 41.0 (above it))
+PASS  WallFrame_F_box.stl: watertight, flat on the bed, fits a 256 mm bed  (104.3 x 72.5 x 26.1 mm, first layer 7188 mm2, 11620 triangles)
+PASS  WallFrame_F_box.stl: no supports needed; widest unsupported patch is a short bridge  (widest bridge 9.6 mm (limit 10), 76 patches)
+INFO  WallFrame_F_box: PETG at 3 walls / 20% gyroid  (solid volume 38.3 cm3)
+PASS  WallFrame_F_front.stl: watertight, flat on the bed, fits a 256 mm bed  (104.3 x 72.5 x 4.5 mm, first layer 2529 mm2, 21056 triangles)
+PASS  WallFrame_F_front.stl: no supports needed; widest unsupported patch is a short bridge  (widest bridge 0.0 mm (limit 10), 0 patches)
+INFO  WallFrame_F_front: PETG at 3 walls / 20% gyroid  (solid volume 11.0 cm3)
+PASS  STL outlines match the design  (box 104.30 x 72.50 x 26.10, front 104.30 x 72.50 x 4.50)
+PASS  board post pilots in the box STL: 58.00 x 46.50 (Waveshare's hole pattern)  (measured 58.01 x 46.50, pilot Ø2.10, worst position error 0.01 mm)
+PASS  keyholes in the box STL: 28.0 apart, level  (measured 28.02 apart, heights differ 0.01 mm)
+PASS  front's 4 screw holes line up with the box's 4 column pilots (both STLs)  (worst offset 0.010 mm; pilots Ø2.50, through holes Ø3.40)
+
+29 PASS, 0 FAIL
+
+NOT VERIFIED (needs the real board): part heights marked est., how far the jacks really stand past the PCB
+(both the drawing's 3.3 and 1.0 mm are checked above), the rod's purpose and height, and print behaviour
+(no test print). Board positions come from Waveshare's drawing, good to about +-0.3 mm:
+see DIMENSIONS_adapter_F.txt.

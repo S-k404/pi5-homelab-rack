@@ -21,8 +21,8 @@ This is the **one** to-do list. `START_HERE.md` points here; the print list is `
 - [ ] Onshape: unit 4 is still the unused custom UCG shelf as a stand-in (the Printables 942972 mount is mesh-only).
 
 **Needs a decision from you:**
-- [ ] Merge `feature/b1-dock` into `main`? It isn't merged, and there's no remote.
-- [ ] Repo size: `.git` is ~520 MB, so `/ultrareview` can't run on it. Fixing that means untracking the STL/STEP/PNG/3MF files (the `.gitignore` already lists them) or rewriting history; neither is done.
+- [x] ~~Merge `feature/b1-dock` into `main`?~~ Nothing left to decide: the work is on GitHub `main`, and the branch no longer exists.
+- [ ] Repo size: `.git` is ~659 MB, so `/ultrareview` can't run on it. Fixing that means untracking the STL/STEP/PNG/3MF files (the `.gitignore` already lists them) or rewriting history; neither is done.
 
 **Needs hardware:** everything in §2 (measure and test), §3 (print), §4 (build) and §6 (first power-up). Nothing physical has been tested, and the Slim Cargo rack has never been printed.
 

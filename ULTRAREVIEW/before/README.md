@@ -5,8 +5,8 @@ A **printed 10-inch, 9U mini rack** in the DeskPi RackMate T0 look: 280 W × 200
 ## Folders & CAD Downloads
 | Folder / file | What it is |
 |---|---|
-| 🌟 **[`Pi5_HomeLab_9U_COMBINED_FOR_ONSHAPE.step`](file://~/Downloads/Pi%205%20HomeLab%201/Pi5_HomeLab_9U_COMBINED_FOR_ONSHAPE.step)** | **Master 2-in-1 Combined STEP**: Standard 200 mm & Slim Cargo 140 mm racks side-by-side in one file for Onshape |
-| 📦 **[`Pi5_HomeLab_9U_Onshape_Project_Package.zip`](file://~/Downloads/Pi%205%20HomeLab%201/Pi5_HomeLab_9U_Onshape_Project_Package.zip)** | **Complete Onshape Import Archive**: Both master assemblies, 30 component STEPs, and dimensioned schematics |
+| 🌟 **``Pi5_HomeLab_9U_COMBINED_FOR_ONSHAPE.step``** | **Master 2-in-1 Combined STEP**: Standard 200 mm & Slim Cargo 140 mm racks side-by-side in one file for Onshape |
+| 📦 **``Pi5_HomeLab_9U_Onshape_Project_Package.zip``** | **Complete Onshape Import Archive**: Both master assemblies, 30 component STEPs, and dimensioned schematics |
 | **`01_PRINT_FILES/`** | **Every print file, and nothing else**, sorted: `1_PRINT-NOW`, `2_CHECK-UPS-FIRST`, `3_WAIT`, `4_OPTIONAL_spare-spacers`, `5_SLIM_CARGO_140mm_TRAVEL_PROTOTYPE`. STLs for Robu plus P1S plates. Start with its `README.md` |
 | `02_RENDERS/` | 16 renders of this build (`FINAL_sheet.png` = all on one page), 360° turntable videos, exploded animations, the Blender scene |
 | `03_CHECKS/` | Every check report (calculations on the 3D models, not physical tests) |
@@ -58,4 +58,4 @@ Its renders show that faceplate and a UPS moved 29.9 mm forward, and its BOM xls
 
 ## Links
 - Jeff Geerling's Project MINI RACK: https://mini-rack.jeffgeerling.com/
-- Older interactive 3D view (v7.2, private): https://claude.ai/artifact/9pqgvvRfigWwcD8ecrPeBo
+- Older interactive 3D view (v7.2, private): (a private interactive view that is no longer available)

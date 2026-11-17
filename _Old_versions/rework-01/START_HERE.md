@@ -11,7 +11,7 @@ v7.2 is a 9U rack. From the bottom: Pi 5 + UPS (2U), NIIMBOT B1 dock (3U), 7" to
 | What to print, plate by plate, on the P1S | `Pi5-MiniRack_v7.2_ALL-FILES_2026-10-27/PRINT_PLAN_P1S.md` |
 | Print files | `STL_for_printing/` inside each unit folder (`1_Rack…`, `2_B1_Dock…`, `3_Display…`, `4_Pi_Unit…`, `5_UCG-Ultra…`) |
 | What to buy, with prices | `Pi5-MiniRack_v7.2_ALL-FILES_2026-10-27/BOM_Pi5-MiniRack_v7.2.xlsx` (₹47,142 still to spend, of which ₹17,949 is the UCG-Ultra) |
-| Interactive 3D view | https://claude.ai/artifact/9pqgvvRfigWwcD8ecrPeBo (private to your claude.ai account) |
+| Interactive 3D view | (a private interactive view that is no longer available) (private to your claude.ai account) |
 | Older versions | `_Old_versions/`. Don't print from these. |
 
 **Printing at a glance (Bambu P1S):**

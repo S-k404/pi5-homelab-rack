@@ -17,7 +17,7 @@ The rack is in `1_Rack_8U_T0-look/`. Each folder has a README, print-ready STLs 
 ![Loaded](VISUALS/rack_loaded.png)
 
 ## See it
-- **Interactive 3D:** https://claude.ai/artifact/9pqgvvRfigWwcD8ecrPeBo. Turn it around, explode it, see every print plate, and tap any part. It's private to your claude.ai account.
+- **Interactive 3D:** (a private interactive view that is no longer available). Turn it around, explode it, see every print plate, and tap any part. It's private to your claude.ai account.
 - **`VISUALS/`:** still images.
   - `everything_exploded.png`
   - `print_plates.png` (every print as it sits on a 220 mm bed)

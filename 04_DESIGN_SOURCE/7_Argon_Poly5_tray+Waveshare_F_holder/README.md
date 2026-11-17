@@ -42,9 +42,9 @@ The sizes published for both cases disagree:
 | NEO 5 | 94 × 70 × 30 | 96.0 × 72.0 | 94 × 70 × 30 (Tom's Hardware, Electrokit); 87.6 × 71.5 × 30 (Core, Little Bird); 93 × 68 × 27 (Botland); 95.5 × 71.5 × 30 |
 | Poly+5 | 93.5 × 64 × 30 | 96.0 × 66.5 | 93.5 × 64 × 30 (seller listings that warn of 0–1 cm measuring error); no official figure |
 
-- **Bigger than the "takes up to" size:** don't print yet. Ask Claude to widen the pocket.
+- **Bigger than the "takes up to" size:** don't print yet. Widen the pocket in the CAD.
 - **Up to about 3 mm smaller:** fine as it is. Push the case into the rear-right corner and tape it down.
-- **More than about 3 mm smaller:** it still works on the tape, or ask Claude for a snug version.
+- **More than about 3 mm smaller:** it still works on the tape, or make a snug version in the CAD.
 
 ### What changes when the Pi is in an Argon case
 - **Adapter (F) can't be used.** It plugs straight into the Pi's side sockets, and the case wall is in the way. That means losing what it provides: the NVMe SSD, the 2.5G PoE port and the 12 V screw terminal. You'd boot from the microSD (or a USB SSD) and use the Pi's own 1G Ethernet.

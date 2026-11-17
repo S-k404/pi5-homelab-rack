@@ -158,3 +158,28 @@ This is the **one** to-do list. `START_HERE.md` points here; the print list is `
 - [ ] **Slim Cargo rack:** only if you want the travel version. The brick would have to live outside, or it needs a new short cradle. It now has print plates (`SlimPlate01–07`, replacing Plate01–07) and a weight estimate (frame ≈ 1.24 kg PETG with the ears and clips), but nothing has been printed or test-fitted.
 - [x] Onshape: the master STEP assemblies were regenerated on 28 Oct (clean faceplate, shelf with the arch, holder base with the HDMI relief). One thing is still a stand-in: unit 4 is the unused custom UCG shelf, because the Printables 942972 mount only exists as a mesh. Rebuild with `04_DESIGN_SOURCE/ONSHAPE_PROJECT/build_onshape_project.py`.
 - [ ] Git: the first commit holds 433 MB of STL/STEP/PNG, so `/ultrareview` can't run on this repo (no remote, too large). See `ULTRAREVIEW/README.md`.
+
+---
+
+## 8. Open items (moved here from the README, 28 Oct 2026)
+
+| What | When |
+|---|---|
+| Check the Cuzor UPS's jack positions and length (≤ 101 mm), then print the UPS tray + faceplate (`2_CHECK-UPS-FIRST`) | when it arrives, or from a photo |
+| Measure the Poly+ 5 (≤ 96.0 × 66.5), do the holder **fit test**, check the FFC exit. Then the tray and, if it passed, the holder (`3_WAIT`) | when it arrives |
+| Measure the screen, then its body (`3_WAIT`) | Wed 4 Nov |
+| Robu print cart changes: see `01_PRINT_FILES/README.md` | before checkout |
+| Test one M5 insert in plate 03 before the rest of the rack | when the inserts arrive |
+| The rack tips forward at ~5.8 N on the back of the gateway: fix it to the desk, or plug the gateway in before racking it | when building |
+| Re-upload the holder base (W2) to the Robu cart: it changed on 28 Oct (HDMI plug relief) | before checkout |
+| Sit the UCG-Ultra in its printed mount and plug in a patch cable + USB-C: the mount's rear lip (10 mm) may block low jacks | when it arrives |
+| Everything else | `FINAL_TODO/FINAL_TODO.md` |
+
+## 9. About the "Antigravity v7.3 final" (27–28 Oct)
+
+Its "switch window" faceplate, UPS switch extender and "hidden cable slit" **don't work**:
+- the Cuzor's switch faces the rack rear
+- the UPS tray's wall is behind the window
+- the brick-lead notch was lost
+
+Its renders show that faceplate and a UPS moved 29.9 mm forward, and its BOM xlsx has the wrong Poly+ 5 price. All of it is retired to `_Old_versions/2026-10-28_retired/`. If that tool runs again and adds files here, don't print from them.

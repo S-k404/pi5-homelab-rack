@@ -1,6 +1,6 @@
 # 9U Slim Cargo Homelab: Production 10-Plate Build Schedule (250 × 250 × 250 mm Bed)
 
-This directory contains the verified, production-ready 3D print suite for the **9U Slim Cargo (140 mm Depth) Homelab**, specifically engineered for **250 × 250 × 250 mm build volume 3D printers** (Bambu Lab X1C / P1S / P1P / A1, Voron 250, Creality K1, Prusa MK4/XL, Anycubic Kobra).
+This directory contains the 3D print suite for the **9U Slim Cargo (140 mm Depth) Homelab**, an **alternative** to the main build (it is not part of the current order; see the root README). It was designed around an EP52 UPS, where the main build uses the Cuzor Mini UPS Pro. It is specifically engineered for **250 × 250 × 250 mm build volume 3D printers** (Bambu Lab X1C / P1S / P1P / A1, Voron 250, Creality K1, Prusa MK4/XL, Anycubic Kobra).
 
 > **Bed Safety & Clearance Verification**: Every single part has been geometrically verified to sit **100% inside the 250 × 250 mm bed boundaries** with generous safety margins ($\ge 13\text{ mm}$ to $58\text{ mm}$ on multi-part plates, and $4.9\text{ mm}$ on the full diagonal 2U faceplate).  
 > **True Flat Orientations**: Vented cap halves and front faceplates are oriented **flat face-down directly on textured PEI spring steel** ($Z = 4\text{ mm}$ to $22\text{ mm}$), ensuring zero supports on cosmetic surfaces, zero wobble, and clean bridging across all vent slots.

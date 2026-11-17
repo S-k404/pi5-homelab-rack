@@ -7,11 +7,17 @@
 </p>
 <!-- /datasheet:banner -->
 
-# Pi 5 HomeLab mini rack (updated 28 Oct 2026, ultrareview in the evening)
+# Pi 5 HomeLab Rack
 
-**To do: `FINAL_TODO/FINAL_TODO.md`.** What the 28 Oct review checked, found and changed: `ULTRAREVIEW/README.md`.
+**A printed 10-inch, 9U mini rack that holds a Raspberry Pi 5, a 7-inch screen, a label printer and a gateway, built to look like a DeskPi RackMate.**
+
+<p align="center">
+  <img src="02_RENDERS/Pi5_MiniRack_360_Turntable.gif" alt="A 360-degree turntable render of the finished 9U mini rack" width="60%">
+</p>
 
 A **printed 10-inch, 9U mini rack** in the DeskPi RackMate T0 look: 280 W × 200 D, silver sides, a vented cap and U handles. It's printed by Robu's print service or on a **Bambu P1S** (256 mm bed): PLA for the rack, dock and screen; PETG near heat.
+
+The whole build is checked on the 3D models (calculations, not physical tests). More renders: [`02_RENDERS/FINAL_sheet.png`](02_RENDERS/FINAL_sheet.png) shows all of them on one page, and [`02_RENDERS/Pi5_MiniRack_Exploded_Assembly.gif`](02_RENDERS/Pi5_MiniRack_Exploded_Assembly.gif) is the exploded assembly.
 
 <!-- datasheet:figure -->
 ## At a glance
@@ -29,16 +35,24 @@ A **printed 10-inch, 9U mini rack** in the DeskPi RackMate T0 look: 280 W × 200
 | **Standard** | Follows Jeff Geerling's 10-inch standard: 236.525 mm rail holes, EIA pattern, 224 mm clear; M5 mounts |
 | **Print** | Robu's print service or a Bambu P1S (256 mm bed); PLA for the rack, dock and screen, PETG near heat |
 | **CAD** | Master 2-in-1 STEP and an Onshape import package in the repo root |
+| **Gateway mount** | The ready-made Printables 942972 mount: download it from Printables, it is not in this repository |
 | **Checklist** | [`FINAL_TODO/FINAL_TODO.md`](FINAL_TODO/FINAL_TODO.md) covers orders, printing, building, wiring and power-up |
 <!-- /datasheet:figure -->
 
-## Folders & CAD Downloads
+## Quick start
+
+1. **Read the to-do list:** [`FINAL_TODO/FINAL_TODO.md`](FINAL_TODO/FINAL_TODO.md) is the one list for orders, measuring, printing, building, wiring and power-up.
+2. **Buy the parts:** [`PARTS_LIST.md`](PARTS_LIST.md), with prices.
+3. **Print:** every print file is in [`01_PRINT_FILES/`](01_PRINT_FILES/), sorted into `1_PRINT-NOW`, `2_CHECK-UPS-FIRST` and `3_WAIT`. The gateway mount is a download from Printables (see Credits).
+4. **Build, wire and power up** with the checklist.
+
+## Folders and CAD downloads
 | Folder / file | What it is |
 |---|---|
 | **`FINAL_TODO/`** | **The one to-do list** (orders, measuring, printing, building, wiring, power-up) |
 | `ULTRAREVIEW/` | The 28 Oct review: findings, every change (with the old files in `before/`), new checks and renders |
-| 🌟 **[`Pi5_HomeLab_9U_COMBINED_FOR_ONSHAPE.step`](Pi5_HomeLab_9U_COMBINED_FOR_ONSHAPE.step)** | **Master 2-in-1 Combined STEP**: Standard 200 mm & Slim Cargo 140 mm racks side-by-side in one file for Onshape. For viewing only: its UCG unit is the unused custom shelf, it has the pre-28-Oct holder, and its Slim Cargo rack shows a brick cradle that doesn't fit there (`04_DESIGN_SOURCE/ONSHAPE_PROJECT/README.md`) |
-| 📦 **[`Pi5_HomeLab_9U_Onshape_Project_Package.zip`](Pi5_HomeLab_9U_Onshape_Project_Package.zip)** | **Complete Onshape Import Archive**: Both master assemblies, 30 component STEPs, and dimensioned schematics |
+| **[`Pi5_HomeLab_9U_COMBINED_FOR_ONSHAPE.step`](Pi5_HomeLab_9U_COMBINED_FOR_ONSHAPE.step)** | **Master 2-in-1 Combined STEP**: Standard 200 mm & Slim Cargo 140 mm racks side-by-side in one file for Onshape. For viewing only: its UCG unit is the unused custom shelf, it has the pre-28-Oct holder, and its Slim Cargo rack shows a brick cradle that doesn't fit there (`04_DESIGN_SOURCE/ONSHAPE_PROJECT/README.md`) |
+| **[`Pi5_HomeLab_9U_Onshape_Project_Package.zip`](Pi5_HomeLab_9U_Onshape_Project_Package.zip)** | **Complete Onshape Import Archive**: Both master assemblies, 30 component STEPs, and dimensioned schematics |
 | **`01_PRINT_FILES/`** | **Every print file, and nothing else**, sorted: `1_PRINT-NOW`, `2_CHECK-UPS-FIRST`, `3_WAIT`, `4_OPTIONAL_spare-spacers`, and `5_SLIM_CARGO_140mm_TRAVEL_PROTOTYPE` (an *alternative* rack frame, not part of the order: the brick cradle doesn't fit it). STLs for Robu plus P1S plates. Start with its `README.md` |
 | `02_RENDERS/` | 18 renders of this build, re-rendered 28 Oct with every cable (`FINAL_sheet.png` = all on one page; 17–18 = the wiring), the Blender scene; plus 360° turntable / exploded videos made by another tool before the review |
 | `03_CHECKS/` | Every check report (calculations on the 3D models, not physical tests) |
@@ -68,26 +82,36 @@ A **printed 10-inch, 9U mini rack** in the DeskPi RackMate T0 look: 280 W × 200
 
 **Standard:** it follows Jeff Geerling's 10-inch standard (236.525 mm rail holes, EIA pattern, 224 mm clear), so any 10-inch mount bolts in with M5 screws and washers.
 
-## Open
-| What | When |
+## Credits
+
+* **The 1U gateway mount** is the ready-made "UniFi Cloud Gateway Ultra 10" rackmount, Printables model 942972: [printables.com/model/942972-unifi-cloud-gateway-ultra-10-rackmount](https://www.printables.com/model/942972-unifi-cloud-gateway-ultra-10-rackmount). Its files are not in this repository; download it from Printables, and print it as plate 12-ALT2 (settings in [`01_PRINT_FILES/1_PRINT-NOW/P1S_plates/Plate12-ALT2_SETTINGS.txt`](01_PRINT_FILES/1_PRINT-NOW/P1S_plates/Plate12-ALT2_SETTINGS.txt)). The build trims 0.8 mm off its top so it clears the cap.
+* **The 10-inch standard** is Jeff Geerling's Project MINI RACK: [mini-rack.jeffgeerling.com](https://mini-rack.jeffgeerling.com/).
+* **The look** follows the DeskPi RackMate T0.
+
+## Typical application
+
+* **A home-lab desk rack:** a UniFi gateway, a Pi 5 with an NVMe drive, a 12 V UPS, a 7-inch screen for a dashboard and a label printer, all in one 10-inch rack.
+* **A print project in stages:** print the rack first, check the UPS tray and faceplate when the UPS arrives (`2_CHECK-UPS-FIRST`), then the parts that wait for measurements (`3_WAIT`).
+
+## Absolute maximum ratings
+
+| Parameter | Limit |
 |---|---|
-| Check the Cuzor UPS's jack positions and length (≤ 101 mm), then print the UPS tray + faceplate (`2_CHECK-UPS-FIRST`) | when it arrives, or from a photo |
-| Measure the Poly+ 5 (≤ 96.0 × 66.5), do the holder **fit test**, check the FFC exit. Then the tray and, if it passed, the holder (`3_WAIT`) | when it arrives |
-| Measure the screen, then its body (`3_WAIT`) | Wed 4 Nov |
-| Robu print cart changes: see `01_PRINT_FILES/README.md` | before checkout |
-| Test one M5 insert in plate 03 before the rest of the rack | when the inserts arrive |
-| The rack tips forward at ~5.8 N on the back of the gateway: fix it to the desk, or plug the gateway in before racking it | when building |
-| Re-upload the holder base (W2) to the Robu cart: it changed on 28 Oct (HDMI plug relief) | before checkout |
-| Sit the UCG-Ultra in its printed mount and plug in a patch cable + USB-C: the mount's rear lip (10 mm) may block low jacks | when it arrives |
-| Everything else | `FINAL_TODO/FINAL_TODO.md` |
+| Rack | 10-inch, 9U, 280 W × 200 D |
+| Rail holes | 236.525 mm apart, 224 mm clear |
+| Print bed | 256 mm (Bambu P1S) |
+| Pi 5 USB budget | the screen and the label printer use about 1.3 to 1.5 A of the Pi's 1.6 A |
+| Poly+ 5 case | up to 96.0 × 66.5 mm fits the holder |
+| UPS | up to 101 mm long |
+| Supply | 12 V 5 A brick, inside the rack |
+| Tip-over | tips forward at about 5.8 N on the back of the gateway |
 
-## About the "Antigravity v7.3 final" (27–28 Oct)
-Its "switch window" faceplate, UPS switch extender and "hidden cable slit" **don't work**:
-- the Cuzor's switch faces the rack rear
-- the UPS tray's wall is behind the window
-- the brick-lead notch was lost
+## Errata
 
-Its renders show that faceplate and a UPS moved 29.9 mm forward, and its BOM xlsx has the wrong Poly+ 5 price. All of it is retired to `_Old_versions/2026-10-28_retired/`. If that tool runs again and adds files here, don't print from them.
+* The checks are calculations on the 3D models, not physical tests.
+* The rack tips forward at about 5.8 N on the back of the gateway: fix it to the desk, or plug the gateway in before racking it.
+* The 9U Slim Cargo (140 mm) variant in `05_PLATES_250x250_BED/` and `ROBU_UPLOAD_SLIM_CARGO/` is an alternative, not part of the current order.
+* The open items, and the notes on the retired "Antigravity v7.3" version, are at the end of [`FINAL_TODO/FINAL_TODO.md`](FINAL_TODO/FINAL_TODO.md).
 
 ## First power-up
 1. Boot from the microSD, then (if the FFC route works) move the OS to the NVMe.
@@ -96,4 +120,13 @@ Its renders show that faceplate and a UPS moved 29.9 mm forward, and its BOM xls
 
 ## Links
 - Jeff Geerling's Project MINI RACK: https://mini-rack.jeffgeerling.com/
-- Older interactive 3D view (v7.2, private): https://claude.ai/artifact/9pqgvvRfigWwcD8ecrPeBo
+- Printables 942972, the gateway mount: https://www.printables.com/model/942972-unifi-cloud-gateway-ultra-10-rackmount
+
+<!-- datasheet:footer -->
+---
+
+<p align="center">
+  <a href="https://github.com/S-k404/solder-reflow-pad">&larr; U17 solder-reflow-pad</a> &middot;
+  <a href="https://github.com/S-k404/S-k404">SK-404 index</a>
+</p>
+<!-- /datasheet:footer -->

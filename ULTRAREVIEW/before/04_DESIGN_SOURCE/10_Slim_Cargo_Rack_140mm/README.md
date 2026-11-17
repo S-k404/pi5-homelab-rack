@@ -41,7 +41,7 @@ All four units in the homelab mount to standard 10-inch EIA-310 rails ($236.5\te
 ## 4. CAD & Manufacturing Files
 
 * **Onshape-Ready 3D Assembly STEP:**  
-  [`STEP_for_Onshape/SlimCargo_Rack_9U_140mm_ASSEMBLY.step`](file://~/Downloads/Pi%205%20HomeLab%201/04_DESIGN_SOURCE/10_Slim_Cargo_Rack_140mm/STEP_for_Onshape/SlimCargo_Rack_9U_140mm_ASSEMBLY.step)
+  ``STEP_for_Onshape/SlimCargo_Rack_9U_140mm_ASSEMBLY.step``
 * **Print-Ready STLs (fit standard $220\times 220\text{ mm}$ and Bambu $256\times 256\text{ mm}$ beds):**
   * `SlimCargo_SideModule_2U_Base_x2.stl`
   * `SlimCargo_SideModule_3U_x4.stl`
@@ -50,5 +50,5 @@ All four units in the homelab mount to standard 10-inch EIA-310 rails ($236.5\te
   * `SlimCargo_LowProfile_Handle_x2.stl`
   * `SlimCargo_BaseBar_x3.stl`
 * **Studio Renders:**  
-  Located in [`02_RENDERS/SLIM_CARGO_PROTOTYPE/`](file://~/Downloads/Pi%205%20HomeLab%201/02_RENDERS/SLIM_CARGO_PROTOTYPE/).
+  Located in ``02_RENDERS/SLIM_CARGO_PROTOTYPE/``.
 

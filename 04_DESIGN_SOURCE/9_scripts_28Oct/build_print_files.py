@@ -232,7 +232,7 @@ open(os.path.join(PLC, "Plate11_CHECK-UPS_SETTINGS.txt"), "w").write(
     "  - switch, LED and OUT on one end face (it goes to the rack REAR: tray window x 58..110 of the 100 mm face)\n"
     "  - DC-IN on the opposite end face, at the end that lines up with the UPS tray's DC-IN window (x 80..112)\n"
     "  - at most 101 x 81 x 28.5 mm (Cuzor's page: 10 x 8 x 2.8 cm; one listing says 10.2 long)\n"
-    "  If the DC-IN sits at the other end of its face, don't print: ask Claude to move the windows.\n"
+    "  If the DC-IN sits at the other end of its face, don't print: move the windows in the CAD.\n"
     "Material: PETG black, about 130 g (faceplate ~68 g, UPS tray ~62 g)\n\n"
     "BRIM OFF: the faceplate is 254 mm long on the 256 mm bed (1 mm from each edge). Faceplate front face down,\n"
     "UPS tray floor down.\n" + PETG_SET +
@@ -249,7 +249,7 @@ open(os.path.join(PLW, "Plate11W_WAIT_SETTINGS.txt"), "w").write(
     "Plate 11W (PETG): Argon Poly+ 5 tray + Waveshare adapter (F) holder base + lid  --  WAIT\n"
     "=====================================================================================\n"
     "1. The Poly+ 5 tray: measure the case. It takes up to 96.0 long x 66.5 wide (listed 93.5 x 64 x 30, +-1 cm).\n"
-    "   Bigger: don't print, ask Claude to widen the pocket.\n"
+    "   Bigger: don't print, widen the pocket in the CAD.\n"
     "2. The holder (base + lid): FIT TEST. The holder sits 3-5 mm from the case's side ports (USB-C power, both\n"
     "   micro-HDMI), so it only works if the adapter (F)'s own plugs reach the Pi through the Poly+ 5's side cut-outs.\n"
     "   Test: Pi in the Poly+ 5, lid on; hold the adapter flat beside it, plug edge to the case, push its USB-C and\n"

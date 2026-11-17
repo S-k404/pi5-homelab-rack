@@ -1,23 +1,21 @@
-# CAD & 3D Printing manufacturing binaries
-*.stl
-*.step
-*.stp
-*.3mf
+# This repository tracks its CAD and print files (STL, STEP, 3MF), renders and archives on purpose,
+# so those file types are not ignored. What is ignored is listed here.
 
-# Renders and media assets
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.mp4
-*.blend
+# Third-party model (Printables 942972): download it from Printables, never commit it
+*Printables-942972*
+UCG_U 10inch rack mount.stl
+
+# Backups and scratch files from CAD and Blender
 *.blend1
+*.bak
+*~
 
-# Archives & spreadsheets
-*.zip
-*.xlsx
+# AI session notes (kept on disk, not published)
+CLAUDE.md
+HANDOFF_FOR_NEXT_AGENT.md
+PROGRESS_*.md
 
-# Python cache & build
+# Python cache and build
 __pycache__/
 *.py[cod]
 *$py.class
@@ -27,4 +25,3 @@ __pycache__/
 # OS metadata
 .DS_Store
 Thumbs.db
-

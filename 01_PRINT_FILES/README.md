@@ -64,7 +64,7 @@
 - the DC-IN is on the opposite end face, at the end that lines up with the UPS tray's DC-IN window (where the right-angle extension plugs in)
 - it's no longer than 101 mm
 
-**Why:** Cuzor publish no drawing. The tray's windows were drawn from product photos, and the UPS's CAD model puts DC-IN at the other end. If it doesn't match, ask Claude to move the windows.
+**Why:** Cuzor publish no drawing. The tray's windows were drawn from product photos, and the UPS's CAD model puts DC-IN at the other end. If it doesn't match, move the windows in the CAD.
 
 **Plate:** `Plate11_CHECK-UPS`, both parts. **Brim off:** the faceplate is 254 mm on a 256 mm bed.
 

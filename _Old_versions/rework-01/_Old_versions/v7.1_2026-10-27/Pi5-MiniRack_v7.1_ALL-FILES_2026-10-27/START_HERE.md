@@ -18,7 +18,7 @@ The rack is in `1_Rack_8U_T0-look/`. This zip has everything; you don't need the
 
 ## Start with these
 - **`PRINT_PLAN_P1S.md`:** your P1S plan. It has the 11 plates, the settings for each, the print time and the costs.
-- **Interactive 3D:** https://claude.ai/artifact/9pqgvvRfigWwcD8ecrPeBo. Assembled and exploded views, the 11 P1S plates, and every part; tap any part to see what it is. It's private to your claude.ai account.
+- **Interactive 3D:** (a private interactive view that is no longer available). Assembled and exploded views, the 11 P1S plates, and every part; tap any part to see what it is. It's private to your claude.ai account.
 - **`BOM_Pi5-MiniRack_v7.1.xlsx`:** everything to buy, with your 27 Oct order marked as bought and your cart prices filled in. The Printed_Parts tab has editable print costs.
 - **`VISUALS/`:** still images.
   - `print_plates_P1S.png`

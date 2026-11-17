@@ -34,7 +34,7 @@ Notes:
   Hardware: 4 x M5 x 12 button head + washers into the rail inserts, the same as plate 12.
   BEFORE RACKING: put the gateway in and plug in its rear cables. A 10 mm lip runs across the back, 2 mm behind
   the gateway, and a corner post covers the last 14 mm of its back on the right (seen from the front). Check the
-  RJ45 and USB-C plugs clear them. If one doesn't, ask Claude to cut that part down.
+  RJ45 and USB-C plugs clear them. If one doesn't, cut that part down in the CAD.
 
 On this plate:
   - UCG-Ultra 1U mount, 3 keystones x1   (UCG-Ultra_1U_3-keystones_Printables-942972.stl)

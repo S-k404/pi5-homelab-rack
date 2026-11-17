@@ -133,7 +133,7 @@ The zip in this folder was rebuilt from the corrected files.
   - move the root's current v7.2 folder and zip into `_Old_versions/`
   - move `rework-01`'s folder and zip up to the root (rename them v7.3 if anything printable changes, e.g. a ballast tray)
   - copy `rework-01/START_HERE.md` over the root one
-- [ ] If option B is chosen: design the tray, re-run the four checks, update the print plan, the BOM, `VISUALS/` and the 3D page (https://claude.ai/artifact/9pqgvvRfigWwcD8ecrPeBo).
+- [ ] If option B is chosen: design the tray, re-run the four checks, update the print plan, the BOM, `VISUALS/` and the 3D page ((a private interactive view that is no longer available)).
 
 ---
 

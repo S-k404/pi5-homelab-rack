@@ -26,7 +26,7 @@ The rack is in `1_Rack_9U_T0-look/`. This folder has everything; you don't need 
 ## Start with these
 - **`PRINT_PLAN_P1S.md`:** your P1S plan. It has the 12 plates, the settings for each, the print time and the costs.
 - **`BOM_Pi5-MiniRack_v7.2.xlsx`:** everything to buy. Your 27 Oct order is marked as bought and your cart prices are filled in. The Printed_Parts tab has editable print costs.
-- **Interactive 3D:** https://claude.ai/artifact/9pqgvvRfigWwcD8ecrPeBo. It shows the 9U v7.2 rack: assembled and exploded views, the 12 P1S plates and every part. Tap any part to see what it is. It's private to your claude.ai account.
+- **Interactive 3D:** (a private interactive view that is no longer available). It shows the 9U v7.2 rack: assembled and exploded views, the 12 P1S plates and every part. Tap any part to see what it is. It's private to your claude.ai account.
 - **`VISUALS/`:** still images, all v7.2. They include the 12 P1S plates, everything exploded, the parts sheet, the rack views, `ucg_front.png`, and `parts/` (one picture per STL).
 
 ## Print and cost at a glance (Bambu P1S)

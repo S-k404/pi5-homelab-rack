@@ -22,9 +22,9 @@ Notes:
   Measure the case first: length (port end to microSD end), width (side ports to GPIO side), height.
   The tray takes any case up to 96.0 long x 72.0 wide (the largest published size
   is 95.5 x 71.5). Listed size 94.0 x 70.0 x 30.0.
-  - Bigger than that: don't print, ask Claude to widen the pocket.
+  - Bigger than that: don't print, widen the pocket in the CAD.
   - Up to ~3 mm smaller: fine. Push it into the rear-right corner and stick it down with the foam tape.
-  - More than ~3 mm smaller: it still works on the foam tape, or ask Claude for a snug version.
+  - More than ~3 mm smaller: it still works on the foam tape, or make a snug version in the CAD.
   The faceplate is the same file as plate 11's. If you've already printed plate 11, you only need the tray:
   in Bambu Studio, delete the faceplate from the plate before slicing.
 

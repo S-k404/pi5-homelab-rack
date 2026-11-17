@@ -6,7 +6,7 @@ Status: print once you've checked the real Cuzor Mini UPS Pro (a photo of it is 
   - switch, LED and OUT on one end face (it goes to the rack REAR: tray window x 58..110 of the 100 mm face)
   - DC-IN on the opposite end face, at the end that lines up with the UPS tray's DC-IN window (x 80..112)
   - at most 101 x 81 x 28.5 mm (Cuzor's page: 10 x 8 x 2.8 cm; one listing says 10.2 long)
-  If the DC-IN sits at the other end of its face, don't print: ask Claude to move the windows.
+  If the DC-IN sits at the other end of its face, don't print: move the windows in the CAD.
 Material: PETG black, about 130 g (faceplate ~68 g, UPS tray ~62 g)
 
 BRIM OFF: the faceplate is 254 mm long on the 256 mm bed (1 mm from each edge). Faceplate front face down,

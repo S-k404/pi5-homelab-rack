@@ -1,12 +1,30 @@
-# This repository tracks its CAD and print files (STL, STEP, 3MF), renders and archives on purpose,
-# so those file types are not ignored. What is ignored is listed here.
+# New binaries are ignored by default so big CAD and render files are not committed by accident.
+# The ones already in this repository stay tracked; to add a new one on purpose, use `git add -f`.
+
+# CAD & 3D Printing manufacturing binaries
+*.stl
+*.step
+*.stp
+*.3mf
+
+# Renders and media assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.blend
+*.blend1
+
+# Archives & spreadsheets
+*.zip
+*.xlsx
 
 # Third-party model (Printables 942972): download it from Printables, never commit it
 *Printables-942972*
 UCG_U 10inch rack mount.stl
 
-# Backups and scratch files from CAD and Blender
-*.blend1
+# Backups and scratch files
 *.bak
 *~
 
@@ -15,7 +33,7 @@ CLAUDE.md
 HANDOFF_FOR_NEXT_AGENT.md
 PROGRESS_*.md
 
-# Python cache and build
+# Python cache & build
 __pycache__/
 *.py[cod]
 *$py.class

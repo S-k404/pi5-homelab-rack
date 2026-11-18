@@ -19,7 +19,7 @@ CAP = {
     "10_b1_dock": "B1 dock v5 with the B1",
     "11_b1_dock_lid_open": "B1 dock: clamshell lid open (paper roll bay)",
     "12_screen_module": "7\" screen module (prints after 4 Nov)",
-    "13_ucg_mount": "UCG-Ultra mount (Printables 942972)",
+    "13_ucg_mount": "UCG-Ultra 1U shelf",
     "14_ucg_mount_back": "UCG-Ultra mount, back",
     "15_pi_power_rear_ups_out_plug": "Rear: right-angle plug in the UPS OUT",
     "16_pi_power_path_cutaway": "Cutaway: UPS OUT lead route",

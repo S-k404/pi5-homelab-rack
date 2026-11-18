@@ -122,6 +122,10 @@ The whole build is checked on the 3D models (calculations, not physical tests). 
 - Jeff Geerling's Project MINI RACK: https://mini-rack.jeffgeerling.com/
 - Printables 942972, the gateway mount: https://www.printables.com/model/942972-unifi-cloud-gateway-ultra-10-rackmount
 
+## License
+
+MIT. See [LICENSE](LICENSE).
+
 <!-- datasheet:footer -->
 ---
 

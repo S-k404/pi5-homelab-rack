@@ -131,6 +131,7 @@ MIT. See [LICENSE](LICENSE).
 
 <p align="center">
   <a href="https://github.com/S-k404/solder-reflow-pad">&larr; U17 solder-reflow-pad</a> &middot;
-  <a href="https://github.com/S-k404/S-k404">SK-404 index</a>
+  <a href="https://github.com/S-k404/S-k404">SK-404 index</a> &middot;
+  <a href="https://github.com/S-k404/mc-server-manager">U19 mc-server-manager &rarr;</a>
 </p>
 <!-- /datasheet:footer -->
